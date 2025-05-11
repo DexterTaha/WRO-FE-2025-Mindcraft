@@ -27,7 +27,7 @@
     <tbody>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🖼️ IMAGE</td>
-            <td style="text-align: center; vertical-align: middle; justify: center;">
+            <td style="text-align: center; vertical-align: middle; justify-content: center;">
                 <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/001b107defe7aed8ceac6327d68158100a3433c0/images/IMG_6960%202.png" width="350" alt="Salman Derdeb">
             </td>
             <td style="text-align: center; vertical-align: middle;">
