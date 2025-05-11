@@ -47,7 +47,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/raw/main/v-photos/rendering%20images/ROBOT%20ISOMOTRIC%20VIEW.png" alt="ROBOT ISOMETRIC VIEW" height="600">
+      <img src="" alt="ROBOT ISOMETRIC VIEW" height="600">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Isometric View</p>
     </td>
   </tr>
