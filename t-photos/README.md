@@ -31,7 +31,7 @@
                 <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/2df2964e9dffda16295acba3887ab3456d303f8d/images/IMG_6960.png" width="400" alt="Salman Derdeb">
             </td>
             <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/user-attachments/assets/23f7989c-80eb-4c4a-bd4e-48854502ae04" width="400" alt="Taha Taidi Laamiri">
+                <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/d654ffdd57f7d1769db7320150e4f58304b70391/images/IMG_6966%202.png" width="400" alt="Taha Taidi Laamiri">
             </td>
         </tr>
         <tr>
