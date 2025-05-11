@@ -22,7 +22,6 @@
             <th style="text-align: center; vertical-align: middle; width: 25%;">👤 NAME</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;">DERDEB Salmane</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;">TAIDI LAAMIRI TAHA</th>
-            <th style="text-align: center; vertical-align: middle; width: 25%;">TAIDI LAAMIRI MORTADA</th>
         </tr>
     </thead>
     <tbody>
@@ -34,27 +33,21 @@
             <td style="text-align: center; vertical-align: middle;">
                 <img src="https://github.com/user-attachments/assets/23f7989c-80eb-4c4a-bd4e-48854502ae04" width="200" alt="Taha Taidi Laamiri">
             </td>
-            <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/user-attachments/assets/5c9d1a28-243c-4c6f-8052-82998c2a2ced" width="200" alt="Mortada Taidi Laamiri">
-            </td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🔢 AGE</td>
             <td style="text-align: center; vertical-align: middle;">15 YEARS OLD</td>
             <td style="text-align: center; vertical-align: middle;">19 YEARS OLD</td>
-            <td style="text-align: center; vertical-align: middle;">16 YEARS OLD</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🎓 STUDIES</td>
             <td style="text-align: center; vertical-align: middle;">10th Grade Scientific (French Option) Student</td>
             <td style="text-align: center; vertical-align: middle;">Industrial Engineering Student + Automated System Degree</td>
-            <td style="text-align: center; vertical-align: middle;">11th Grade Physics and Math (French Option) Student</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🎯 ROLE</td>
             <td style="text-align: center; vertical-align: middle;">Computer Vision and Programming Lead</td>
             <td style="text-align: center; vertical-align: middle;">Team Leader, Electrical and Electronics Lead</td>
-            <td style="text-align: center; vertical-align: middle;">Fabrication and Conception Lead</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🌐 LANGUAGE</td>
@@ -71,13 +64,6 @@
                     <li>Arabic: Native</li>
                     <li>French: Very Good</li>
                     <li>English: Very Good</li>
-                </ul>
-            </td>
-            <td style="text-align: center; vertical-align: middle;">
-                <ul style="list-style-type: none; padding-left: 0;">
-                    <li>Arabic: Native</li>
-                    <li>French: Good</li>
-                    <li>English: Beginner</li>
                 </ul>
             </td>
         </tr>
@@ -101,15 +87,6 @@
                     <li>Perform component compatibility calculations.</li>
                     <li>Manage the Bill of Materials (BOM) and component sourcing.</li>
                     <li>Document project progress on GitHub.</li>
-                </ul>
-            </td>
-            <td style="text-align: center; vertical-align: top;">
-                <ul style="list-style-type: disc; padding-left: 20px;">
-                    <li>Take measurements for robot components.</li>
-                    <li>Design and 3D print components.</li>
-                    <li>Lead robot assembly and manage mechanical parts.</li>
-                    <li>Test, iterate, and improve design versions.</li>
-                    <li>Document work on GitHub.</li>
                 </ul>
             </td>
         </tr>
@@ -151,32 +128,11 @@
                     <li><img src="https://skillicons.dev/icons?i=raspberrypi" width="32" alt="Raspberry Pi"> Raspberry Pi</li>
                 </ul>
             </td>
-            <td style="text-align: left; vertical-align: top;">
-                <ul style="list-style-type: none; padding-left: 0;">
-                    <li><img src="https://skillicons.dev/icons?i=github" width="32" alt="GitHub"> GitHub</li>
-                    <li><img src="https://skillicons.dev/icons?i=html" width="32" alt="HTML"> HTML</li>
-                    <li><img src="https://skillicons.dev/icons?i=css" width="32" alt="CSS"> CSS</li>
-                    <li><img src="https://skillicons.dev/icons?i=js" width="32" alt="JavaScript"> JavaScript</li>
-                    <li><img src="https://skillicons.dev/icons?i=figma" width="32" alt="Figma"> Figma</li>
-                    <li><img src="https://img.icons8.com/color/48/000000/blender-3d.png" width="32" alt="Blender"> Blender</li>
-                    <li><img src="https://github.com/user-attachments/assets/3bd25fc1-e0b4-4359-a85d-52b0d4249014" width="32" alt="Creality Print"> Onshape</li>
-                    <li><img src="https://github.com/user-attachments/assets/d12627fa-4115-4672-9df0-1b158f3b0dda" width="32" alt="Onshape"> creality print
-                            <li>
-                                <li>
-                                    <li>
-                                        <li>
-                                            <li><li>
-                                                <li>
-                                                    <li>
-                            <li>
-                </ul>
-            </td>
         </tr>
         <tr>
             <th style="text-align: center; vertical-align: middle; width: 25%;">🐈‍⬛ GITHUB Profile</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/salmane-derdeb">Salmane Derdeb</a></th>
             <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/DexterTaha">Taha TAIDI LAAMIRI</a></th>
-            <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/taidimortada">Mortada TAIDI LAAMIRI</a></th>
         </tr>
     </tbody>
 </table>
