@@ -28,10 +28,10 @@
         <tr>
             <td style="text-align: center; vertical-align: middle;">🖼️ IMAGE</td>
             <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/user-attachments/assets/70c6ed95-7fce-4ee0-840e-6f5b5265e15e" width="200" alt="Salman Derdeb">
+                <img src="https://github.com/user-attachments/assets/70c6ed95-7fce-4ee0-840e-6f5b5265e15e" width="400" alt="Salman Derdeb">
             </td>
             <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/user-attachments/assets/23f7989c-80eb-4c4a-bd4e-48854502ae04" width="200" alt="Taha Taidi Laamiri">
+                <img src="https://github.com/user-attachments/assets/23f7989c-80eb-4c4a-bd4e-48854502ae04" width="400" alt="Taha Taidi Laamiri">
             </td>
         </tr>
         <tr>
