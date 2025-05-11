@@ -28,7 +28,7 @@
         <tr>
             <td style="text-align: center; vertical-align: middle;">🖼️ IMAGE</td>
             <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/2df2964e9dffda16295acba3887ab3456d303f8d/images/IMG_6960.png" width="400" alt="Salman Derdeb">
+                <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/001b107defe7aed8ceac6327d68158100a3433c0/images/IMG_6960%202.png" width="400" alt="Salman Derdeb">
             </td>
             <td style="text-align: center; vertical-align: middle;">
                 <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/d654ffdd57f7d1769db7320150e4f58304b70391/images/IMG_6966%202.png" width="420" alt="Taha Taidi Laamiri">
