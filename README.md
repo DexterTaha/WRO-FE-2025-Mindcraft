@@ -10,3 +10,4 @@ This repository provides information and knowledge regarding the ongoing progres
 >
 > This year, the Future Engineers category presents an exciting challenge: creating a self-driving car. This challenge pushes participants to explore the cutting edge of robotics, adding layers of complexity and innovation to an already thrilling competition.
 
+[Watch the challenge explanation video](https://www.youtube.com/watch?v=_J15lf6uhwo&t=2s)
