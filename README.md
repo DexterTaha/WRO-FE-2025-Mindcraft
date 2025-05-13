@@ -1,5 +1,5 @@
 # WRO-FE-2025-Mindcraft
 
 
-> A curated list of awesome READMEs
+> MINDCRAFT WRO Future Engineers team
 > <img src="icon.png" align="right"/>
