@@ -44,9 +44,9 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x03</td>
                 <td data-label="Name">GYROSCOPE Sensor BMO055</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x04-GYROSCOPE%20Sensor%20MPU6050/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x04-GYROSCOPE%20Sensor%20MPU6050/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/5080605618051d13a916ba3c">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-bno055-bmp280-bff.pdf">Datasheet</a></td>
+                <td data-label="Setup"><a href="">Setup</a></td>
+                <td data-label="3D Model"><a href="">3D Model</a></td>
                 <td data-label="Description">6-axis Gyroscope and Accelerometer</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3292dd0671aa85c017197eddac3cbf1397f1297f/images/BNO055.png" height="auto" width="1000" alt="MPU6050"></td>
             </tr>
