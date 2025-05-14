@@ -143,9 +143,9 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td>0x15</td>
                 <td>Push button</td>
-                <td><a href="https://docs.rs-online.com/1f89/0900766b814b93ef.pdf">Datasheet</a></td>
+                <td><a href="">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="">3D Model</a></td>
                 <td>Push Button</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/575f0d8f996cfef9ff769139a33f20e246797bd0/images/Push%20button.png" height="auto" width="1000" alt="Switch"></td>
             </tr>
@@ -188,18 +188,18 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td>0x19</td>
                 <td>RBG Led</td>
-                <td><a href="https://www.sandisk.com/home/memory-cards/microsd-cards">Datasheet</a></td>
+                <td><a href="https://components101.com/diodes/rgb-led-pinout-configuration-circuit-datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="">3D Model</a></td>
                 <td>RGB Led</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/8c57d1b0ce763fbbdc015b63e02a094686d0da0b/images/RGB%20led.png" height="auto" width="1000" alt="RBG Led"></td>
             </tr>
             <tr>
                 <td>0x20</td>
                 <td>Switch</td>
-                <td><a href="https://www.sandisk.com/home/memory-cards/microsd-cards">Datasheet</a></td>
+                <td><a href="https://docs.rs-online.com/8f3b/0900766b8137f1ad.pdf">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="">3D Model</a></td>
                 <td>Switch</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/66f749f66114f576520b85acc3fdf5edb1f33ee6/images/Switch.png" height="auto" width="1000" alt="Switch"></td>
             </tr>  
