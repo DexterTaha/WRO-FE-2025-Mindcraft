@@ -42,7 +42,7 @@ This repository provides information and knowledge regarding the ongoing progres
 |:---------------------------------------|
 |Power and Sense management discussion should cover the power source for the vehicle as well as the sensors required to provide the vehicle with information to negotiate the different challenges. The discussion can include the reasons for selecting various sensors and how they are being used on the vehicle together with power consumption. The discussion could include a wiring diagram with BOM for the vehicle that includes all aspects of professional wiring diagrams.|
 | [Bill of Materials (BOM)]()            |
-| [Schematics]()                   |
+| [Schematics](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/8bc0357a20f934db1f0ee246594716c5e9e2c6fb/schemes)                   |
 
 ---
 
