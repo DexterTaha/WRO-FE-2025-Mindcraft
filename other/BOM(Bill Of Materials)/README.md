@@ -60,7 +60,7 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/fea66e825d38112703e0e30803ce8288530d9e51/images/Picamera.png" height="auto" width="1000" alt="Camera"></td>
             </tr>
             <tr>
-                <td data-label="Code">0x06</td>
+                <td data-label="Code">0x05</td>
                 <td data-label="Name">DC Brushed Motor with Encoder</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/84b82731468978746051cf060b159d2cc26e164f/other/component%20Details/0x06-DC%20Brushed%20Motor%20with%20encoder/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/84b82731468978746051cf060b159d2cc26e164f/other/component%20Details/0x06-DC%20Brushed%20Motor%20with%20encoder/Setup">Setup</a></td>
@@ -69,13 +69,13 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/Brushed%20motor.png" height="auto" width="1000" alt="DC Motor with Encoder"></td>
             </tr>
             <tr>
-                <td data-label="Code">0x07</td>
+                <td data-label="Code">0x06</td>
                 <td data-label="Name">Wheels</td>
                 <td data-label="Datasheet"><a href="https://www.robotshop.com/en/motor-wheels.html">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://www.robotshop.com/en/wheel-and-tread.html">Setup</a></td>
                 <td data-label="3D Model"><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
                 <td data-label="Description">Wheels for robot movement</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/Wheels.png" height="auto" width="1000" alt="Wheels"></td>
+                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/49b7ff127fd819d15639d48f7cce73234cc067bf/images/wheels.png" height="auto" width="1000" alt="Wheels"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x08</td>
