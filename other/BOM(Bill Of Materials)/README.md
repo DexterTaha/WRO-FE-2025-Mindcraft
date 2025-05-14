@@ -194,6 +194,18 @@ width="1500" alt="Raspberry"></td>
                 <td>RGB Led</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/8c57d1b0ce763fbbdc015b63e02a094686d0da0b/images/RGB%20led.png" height="auto" width="1000" alt="RBG Led"></td>
             </tr>
+            <tr>
+                <td>0x10</td>
+                <td>Switch</td>
+                <td><a href="https://www.sandisk.com/home/memory-cards/microsd-cards">Datasheet</a></td>
+                <td>N/A</td>
+                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td>Switch</td>
+                <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/66f749f66114f576520b85acc3fdf5edb1f33ee6/images/Switch.png" height="auto" width="1000" alt="Switch"></td>
+            </tr>
+
+
+            
         </tbody>
     </table>
 </body>
