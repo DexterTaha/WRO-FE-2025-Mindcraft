@@ -185,6 +185,15 @@ width="1500" alt="Raspberry"></td>
                 <td>64GB SD Card</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/069266dcb97c8694b2de51c4d2f10cfe2f28b0b3/images/MEMORY-CARD.png" height="auto" width="1000" alt="SD Card"></td>
             </tr>
+            <tr>
+                <td>0x19</td>
+                <td>RBG Led</td>
+                <td><a href="https://www.sandisk.com/home/memory-cards/microsd-cards">Datasheet</a></td>
+                <td>N/A</td>
+                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td>RGB Led</td>
+                <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/8c57d1b0ce763fbbdc015b63e02a094686d0da0b/images/RGB%20led.png" height="auto" width="1000" alt="RBG Led"></td>
+            </tr>
         </tbody>
     </table>
 </body>
