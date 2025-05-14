@@ -141,13 +141,13 @@ width="1500" alt="Raspberry"></td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/TRANSISTORS.png" height="auto" width="1000" alt="7806 Transistor"></td>
             </tr>
             <tr>
-                <td>0x14</td>
-                <td>Switch High Amper</td>
+                <td>0x15</td>
+                <td>Push button</td>
                 <td><a href="https://docs.rs-online.com/1f89/0900766b814b93ef.pdf">Datasheet</a></td>
                 <td>N/A</td>
                 <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
-                <td>High Current Switch</td>
-                <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/Switch.png" height="auto" width="1000" alt="Switch"></td>
+                <td>Push Button</td>
+                <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/575f0d8f996cfef9ff769139a33f20e246797bd0/images/Push%20button.png" height="auto" width="1000" alt="Switch"></td>
             </tr>
             <tr>
                 <td>0x15</td>
@@ -184,15 +184,6 @@ width="1500" alt="Raspberry"></td>
                 <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
                 <td>64GB SD Card</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/069266dcb97c8694b2de51c4d2f10cfe2f28b0b3/images/MEMORY-CARD.png" height="auto" width="1000" alt="SD Card"></td>
-            </tr>
-            <tr>
-                <td>0x19</td>
-                <td>TPLink AC600</td>
-                <td><a href="https://www.tp-link.com/us/home-networking/usb-adapter/archer-t2u/">Datasheet</a></td>
-                <td><a href="https://static.tp-link.com/2018/201812/20181227/2018Q4_UG_T2U.pdf">Setup</a></td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
-                <td>WiFi Adapter</td>
-                <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/7db8edfbd032b0a25831cd457da72fb8935418f6/images/TP-LINK.png" height="auto" width="1000" alt="WiFi Adapter"></td>
             </tr>
         </tbody>
     </table>
