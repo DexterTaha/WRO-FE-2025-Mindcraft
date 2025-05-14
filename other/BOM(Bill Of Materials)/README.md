@@ -30,7 +30,7 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x01-Arduino%20NANO/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/58c1c76865cebcf7f2c0d9cc">3D Model</a></td>
                 <td data-label="Description">Microcontroller</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/arduino%20NANO.png" height="auto" width="1000" alt="Arduino Nano"></td>
+                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/e0ca3d18acca4e6c24058f27a92695fc994182f8/images/pico%20wh.png" height="auto" width="1000" alt="Arduino Nano"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x02</td>
@@ -43,30 +43,21 @@ width="1500" alt="Raspberry"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x03</td>
-                <td data-label="Name">Distance Sensor VL53L1X</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x03-Distance%20Sensor%20VL53L1X/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x03-Distance%20Sensor%20VL53L1X/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/94e51bc799b10763631d10cb">3D Model</a></td>
-                <td data-label="Description">Time-of-Flight Distance Sensor</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/VLX1-DTOF.png" height="auto" width="1000" alt="VL53L1X"></td>
-            </tr>
-            <tr>
-                <td data-label="Code">0x04</td>
-                <td data-label="Name">GYROSCOPE Sensor MPU6050</td>
+                <td data-label="Name">GYROSCOPE Sensor BMO055</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x04-GYROSCOPE%20Sensor%20MPU6050/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x04-GYROSCOPE%20Sensor%20MPU6050/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/5080605618051d13a916ba3c">3D Model</a></td>
                 <td data-label="Description">6-axis Gyroscope and Accelerometer</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/mpu-6050.png" height="auto" width="1000" alt="MPU6050"></td>
+                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3292dd0671aa85c017197eddac3cbf1397f1297f/images/BNO055.png" height="auto" width="1000" alt="MPU6050"></td>
             </tr>
             <tr>
-                <td data-label="Code">0x05</td>
-                <td data-label="Name">Camera</td>
+                <td data-label="Code">0x04</td>
+                <td data-label="Name">PiCamera 3 wide</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x05-Camera/Datasheet/">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/84b82731468978746051cf060b159d2cc26e164f/other/component%20Details/0x05-Camera/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://www.thingiverse.com/thing:2970128">3D Model</a></td>
                 <td data-label="Description">Camera module</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/CAM-RASPI.png" height="auto" width="1000" alt="Camera"></td>
+                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/fea66e825d38112703e0e30803ce8288530d9e51/images/Picamera.png" height="auto" width="1000" alt="Camera"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x06</td>
