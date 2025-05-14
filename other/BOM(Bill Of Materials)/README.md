@@ -71,18 +71,18 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x06</td>
                 <td data-label="Name">Wheels</td>
-                <td data-label="Datasheet"><a href="https://www.robotshop.com/en/motor-wheels.html">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://www.robotshop.com/en/wheel-and-tread.html">Setup</a></td>
-                <td data-label="3D Model"><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td data-label="Datasheet"><a href="">Datasheet</a></td>
+                <td data-label="Setup"><a href="">Setup</a></td>
+                <td data-label="3D Model"><a href="">3D Model</a></td>
                 <td data-label="Description">Wheels for robot movement</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/49b7ff127fd819d15639d48f7cce73234cc067bf/images/wheels.png" height="auto" width="1000" alt="Wheels"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x07</td>
                 <td data-label="Name">TB1266FNG Motor Driver</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/67650b7d72705afa8f343d58dabc49bec869e66c/other/component%20Details/0x08-L298N%20Motor%20driver/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/67650b7d72705afa8f343d58dabc49bec869e66c/other/component%20Details/0x08-L298N%20Motor%20driver/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://www.pololu.com/product/713">Datasheet</a></td>
+                <td data-label="Setup"><a href="">Setup</a></td>
+                <td data-label="3D Model"><a href="">3D Model</a></td>
                 <td data-label="Description">Command Motor High Voltage with logic voltage 5v</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/92a20cc2639826b5a55c2fd93658aea0b5cfd2f9/images/Motor%20Driver.png" height="auto" alt="Wheels"></td>
             </tr>
