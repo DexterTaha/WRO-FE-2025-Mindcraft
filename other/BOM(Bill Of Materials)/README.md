@@ -26,9 +26,9 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x01</td>
                 <td data-label="Name">Raspberry pi pico</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x01-Arduino%20NANO/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x01-Arduino%20NANO/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/58c1c76865cebcf7f2c0d9cc">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf">Datasheet</a></td>
+                <td data-label="Setup"><a href="">Setup</a></td>
+                <td data-label="3D Model"><a href="">3D Model</a></td>
                 <td data-label="Description">Microcontroller</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/e0ca3d18acca4e6c24058f27a92695fc994182f8/images/pico%20wh.png" height="auto" width="1000" alt="Arduino Nano"></td>
             </tr>
