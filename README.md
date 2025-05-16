@@ -15,7 +15,6 @@ This repository provides information and knowledge regarding the ongoing progres
 
 ## Content
 
-```
 📦 WRO-FE-2025-Mindcraft
 ├── 📁 `Models`                
 ├── 📁 `docs` 
@@ -32,7 +31,6 @@ This repository provides information and knowledge regarding the ongoing progres
 ├── 📄 `.gitignore` 
 ├── 📄 `LICENSE`    
 └── 📄 `README.md`             
-```
 
 
 # WRO Future Engineers Competition
