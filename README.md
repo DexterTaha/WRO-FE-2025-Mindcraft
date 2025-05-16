@@ -14,24 +14,24 @@ This repository provides information and knowledge regarding the ongoing progres
 
 
 ## Content
-
+```
 📦 WRO-FE-2025-Mindcraft
-├── 📁 `Models`                
-├── 📁 `docs` 
-├── 📁 `images`
-├── 📁 `other`      
-│   ├── 📁 `BOM(Bill Of Materials` 
+├── 📁 Models           
+├── 📁 docs
+├── 📁 images
+├── 📁 other     
+│   ├── 📁 BOM(Bill Of Materials 
 │   ├── 📁 team-photos 
 │   └── 📁 video 
-├── 📁 `schemes`  
-├── 📁 `src ( source code )` 
-├── 📁 `t-photos`
-├── 📁 `v-photos`
-├── 📁 `videos`
-├── 📄 `.gitignore` 
-├── 📄 `LICENSE`    
-└── 📄 `README.md`             
-
+├── 📁 schemes 
+├── 📁 src ( source code )
+├── 📁 t-photos
+├── 📁 v-photos
+├── 📁 videos
+├── 📄 .gitignore
+├── 📄 LICENSE
+└── 📄 README.md             
+```
 
 # WRO Future Engineers Competition
 
