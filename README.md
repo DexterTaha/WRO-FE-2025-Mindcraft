@@ -1,4 +1,7 @@
 # MINDCRAFT WRO Future Engineers team
+[![WRO - Future Engineers](https://img.shields.io/badge/WRO-Future_Engineers-2e52af)](https://wro-association.org/wp-content/uploads/WRO-2024-Future-Engineers-Self-Driving-Cars-General-Rules.pdf)
+[![YouTube - Opening Race](https://img.shields.io/badge/YouTube-▶️%20Opening_Race-df3e3e?logo=youtube)](http://www.youtube.com/@MindcraftWRO-kw8vp)
+
 
 This repository provides information and knowledge regarding the ongoing progress, evolution, and development of our self-driving robot vehicle, which was created and coded by us, Salmane Derdeb and Taha TAIDI LAAMIRI as participants in the Future Engineers 2025 division of the World Robot Olympiad (WRO).
 
