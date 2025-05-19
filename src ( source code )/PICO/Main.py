@@ -20,6 +20,42 @@ STBY = Pin(27, Pin.OUT)  # Standby pin
 buzzer.duty_u16(0)  
 # Initialize PWM frequency
 PWMA.freq(1000)  # 1kHz is typical for motors
+# Define RGB values for each color
+color_map = {
+    "red":     (1, 0, 0),
+    "green":   (0, 1, 0),
+    "blue":    (0, 0, 1),
+    "yellow":  (1, 1, 0),
+    "cyan":    (0, 1, 1),
+    "magenta": (1, 0, 1),
+    "white":   (1, 1, 1),
+    "off":     (0, 0, 0)
+}
+
+def set_color(color_name, duration=1.0, mode="solid"):
+    color = color_map.get(color_name.lower(), (0, 0, 0))  # default to off if unknown
+
+    if mode == "solid":
+        red.value(color[0])
+        green.value(color[1])
+        blue.value(color[2])
+        time.sleep(duration)
+        red.value(0)
+        green.value(0)
+        blue.value(0)
+    
+    elif mode == "blink":
+        blink_times = int(duration / 0.5)
+        for _ in range(blink_times):
+            red.value(color[0])
+            green.value(color[1])
+            blue.value(color[2])
+            time.sleep(0.25)
+            red.value(0)
+            green.value(0)
+            blue.value(0)
+            time.sleep(0.25)
+            
 # Function to produce a tone for a given frequency and duration
 def play_tone(frequency, duration):
     buzzer.freq(frequency)
