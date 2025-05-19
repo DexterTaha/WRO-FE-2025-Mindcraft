@@ -1,6 +1,6 @@
 # MINDCRAFT WRO Future Engineers team
 ## Team 
-[![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)](\)
+[![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
 [![Team Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@MindcraftWRO-kw8vp)
 
 
