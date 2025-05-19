@@ -10,17 +10,17 @@ blue = Pin(15, Pin.OUT)
 button = Pin(20, Pin.IN, Pin.PULL_UP)  # Button connected to GND
 buzzer = PWM(Pin(21))
 
-# Pin definitions (based on your setup)
-PWMA = PWM(Pin(28))      # PWM control for speed
-AIN1 = Pin(26, Pin.OUT)  # Direction control
-AIN2 = Pin(22, Pin.OUT)  # Direction control
-STBY = Pin(27, Pin.OUT)  # Standby pin
+# Motor Setup
+PWMA = PWM(Pin(28))      # PWM for speed
+AIN1 = Pin(26, Pin.OUT)  # Direction
+AIN2 = Pin(22, Pin.OUT)  # Direction
+STBY = Pin(27, Pin.OUT)  # Standby
 
 # Start with buzzer off
-buzzer.duty_u16(0)  
-# Initialize PWM frequency
-PWMA.freq(1000)  # 1kHz is typical for motors
-# Define RGB values for each color
+buzzer.duty_u16(0)
+PWMA.freq(1000)
+
+# RGB color map
 color_map = {
     "red":     (1, 0, 0),
     "green":   (0, 1, 0),
@@ -33,8 +33,7 @@ color_map = {
 }
 
 def set_color(color_name, duration=1.0, mode="solid"):
-    color = color_map.get(color_name.lower(), (0, 0, 0))  # default to off if unknown
-
+    color = color_map.get(color_name.lower(), (0, 0, 0))
     if mode == "solid":
         red.value(color[0])
         green.value(color[1])
@@ -43,7 +42,6 @@ def set_color(color_name, duration=1.0, mode="solid"):
         red.value(0)
         green.value(0)
         blue.value(0)
-    
     elif mode == "blink":
         blink_times = int(duration / 0.5)
         for _ in range(blink_times):
@@ -55,45 +53,35 @@ def set_color(color_name, duration=1.0, mode="solid"):
             green.value(0)
             blue.value(0)
             time.sleep(0.25)
-            
-# Function to produce a tone for a given frequency and duration
+
 def play_tone(frequency, duration):
     buzzer.freq(frequency)
-    buzzer.duty_u16(30000)  # Medium volume
+    buzzer.duty_u16(30000)
     time.sleep(duration)
-    buzzer.duty_u16(0)  # Turn off buzzer after sound
+    buzzer.duty_u16(0)
 
-# Buzzer for Robot Start
 def BuzzerRobotStart():
     for _ in range(3):
-        play_tone(1000, 0.2)  # 1000 Hz for 200ms
-        time.sleep(0.1)        # Short pause between tones
+        play_tone(1000, 0.2)
+        time.sleep(0.1)
 
-# Buzzer for Robot End
 def BuzzerRobotEnd():
-    play_tone(500, 1)  # 500 Hz for 1 second
+    play_tone(500, 1)
 
-# Buzzer for Robot Error
 def BuzzerRobotError():
     for _ in range(5):
-        play_tone(1500, 0.1)  # 1500 Hz for 100ms
-        time.sleep(0.1)        # Short pause between tones
-
-# Buzzer for Robot Special (Melody)
+        play_tone(1500, 0.1)
+        time.sleep(0.1)
 
 def BuzzerRobotSpecial():
-    melody = [262, 294, 330, 349]  # Notes for C, D, E, F
+    melody = [262, 294, 330, 349]  # C, D, E, F
     for note in melody:
-        play_tone(note, 0.3)  # Each note lasts for 300ms
-        time.sleep(0.1)        # Short pause between notes
-def Run(speed):
-    """Control motor speed and direction.
-    speed: -100 to 100, where sign = direction
-    """
-    # Activate the motor driver
-    STBY.value(1)
+        play_tone(note, 0.3)
+        time.sleep(0.1)
 
-    # Clamp speed to -100 to 100
+def Run(speed):
+    """Run the motor with given speed [-100 to 100]"""
+    STBY.value(1)
     speed = max(-100, min(100, speed))
 
     if speed < 0:
@@ -103,10 +91,49 @@ def Run(speed):
         AIN1.value(0)
         AIN2.value(1)
     else:
-        # Stop the motor
         AIN1.value(0)
         AIN2.value(0)
 
-    # Convert speed to duty cycle (0-65535)
-    duty = int(abs(speed) * 65535 / 100)
+    duty = int(abs(speed) * 65535 * 0.9 / 100)  # limit to 90% PWM
     PWMA.duty_u16(duty)
+    print(f"Run motor: speed={speed}, duty={duty}")
+
+def Stop():
+    AIN1.value(0)
+    AIN2.value(0)
+    PWMA.duty_u16(0)
+    STBY.value(0)
+    print("Motor stopped")
+
+def is_button_pressed():
+    if button.value() == 0:
+        time.sleep(0.05)  # debounce
+        return button.value() == 0
+    return False
+
+# Main Program Loop
+try:
+    print("Waiting for button press...")
+    while True:
+        if is_button_pressed():
+            print("Button pressed!")
+            BuzzerRobotStart()
+            set_color("green", 1, "blink")
+
+            Run(80)
+            time.sleep(2)
+
+            Run(-80)
+            time.sleep(2)
+
+            Stop()
+            set_color("red", 1, "solid")
+            BuzzerRobotEnd()
+
+            print("Cycle complete. Waiting for next press...")
+
+except KeyboardInterrupt:
+    Stop()
+    buzzer.duty_u16(0)
+    set_color("off")
+    print("Program interrupted by user.")
