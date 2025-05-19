@@ -16,6 +16,8 @@ AIN1 = Pin(26, Pin.OUT)  # Direction control
 AIN2 = Pin(22, Pin.OUT)  # Direction control
 STBY = Pin(27, Pin.OUT)  # Standby pin
 
+# Start with buzzer off
+buzzer.duty_u16(0)  
 # Initialize PWM frequency
 PWMA.freq(1000)  # 1kHz is typical for motors
 # Function to produce a tone for a given frequency and duration
