@@ -42,16 +42,19 @@
             <td style="text-align: center; vertical-align: middle;">🔢 AGE</td>
             <td style="text-align: center; vertical-align: middle;">15 YEARS OLD</td>
             <td style="text-align: center; vertical-align: middle;">19 YEARS OLD</td>
+            <td style="text-align: center; vertical-align: middle;">15 YEARS OLD</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🎓 STUDIES</td>
             <td style="text-align: center; vertical-align: middle;">10th Grade Scientific (French Option) Student</td>
             <td style="text-align: center; vertical-align: middle;">Industrial Engineering Student + Automated System Degree</td>
+            <td style="text-align: center; vertical-align: middle;">10th Grade Technic Student</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🎯 ROLE</td>
             <td style="text-align: center; vertical-align: middle;">Computer Vision and Programming Lead</td>
             <td style="text-align: center; vertical-align: middle;">Team Leader, Electrical and Electronics Lead</td>
+            <td style="text-align: center; vertical-align: middle;">Documentation & Strategy</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🌐 LANGUAGE</td>
