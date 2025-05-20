@@ -4,6 +4,11 @@ from machine import Pin, PWM
 servo = PWM(Pin(0))
 servo.freq(50)  # 50Hz for standard servo motors
 
+servoCentre = 85
+TurnRange = 60
+servoRMx = servoCentre+(TurnRange/2)
+servoLMn = servoCentre-(TurnRange/2)
+
 def set_servo_angle(angle):
     """
     Set servo to a specific angle (0 to 180 degrees).
@@ -20,3 +25,5 @@ def set_servo_angle(angle):
     duty = int(min_duty + (angle / 180) * (max_duty - min_duty))
 
     servo.duty_u16(duty)
+
+set_servo_angle(servoCentre)
