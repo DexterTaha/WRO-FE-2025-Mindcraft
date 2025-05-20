@@ -167,6 +167,7 @@
             <th style="text-align: center; vertical-align: middle; width: 25%;">🐈‍⬛ GITHUB Profile</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/salmane-derdeb">Salmane Derdeb</a></th>
             <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/DexterTaha">Taha TAIDI LAAMIRI</a></th>
+            <th style="text-align: center; vertical-align: middle; width: 25%;"><a href="https://github.com/Rayane-Ghacha">Rayane GHACHA</a></th>
         </tr>
     </tbody>
 </table>
