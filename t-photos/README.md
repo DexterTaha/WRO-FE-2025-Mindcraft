@@ -35,7 +35,7 @@
                 <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/17705f416c66d8c19de54413387f8e33786d9a26/images/Taha%20TAIDI%20LAAMIRI.png" width="420" alt="Taha Taidi Laamiri">
             </td>
              <td style="text-align: center; vertical-align: middle;">
-                <img src="https://github.com/user-attachments/assets/5c9d1a28-243c-4c6f-8052-82998c2a2ced" width="200" alt="Rayan ghacha">
+                <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/84c637bc7193911377976d6bf9bd4caf7693fa32/images/Rayane.png" width="200" alt="Rayane ghacha">
             </td>
         </tr>
         <tr>
