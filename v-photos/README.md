@@ -11,11 +11,11 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3648581beedd647cb17bd90c8236784383e7d88c/images/top-view.JPG" alt="Top View" height="700">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3648581beedd647cb17bd90c8236784383e7d88c/images/top-view.JPG" alt="Top View" height="650">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Top View</p>
     </td>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/bottom-view.JPG" alt="Bottom View" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/bottom-view.JPG" alt="Bottom View" height="650">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Bottom View</p>
     </td>
   </tr>
