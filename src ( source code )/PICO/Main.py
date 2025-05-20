@@ -16,9 +16,23 @@ AIN1 = Pin(26, Pin.OUT)  # Direction
 AIN2 = Pin(22, Pin.OUT)  # Direction
 STBY = Pin(27, Pin.OUT)  # Standby
 
-# Start with buzzer off
-buzzer.duty_u16(0)
-PWMA.freq(1000)
+# Servo Setup
+servo = PWM(Pin(0))
+servo.freq(50)  # Standard servo frequency
+servoCentre = 85
+TurnRange = 60
+servoRMx = servoCentre + (TurnRange / 2)
+servoLMn = servoCentre - (TurnRange / 2)
+
+def set_servo_angle(angle):
+    """
+    Set servo to a specific angle (0 to 180 degrees).
+    """
+    angle = max(0, min(180, angle))
+    min_duty = 1000
+    max_duty = 9000
+    duty = int(min_duty + (angle / 180) * (max_duty - min_duty))
+    servo.duty_u16(duty)
 
 # RGB color map
 color_map = {
@@ -74,13 +88,12 @@ def BuzzerRobotError():
         time.sleep(0.1)
 
 def BuzzerRobotSpecial():
-    melody = [262, 294, 330, 349]  # C, D, E, F
+    melody = [262, 294, 330, 349]
     for note in melody:
         play_tone(note, 0.3)
         time.sleep(0.1)
 
 def Run(speed):
-    """Run the motor with given speed [-100 to 100]"""
     STBY.value(1)
     speed = max(-100, min(100, speed))
 
@@ -94,7 +107,7 @@ def Run(speed):
         AIN1.value(0)
         AIN2.value(0)
 
-    duty = int(abs(speed) * 65535 * 0.9 / 100)  # limit to 90% PWM
+    duty = int(abs(speed) * 65535 * 0.9 / 100)
     PWMA.duty_u16(duty)
     print(f"Run motor: speed={speed}, duty={duty}")
 
@@ -107,7 +120,7 @@ def Stop():
 
 def is_button_pressed():
     if button.value() == 0:
-        time.sleep(0.05)  # debounce
+        time.sleep(0.05)
         return button.value() == 0
     return False
 
@@ -120,6 +133,11 @@ try:
             BuzzerRobotStart()
             set_color("green", 1, "blink")
 
+            # Move servo to center
+            print("Centering servo...")
+            set_servo_angle(servoCentre)
+            time.sleep(0.5)
+
             Run(80)
             time.sleep(2)
 
@@ -127,6 +145,19 @@ try:
             time.sleep(2)
 
             Stop()
+
+            # Move servo left and right
+            print("Turning servo left...")
+            set_servo_angle(servoLMn)
+            time.sleep(0.5)
+
+            print("Turning servo right...")
+            set_servo_angle(servoRMx)
+            time.sleep(0.5)
+
+            print("Returning servo to center...")
+            set_servo_angle(servoCentre)
+
             set_color("red", 1, "solid")
             BuzzerRobotEnd()
 
@@ -136,4 +167,5 @@ except KeyboardInterrupt:
     Stop()
     buzzer.duty_u16(0)
     set_color("off")
+    set_servo_angle(servoCentre)
     print("Program interrupted by user.")
