@@ -73,6 +73,13 @@
                     <li>English: Very Good</li>
                 </ul>
             </td>
+            <td style="text-align: center; vertical-align: middle;">
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li>French: Native</li>
+                    <li>Arabic: Very Good</li>
+                    <li>English: Very Good</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: top;">🛠️ RESPONSIBILITIES</td>
