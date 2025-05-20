@@ -123,7 +123,6 @@
                     <li><img src="https://skillicons.dev/icons?i=bootstrap" width="32" alt="Bootstrap"> Bootstrap</li>
                     <li><img src="https://skillicons.dev/icons?i=figma" width="32" alt="Figma"> Figma</li>
                     <li><img src="https://skillicons.dev/icons?i=c" width="32" alt="C"> C</li>
-                    <li><img src="https://skillicons.dev/icons?i=cpp" width="32" alt="C++"> C++</li>
                     <li><img src="https://skillicons.dev/icons?i=py" width="32" alt="Python"> Python</li>
                     <li><img src="https://skillicons.dev/icons?i=linux" width="32" alt="Linux"> Linux</li>
                     <li><img src="https://skillicons.dev/icons?i=ubuntu" width="32" alt="Ubuntu"> Ubuntu</li>
