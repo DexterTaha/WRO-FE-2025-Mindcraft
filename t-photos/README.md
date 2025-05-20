@@ -48,7 +48,7 @@
             <td style="text-align: center; vertical-align: middle;">🎓 STUDIES</td>
             <td style="text-align: center; vertical-align: middle;">10th Grade Scientific (French Option) Student</td>
             <td style="text-align: center; vertical-align: middle;">Industrial Engineering Student + Automated System Degree</td>
-            <td style="text-align: center; vertical-align: middle;">10th Grade Technic Student</td>
+            <td style="text-align: center; vertical-align: middle;">10th Grade Technic (French Option) Student</td>
         </tr>
         <tr>
             <td style="text-align: center; vertical-align: middle;">🎯 ROLE</td>
