@@ -126,6 +126,24 @@ def is_button_pressed():
         time.sleep(0.05)
         return button.value() == 0
     return False
+    
+def move(speed, steer):
+    """
+    Controls both motor speed and steering angle.
+
+    :param speed: Motor speed (-100 to 100)
+    :param steer: Steering direction (-100 to 100)
+    """
+    # Clamp steer value
+    steer = max(-100, min(100, steer))
+    
+    # Map steer value to servo angle
+    angle = servoCentre + (steer / 100) * (TurnRange / 2)
+    set_servo_angle(angle)
+    print(f"Steering: steer={steer}, angle={angle}")
+
+    # Run the motor
+    Run(speed)
 
 # Main Program Loop
 try:
