@@ -89,7 +89,6 @@
                     <li>Handle general programming, ensuring software works with hardware.</li>
                     <li>Create and edit videos, graphics, and team content.</li>
                     <li>Produce 3D animations using Blender for project visuals.</li>
-                    <li>Document work on GitHub and maintain the physical engineering notebook.</li>
                 </ul>
             </td>
             <td style="text-align: center; vertical-align: top;">
@@ -99,8 +98,15 @@
                     <li>Conduct technical study and oversee engineering of the robot.</li>
                     <li>Design and create the PCB and handle electronics connections.</li>
                     <li>Perform component compatibility calculations.</li>
+                </ul>
+            </td>
+            <td style="text-align: center; vertical-align: top;">
+                <ul style="list-style-type: disc; padding-left: 20px;">
+                    <li>Records all technical and design progress.</li>
+                    <li>Document work on GitHub and maintain the physical engineering notebook.</li>
+                    <li>Analyzes the game rules and scoring.</li>
+                    <li>Designs and adjusts the mission plan</li>
                     <li>Manage the Bill of Materials (BOM) and component sourcing.</li>
-                    <li>Document project progress on GitHub.</li>
                 </ul>
             </td>
         </tr>
