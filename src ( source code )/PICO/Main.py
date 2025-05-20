@@ -16,6 +16,9 @@ AIN1 = Pin(26, Pin.OUT)  # Direction
 AIN2 = Pin(22, Pin.OUT)  # Direction
 STBY = Pin(27, Pin.OUT)  # Standby
 
+# Initialize PWM frequency
+PWMA.freq(1000)  # 1kHz is typical for motors
+
 # Servo Setup
 servo = PWM(Pin(0))
 servo.freq(50)  # Standard servo frequency
@@ -97,10 +100,10 @@ def Run(speed):
     STBY.value(1)
     speed = max(-100, min(100, speed))
 
-    if speed < 0:
+    if speed > 0:
         AIN1.value(1)
         AIN2.value(0)
-    elif speed > 0:
+    elif speed < 0:
         AIN1.value(0)
         AIN2.value(1)
     else:
