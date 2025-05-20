@@ -11,7 +11,7 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3648581beedd647cb17bd90c8236784383e7d88c/images/top-view.JPG" alt="Top View" height="800">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/3648581beedd647cb17bd90c8236784383e7d88c/images/top-view.JPG" alt="Top View" height="650">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Top View</p>
     </td>
     <td>
