@@ -22,6 +22,7 @@
             <th style="text-align: center; vertical-align: middle; width: 25%;">👤 NAME</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;">DERDEB Salmane</th>
             <th style="text-align: center; vertical-align: middle; width: 25%;">TAIDI LAAMIRI TAHA</th>
+            <th style="text-align: center; vertical-align: middle; width: 25%;">RAYANE GHACHA</th>
         </tr>
     </thead>
     <tbody>
@@ -32,6 +33,9 @@
             </td>
             <td style="text-align: center; vertical-align: middle;">
                 <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/17705f416c66d8c19de54413387f8e33786d9a26/images/Taha%20TAIDI%20LAAMIRI.png" width="400" alt="Taha Taidi Laamiri">
+            </td>
+             <td style="text-align: center; vertical-align: middle;">
+                <img src="https://github.com/user-attachments/assets/5c9d1a28-243c-4c6f-8052-82998c2a2ced" width="200" alt="Rayan ghacha">
             </td>
         </tr>
         <tr>
