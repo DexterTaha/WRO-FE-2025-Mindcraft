@@ -148,6 +148,21 @@
                     <li><img src="https://skillicons.dev/icons?i=raspberrypi" width="32" alt="Raspberry Pi"> Raspberry Pi</li>
                 </ul>
             </td>
+            <td style="text-align: left; vertical-align: top;">
+                <ul style="list-style-type: none; padding-left: 0;">
+                    <li><img src="https://skillicons.dev/icons?i=github" width="32" alt="GitHub"> GitHub</li>
+                    <li><img src="https://skillicons.dev/icons?i=html" width="32" alt="HTML"> HTML</li>
+                    <li><img src="https://skillicons.dev/icons?i=css" width="32" alt="CSS"> CSS</li>
+                    <li><img src="https://skillicons.dev/icons?i=scss" width="32" alt="SCSS"> SCSS</li>
+                    <li><img src="https://skillicons.dev/icons?i=js" width="32" alt="JavaScript"> JavaScript</li>
+                    <li><img src="https://skillicons.dev/icons?i=react" width="32" alt="React"> React</li>
+                    <li><img src="https://skillicons.dev/icons?i=bootstrap" width="32" alt="Bootstrap"> Bootstrap</li>
+                    <li><img src="https://skillicons.dev/icons?i=figma" width="32" alt="Figma"> Figma</li>
+                    <li><img src="https://skillicons.dev/icons?i=py" width="32" alt="Python"> Python</li>
+                     <li><img src="https://skillicons.dev/icons?i=linux" width="32" alt="Linux"> Linux</li>
+                    <li><img src="https://skillicons.dev/icons?i=raspberrypi" width="32" alt="Raspberry Pi"> Raspberry Pi</li>
+                </ul>
+            </td>
         </tr>
         <tr>
             <th style="text-align: center; vertical-align: middle; width: 25%;">🐈‍⬛ GITHUB Profile</th>
