@@ -56,11 +56,11 @@
 <table>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/cbc1ae4867dddde1a955f655e8078c0f428cc90a/v-photos/rendering%20images/top.png" alt="ROBOT TOP VIEW" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/cbc1ae4867dddde1a955f655e8078c0f428cc90a/v-photos/rendering%20images/top.png" alt="ROBOT TOP VIEW" height="500">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Top View</p>
     </td>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/cbc1ae4867dddde1a955f655e8078c0f428cc90a/v-photos/rendering%20images/bottom.png" alt="ROBOT BOTTOM VIEW" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/cbc1ae4867dddde1a955f655e8078c0f428cc90a/v-photos/rendering%20images/bottom.png" alt="ROBOT BOTTOM VIEW" height="500">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Bottom View</p>
     </td>
   </tr>
