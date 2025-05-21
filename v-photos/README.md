@@ -21,21 +21,21 @@
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/right-view.JPG" alt="Right View" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/left-view.JPG" alt="Right View" height="300">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Right View</p>
     </td>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/left-view.JPG" alt="Left View" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/right-view.JPG" alt="Left View" height="300">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Left View</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/rear-view.JPG" alt="Back View" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/face-view.JPG" alt="Back View" height="300">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Face View</p>
     </td>
     <td>
-      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/face-view.JPG" alt="Front View" height="300">
+      <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/9a4f6618b9a7737b5979be54bd2ee9eb5d411a3e/images/rear-view.JPG" alt="Front View" height="300">
       <p style="text-align: center; font-size: 24px; font-weight: bold;">Rear View</p>
     </td>
   </tr>
