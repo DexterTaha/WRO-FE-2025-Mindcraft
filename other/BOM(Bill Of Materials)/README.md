@@ -44,7 +44,7 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x03</td>
                 <td data-label="Name">GYROSCOPE Sensor BMO055</td>
-                <td data-label="Datasheet"><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-bno055-bmp280-bff.pdf">Datasheet</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x03-GYROSCOPE%20Sensor%20BMO055/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x03-GYROSCOPE%20Sensor%20BMO055/3D%20Models">3D Model</a></td>
                 <td data-label="Description">6-axis Gyroscope and Accelerometer</td>
