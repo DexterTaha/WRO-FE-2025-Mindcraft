@@ -107,27 +107,27 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td>0x10</td>
                 <td>IMAX B6AC V2</td>
-                <td><a href="https://www.skyrc.com/Charger/B6AC_V2">Datasheet</a></td>
-                <td><a href="https://manuals.skyrc.com/B6AC%20V2.pdf">Setup</a></td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x10-IMAX%20B6AC%20V2/Datasheet">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x10-IMAX%20B6AC%20V2/Setup">Setup</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x10-IMAX%20B6AC%20V2/3D%20Models">3D Model</a></td>
                 <td>Battery Charger</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/B6AC1.png" height="auto" width="1000" alt="IMAX Charger"></td>
             </tr>
             <tr>
                 <td>0x11</td>
                 <td>7806 Transistor</td>
-                <td><a href="https://www.onsemi.com/pdf/datasheet/l78-d.pdf">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x11-7806%20Transistor/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x11-7806%20Transistor/3D%20Models">3D Model</a></td>
                 <td>6V Voltage Regulator</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/TRANSISTORS.png" height="auto" width="1000" alt="7806 Transistor"></td>
             </tr>             
             <tr>
                 <td>0x12</td>
                 <td>7805 Transistor</td>
-                <td><a href="https://www.onsemi.com/pdf/datasheet/l78-d.pdf">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x12-7805%20Transistor/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x12-7805%20Transistor/3D%20Models">3D Model</a></td>
                 <td>6V Voltage Regulator</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/TRANSISTORS.png" height="auto" width="1000" alt="7806 Transistor"></td>
             </tr>
