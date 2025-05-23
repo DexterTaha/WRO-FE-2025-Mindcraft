@@ -26,9 +26,9 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x01</td>
                 <td data-label="Name">Raspberry pi pico</td>
-                <td data-label="Datasheet"><a href="https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf">Datasheet</a></td>
-                <td data-label="Setup"><a href="">Setup</a></td>
-                <td data-label="3D Model"><a href="">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x01-Raspberry%20pi%20pico/Datasheet">Datasheet</a></td>
+                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x01-Raspberry%20pi%20pico/Setup">Setup</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x01-Raspberry%20pi%20pico/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Microcontroller</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/e0ca3d18acca4e6c24058f27a92695fc994182f8/images/pico%20wh.png" height="auto" width="1000" alt="Arduino Nano"></td>
             </tr>
