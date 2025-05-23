@@ -70,37 +70,37 @@ width="1500" alt="Raspberry"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x06</td>
-                <td data-label="Name">Wheels</td>
-                <td data-label="Datasheet"><a href="">Datasheet</a></td>
-                <td data-label="Setup"><a href="">Setup</a></td>
-                <td data-label="3D Model"><a href="">3D Model</a></td>
+                <td data-label="Name">Wheels</td>https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Datasheet
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Datasheet">Datasheet</a></td>
+                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Setup">Setup</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Wheels for robot movement</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/49b7ff127fd819d15639d48f7cce73234cc067bf/images/wheels.png" height="auto" width="1000" alt="Wheels"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x07</td>
                 <td data-label="Name">TB1266FNG Motor Driver</td>
-                <td data-label="Datasheet"><a href="https://www.pololu.com/product/713">Datasheet</a></td>
-                <td data-label="Setup"><a href="">Setup</a></td>
-                <td data-label="3D Model"><a href="">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x07-TB1266FNG%20Motor%20Driver/Datasheet">Datasheet</a></td>
+                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x07-TB1266FNG%20Motor%20Driver/Setup">Setup</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x07-TB1266FNG%20Motor%20Driver/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Command Motor High Voltage with logic voltage 5v</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/92a20cc2639826b5a55c2fd93658aea0b5cfd2f9/images/Motor%20Driver.png" height="auto" alt="Wheels"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x08</td>
                 <td data-label="Name">Servo motor Metal Gear Box 180°</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/67650b7d72705afa8f343d58dabc49bec869e66c/other/component%20Details/0x09-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/67650b7d72705afa8f343d58dabc49bec869e66c/other/component%20Details/0x09-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x08-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/Datasheet">Datasheet</a></td>
+                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x08-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/Setup">Setup</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x08-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/3D%20Models">3D Model</a></td>
                 <td data-label="Description">For Robot turning</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/67650b7d72705afa8f343d58dabc49bec869e66c/images/SERVO.png" height="auto" alt="Wheels"></td>
             </tr>
             <tr>
                 <td>0x9</td>
                 <td>Lipo 3S 2200mah 11.1V 50C</td>
-                <td><a href="https://www.hobbyking.com/hobbyking/store/__17356__Turnigy_2200mAh_3S_20C_Lipo_Pack.html">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x09-Lipo%203S%202200mah%2011.1V%2050C/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x09-Lipo%203S%202200mah%2011.1V%2050C/3D%20Models">3D Model</a></td>
                 <td>Lithium Polymer Battery</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/BATTERIE.png" height="auto" width="1000" alt="Lipo Battery" ></td>
             </tr>
