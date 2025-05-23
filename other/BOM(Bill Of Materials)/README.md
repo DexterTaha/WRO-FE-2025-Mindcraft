@@ -53,7 +53,7 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x04</td>
                 <td data-label="Name">PiCamera 3 wide</td>
-                <td data-label="Datasheet"><a href="https://datasheets.raspberrypi.com/camera/camera-module-3-product-brief.pdf">Datasheet</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x04-PiCamera%203%20wide/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x04-PiCamera%203%20wide/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Camera module</td>
