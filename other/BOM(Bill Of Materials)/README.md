@@ -134,72 +134,72 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td>0x13</td>
                 <td>7809 Transistor</td>
-                <td><a href="https://www.onsemi.com/pdf/datasheet/l78-d.pdf">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x13-7809%20Transistor/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x13-7809%20Transistor/3D%20Models">3D Model</a></td>
                 <td>6V Voltage Regulator</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/TRANSISTORS.png" height="auto" width="1000" alt="7806 Transistor"></td>
             </tr>
             <tr>
                 <td>0x14</td>
                 <td>Push button</td>
-                <td><a href="">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x14-Push%20button/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x14-Push%20button/3D%20Models">3D Model</a></td>
                 <td>Push Button</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/575f0d8f996cfef9ff769139a33f20e246797bd0/images/Push%20button.png" height="auto" width="1000" alt="Switch"></td>
             </tr>
             <tr>
                 <td>0x15</td>
                 <td>Buzzer Alarm Batterie Lipo</td>
-                <td><a href="https://www.hobbyking.com/hobbyking/store/__24786__Hobbyking_8482_Lipoly_Low_Voltage_Alarm_2S_3S.html">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x15-Buzzer%20Alarm%20Batterie%20Lipo/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x15-Buzzer%20Alarm%20Batterie%20Lipo/3D%20Models">3D Model</a></td>
                 <td>Lipo Battery Alarm</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/livo%20battery%20level%20sensor.png" height="auto" width="1000" alt="Buzzer Alarm"></td>
             </tr>
             <tr>
                 <td>0x16</td>
                 <td>Servo Tester</td>
-                <td><a href="https://www.servocity.com/servo-tester/">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x16-Servo%20Tester/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x16-Servo%20Tester/3D%20Models">3D Model</a></td>
                 <td>Servo Motor Tester</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/4c209b5711322504d4969d14073aa15a5130b8df/images/pwm.png" height="auto" width="1000" alt="Servo Tester"></td>
             </tr>
             <tr>
                 <td>0x17</td>
                 <td>Servobras</td>
-                <td><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/cf7c3951c0394e6adfc05022">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x17-Servobras/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x17-Servobras/3D%20Models">3D Model</a></td>
                 <td>Servo Arm</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/4c209b5711322504d4969d14073aa15a5130b8df/images/SERVOBRAS.png" height="auto"></td>
             </tr>
             <tr>
                 <td>0x18</td>
                 <td>SD Card 64GB</td>
-                <td><a href="https://www.sandisk.com/home/memory-cards/microsd-cards">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x18-SD%20card%2064GB/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="https://www.thingiverse.com/thing:1864586">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x18-SD%20card%2064GB/3D%20Models">3D Model</a></td>
                 <td>64GB SD Card</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/069266dcb97c8694b2de51c4d2f10cfe2f28b0b3/images/MEMORY-CARD.png" height="auto" width="1000" alt="SD Card"></td>
             </tr>
             <tr>
                 <td>0x19</td>
                 <td>RBG Led</td>
-                <td><a href="https://components101.com/diodes/rgb-led-pinout-configuration-circuit-datasheet">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x19-RBG%20Led/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x19-RBG%20Led/3D%20Models">3D Model</a></td>
                 <td>RGB Led</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/8c57d1b0ce763fbbdc015b63e02a094686d0da0b/images/RGB%20led.png" height="auto" width="1000" alt="RBG Led"></td>
             </tr>
             <tr>
                 <td>0x20</td>
                 <td>Switch</td>
-                <td><a href="https://docs.rs-online.com/8f3b/0900766b8137f1ad.pdf">Datasheet</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x20-Switch/Datasheet">Datasheet</a></td>
                 <td>N/A</td>
-                <td><a href="">3D Model</a></td>
+                <td><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x20-Switch/3D%20Models">3D Model</a></td>
                 <td>Switch</td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/66f749f66114f576520b85acc3fdf5edb1f33ee6/images/Switch.png" height="auto" width="1000" alt="Switch"></td>
             </tr>  
