@@ -54,7 +54,7 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Code">0x04</td>
                 <td data-label="Name">PiCamera 3 wide</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x04-PiCamera%203%20wide/Datasheet">Datasheet</a></td>
-                <td data-label="Setup"><a href="">Setup</a></td>
+                <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x04-PiCamera%203%20wide/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x04-PiCamera%203%20wide/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Camera module</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/fea66e825d38112703e0e30803ce8288530d9e51/images/Picamera.png" height="auto" width="1000" alt="Camera"></td>
