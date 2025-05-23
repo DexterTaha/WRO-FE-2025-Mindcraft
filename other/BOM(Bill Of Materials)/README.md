@@ -64,7 +64,7 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Name">DC Brushed Motor with Encoder</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/84b82731468978746051cf060b159d2cc26e164f/other/component%20Details/0x06-DC%20Brushed%20Motor%20with%20encoder/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/84b82731468978746051cf060b159d2cc26e164f/other/component%20Details/0x06-DC%20Brushed%20Motor%20with%20encoder/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/bc317ffe6fa7f5ad89df3856">3D Model</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x05-DC%20Brushed%20Motor%20with%20Encoder/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Motor for movement with encoder feedback</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/Brushed%20motor.png" height="auto" width="1000" alt="DC Motor with Encoder"></td>
             </tr>
