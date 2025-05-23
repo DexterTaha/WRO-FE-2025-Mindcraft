@@ -35,7 +35,7 @@ width="1500" alt="Raspberry"></td>
             <tr>
                 <td data-label="Code">0x02</td>
                 <td data-label="Name">LIDAR</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x02-LIDAR/Datasheet">Datasheet</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x02-LIDAR/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/47bf23bfe6a8f57052bee0b2b33903a335146ad1/other/component%20Details/0x02-LIDAR/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x02-LIDAR/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Laser Range Sensor</td>
