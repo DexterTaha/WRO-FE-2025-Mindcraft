@@ -18,7 +18,7 @@
                 <td data-label="Name">Raspberry Pi 4B</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/9ad9d503698aa839e118a1041bc7e58b6689c99e/other/component%20Details/0x00-Raspberry%20Pi%204B/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/9ad9d503698aa839e118a1041bc7e58b6689c99e/other/component%20Details/0x00-Raspberry%20Pi%204B/Setup">Setup</a></td>
-                <td data-label="3D Model"><a href="https://developer.nvidia.com/embedded/learn/jetson-nano-3d-models">3D Model</a></td>
+                <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x00-Raspberry%20Pi%204B">3D Model</a></td>
                 <td data-label="Description">Main computing unit</td>
                 <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/94d52010db407ad0a1d92fda1c9abeead3c4f7cd/images/Raspberry%20pi%204B.png" height="auto" 
 width="1500" alt="Raspberry"></td>
