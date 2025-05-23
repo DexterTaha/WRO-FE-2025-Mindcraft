@@ -141,7 +141,7 @@ width="1500" alt="Raspberry"></td>
                 <td><img src="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/797552ba634ac775af451a20127c331770118177/images/TRANSISTORS.png" height="auto" width="1000" alt="7806 Transistor"></td>
             </tr>
             <tr>
-                <td>0x15</td>
+                <td>0x14</td>
                 <td>Push button</td>
                 <td><a href="">Datasheet</a></td>
                 <td>N/A</td>
