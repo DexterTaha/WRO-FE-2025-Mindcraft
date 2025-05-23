@@ -16,7 +16,7 @@
             <tr>
                 <td data-label="Code">0x00</td>
                 <td data-label="Name">Raspberry Pi 4B</td>
-                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/9ad9d503698aa839e118a1041bc7e58b6689c99e/other/component%20Details/0x00-Raspberry%20Pi%204B/Datasheet">Datasheet</a></td>
+                <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x00-Raspberry%20Pi%204B/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/9ad9d503698aa839e118a1041bc7e58b6689c99e/other/component%20Details/0x00-Raspberry%20Pi%204B/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x00-Raspberry%20Pi%204B/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Main computing unit</td>
