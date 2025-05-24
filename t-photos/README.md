@@ -75,7 +75,7 @@
             </td>
             <td style="text-align: center; vertical-align: middle;">
                 <ul style="list-style-type: none; padding-left: 0;">
-                    <li>French: Native</li>
+                    <li>French: Very Good</li>
                     <li>Arabic: Very Good</li>
                     <li>English: Very Good</li>
                 </ul>
