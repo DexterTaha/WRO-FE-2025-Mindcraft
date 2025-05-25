@@ -70,7 +70,7 @@ width="1500" alt="Raspberry"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x06</td>
-                <td data-label="Name">Wheels</td>https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Datasheet
+                <td data-label="Name">Wheels</td>
                 <td data-label="Datasheet"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Datasheet">Datasheet</a></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x06-Wheels/3D%20Models">3D Model</a></td>
