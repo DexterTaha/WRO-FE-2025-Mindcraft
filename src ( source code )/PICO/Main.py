@@ -49,27 +49,43 @@ color_map = {
     "off":     (0, 0, 0)
 }
 
-def set_color(color_name, duration=1.0, mode="solid"):
+def set_color(color_name, duration=None, mode="solid"):
     color = color_map.get(color_name.lower(), (0, 0, 0))
+
     if mode == "solid":
         red.value(color[0])
         green.value(color[1])
         blue.value(color[2])
-        time.sleep(duration)
-        red.value(0)
-        green.value(0)
-        blue.value(0)
-    elif mode == "blink":
-        blink_times = int(duration / 0.5)
-        for _ in range(blink_times):
-            red.value(color[0])
-            green.value(color[1])
-            blue.value(color[2])
-            time.sleep(0.25)
+        if duration is not None:
+            time.sleep(duration)
             red.value(0)
             green.value(0)
             blue.value(0)
-            time.sleep(0.25)
+
+    elif mode == "blink":
+        if duration is None:
+            # Blink forever
+            while True:
+                red.value(color[0])
+                green.value(color[1])
+                blue.value(color[2])
+                time.sleep(0.25)
+                red.value(0)
+                green.value(0)
+                blue.value(0)
+                time.sleep(0.25)
+        else:
+            blink_times = int(duration / 0.5)
+            for _ in range(blink_times):
+                red.value(color[0])
+                green.value(color[1])
+                blue.value(color[2])
+                time.sleep(0.25)
+                red.value(0)
+                green.value(0)
+                blue.value(0)
+                time.sleep(0.25)
+
 
 def play_tone(frequency, duration):
     buzzer.freq(frequency)
@@ -145,44 +161,28 @@ def move(speed, steer):
     # Run the motor
     Run(speed)
 
+def robotstart():
+    print("robot start")
+    BuzzerRobotStart()
+    set_color("green", 1, "blink")
+    
+def robotend(): 
+    set_color("red", 1, "solid")
+    BuzzerRobotEnd()
+    print("robot finished")
+    
+def main():
+    set_color("blue", "blink")
+    
+    
 # Main Program Loop
 try:
     print("Waiting for button press...")
     while True:
         if is_button_pressed():
-            print("Button pressed!")
-            BuzzerRobotStart()
-            set_color("green", 1, "blink")
-
-            # Move servo to center
-            print("Centering servo...")
-            set_servo_angle(servoCentre)
-            time.sleep(0.5)
-
-            Run(80)
-            time.sleep(2)
-
-            Run(-80)
-            time.sleep(2)
-
-            Stop()
-
-            # Move servo left and right
-            print("Turning servo left...")
-            set_servo_angle(servoLMn)
-            time.sleep(0.5)
-
-            print("Turning servo right...")
-            set_servo_angle(servoRMx)
-            time.sleep(0.5)
-
-            print("Returning servo to center...")
-            set_servo_angle(servoCentre)
-
-            set_color("red", 1, "solid")
-            BuzzerRobotEnd()
-
-            print("Cycle complete. Waiting for next press...")
+            robotstart()
+            main()
+            robotend()
 
 except KeyboardInterrupt:
     Stop()
