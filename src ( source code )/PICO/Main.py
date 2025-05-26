@@ -178,6 +178,7 @@ def main():
 # Main Program Loop
 try:
     print("Waiting for button press...")
+    set_servo_angle(servoCentre)
     while True:
         if is_button_pressed():
             robotstart()
