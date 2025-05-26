@@ -8,6 +8,8 @@
 
 * [Hardware Overview](#hardware-overview)
 * [Wiring Diagram](#wiring-diagram)
+* [About Fritzing](#about-fritzing)
+* [Download Fritzing](#download-fritzing)
 * [Power Management](#power-management)
 * [Communication Architecture](#communication-architecture)
 * [Component Responsibilities](#component-responsibilities)
@@ -44,6 +46,27 @@
 A visual schematic is available in the repo:
 
 ![Robot Circuit Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/schemes.png)
+![View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Circuit.png)
+📌 **High-resolution version** of the full circuit:
+🔗 [View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Circuit.png)
+
+📥 **Download the Fritzing (.fzz) project file:**
+🔗 [Download circuit.fzz from GitHub](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit.fzz)
+
+👉 **Local Download (.fzz)**: <button style="padding: 10px 16px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='/mnt/data/dbd61b93-c1bc-48fd-b559-80db10cae37b.png'">Download Circuit File (.fzz)</button>
+
+---
+
+## 🛠️ About Fritzing
+
+**Fritzing** is an open-source hardware design tool that makes it easy to create electronics schematics and PCB layouts using a visual breadboard-style interface. It's ideal for makers, students, and robotics teams.
+
+🔧 **Download Fritzing**:
+👉 [https://fritzing.org/download](https://fritzing.org/download)
+
+*Available for Windows, macOS, and Linux.*
+
+Fritzing helps document projects like this one by providing a clear and modifiable graphical circuit overview for prototyping, testing, and presentation.
 
 ---
 
