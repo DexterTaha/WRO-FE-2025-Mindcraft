@@ -1,0 +1,1921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://mydomain.org/mysite/models/models/">
+      
+      
+        <link rel="prev" href="../../docsfile/docs/">
+      
+      
+        <link rel="next" href="../../otherfile/BOM/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Models - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wro-future-engineers-robot-models" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../docsfile/docs/" class="md-tabs__link">
+          
+  
+  
+  Docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../otherfile/BOM/" class="md-tabs__link">
+          
+  
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../schemesfile/schemes/" class="md-tabs__link">
+          
+  
+  
+  Schemes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../t-photosfile/t-photos/" class="md-tabs__link">
+          
+  
+  
+  t-photos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../v-photos/v-photos/" class="md-tabs__link">
+          
+  
+  
+  v-photos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../docsfile/docs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Models
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-considerations-before-cad-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Considerations Before CAD Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Considerations Before CAD Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#study-and-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study and Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-robot-design-and-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Robot Design and Iterations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Robot Design and Iterations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#national-competition-lego-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      National Competition: LEGO Robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-version-oversized-diy-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Version: Oversized DIY Robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-version-lack-of-differential-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Version: Lack of Differential System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-version-final-optimized-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Third Version: Final Optimized Robot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-cad-modeling-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D CAD Modeling - Onshape
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D CAD Modeling - Onshape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-chose-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Chose Onshape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-of-onshape-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video of Onshape Demonstration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots-of-our-robot-3d-model-in-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots of Our Robot 3D Model in Onshape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-cad-options-considered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other CAD Options Considered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshape-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onshape Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Onshape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Printing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Printing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-chose-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Chose 3D Printing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-of-choice-creality-k1-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer of Choice: Creality K1 Max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-printed-robot-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Printed Robot Parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-of-printing-a-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video of Printing a Part
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-didnt-choose-laser-cutting-or-cnc-engraving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Didn't Choose Laser Cutting or CNC Engraving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of 3D Printing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robot-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot Assembly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steering-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steering System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-parts-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot Parts Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Other
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../otherfile/BOM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Schemes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Schemes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schemesfile/schemes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schemes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    t-photos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            t-photos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t-photosfile/t-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    t-photos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    v-photos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            v-photos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../v-photos/v-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    v-photos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-considerations-before-cad-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Considerations Before CAD Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Design Considerations Before CAD Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Requirements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#study-and-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Study and Planning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#initial-robot-design-and-iterations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Robot Design and Iterations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Initial Robot Design and Iterations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#national-competition-lego-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      National Competition: LEGO Robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#first-version-oversized-diy-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Version: Oversized DIY Robot
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#second-version-lack-of-differential-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Second Version: Lack of Differential System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-version-final-optimized-robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Third Version: Final Optimized Robot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-cad-modeling-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D CAD Modeling - Onshape
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D CAD Modeling - Onshape">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-chose-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Chose Onshape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-of-onshape-demonstration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video of Onshape Demonstration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenshots-of-our-robot-3d-model-in-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screenshots of Our Robot 3D Model in Onshape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-cad-options-considered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other CAD Options Considered
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#onshape-advantages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Onshape Advantages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#learning-onshape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning Onshape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Printing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3D Printing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-we-chose-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Chose 3D Printing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#printer-of-choice-creality-k1-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      Printer of Choice: Creality K1 Max
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-printed-robot-parts" class="md-nav__link">
+    <span class="md-ellipsis">
+      3D Printed Robot Parts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-of-printing-a-part" class="md-nav__link">
+    <span class="md-ellipsis">
+      Video of Printing a Part
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-we-didnt-choose-laser-cutting-or-cnc-engraving" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why We Didn't Choose Laser Cutting or CNC Engraving
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advantages-of-3d-printing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advantages of 3D Printing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robot-assembly" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot Assembly
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Power System
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steering-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steering System
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robot-parts-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Robot Parts Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="wro-future-engineers-robot-models">WRO Future Engineers Robot - Models</h1>
+<p>This section covers the <strong>CAD modeling and manufacturing process</strong> behind the development of our robot for the <strong>WRO Future Engineers competition</strong>, explaining our design tools, choices, and manufacturing techniques. The following highlights the key decisions in our process and why they benefit the project.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#design-considerations-before-cad-modeling">Design Considerations Before CAD Modeling</a></li>
+<li><a href="#key-requirements">Key Requirements</a></li>
+<li><a href="#study-and-planning">Study and Planning</a></li>
+<li><a href="#initial-robot-design-and-iterations">Initial Robot Design and Iterations</a></li>
+<li><a href="#national-competition-lego-robot">National Competition: LEGO Robot</a></li>
+<li><a href="#first-version-oversized-diy-robot">First Version: Oversized DIY Robot</a></li>
+<li><a href="#second-version-lack-of-differential-system">Second Version: Lack of Differential System</a></li>
+<li><a href="#third-version-final-optimized-robot">Third Version: Final Optimized Robot</a></li>
+<li><a href="#3d-cad-modeling---onshape">3D CAD Modeling - Onshape</a></li>
+<li><a href="#why-we-chose-onshape">Why We Chose Onshape</a></li>
+<li><a href="#video-of-onshape-demonstration">Video of Onshape Demonstration</a></li>
+<li><a href="#screenshots-of-our-robot-3d-model-in-onshape">Screenshots of Our Robot 3D Model in Onshape</a></li>
+<li><a href="#other-cad-options-considered">Other CAD Options Considered</a></li>
+<li><a href="#onshape-advantages">Onshape Advantages</a></li>
+<li><a href="#learning-onshape">Learning Onshape</a></li>
+<li><a href="#3d-printing">3D Printing</a></li>
+<li><a href="#why-we-chose-3d-printing">Why We Chose 3D Printing</a></li>
+<li><a href="#printer-of-choice-creality-k1-max">Printer of Choice: Creality K1 Max</a></li>
+<li><a href="#3d-printed-robot-parts">3D Printed Robot Parts</a></li>
+<li><a href="#video-of-printing-a-part">Video of Printing a Part</a></li>
+<li><a href="#why-we-didnt-choose-laser-cutting-or-cnc-engraving">Why We Didn't Choose Laser Cutting or CNC Engraving</a></li>
+<li><a href="#robot">Robot</a></li>
+<li><a href="#robot-assembly">Robot Assembly</a></li>
+<li><a href="#power-system">Power System</a></li>
+<li><a href="#steering-system">Steering System</a></li>
+<li><a href="#robot-parts-details">Robot Parts Details</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<hr />
+<h2 id="design-considerations-before-cad-modeling">Design Considerations Before CAD Modeling</h2>
+<p>Before we began the CAD modeling process, we conducted a thorough study to establish the key requirements and considerations for our robot design. Our primary goal was to create a robot that is efficient, reliable, and optimized for the competition's challenges. The following points outline the main factors we considered:</p>
+<h3 id="key-requirements">Key Requirements</h3>
+<ul>
+<li><strong>Compact Size</strong>: Our strategy required the robot to be smaller than a <strong>20cm cube</strong> to navigate efficiently through the competition environment.</li>
+<li><strong>Turning Radius</strong>: The robot must be able to turn within an outside circle of maximum <strong>40cm</strong>, enabling it to maneuver in tight spaces.</li>
+<li><strong>Stability</strong>: A <strong>low center of gravity</strong> was essential to ensure the robot's stability during movement and operations.</li>
+<li><strong>Weight Distribution</strong>: <strong>Equal weight distribution</strong> across the robot prevents tipping and improves handling.</li>
+<li><strong>Traction</strong>: High <strong>friction on traction wheels</strong> was necessary to prevent slipping and to provide better control.</li>
+<li><strong>Assembly Method</strong>: All robot parts should be assembled using <strong>screws</strong>, <strong>nuts</strong>, and <strong>zip ties</strong>—<strong>no glue</strong>—to allow for easy modifications and repairs.</li>
+<li><strong>Ease of Modification</strong>: The robot should be <strong>sturdy yet easy to modify</strong> and improve as needed.</li>
+<li><strong>Lightweight Design</strong>: Keeping the robot as <strong>lightweight as possible</strong> enhances speed and reduces energy consumption.</li>
+<li><strong>Differential System</strong>: Incorporating a <strong>differential system</strong> allows the robot to turn easily and smoothly.</li>
+<li><strong>Battery Safety</strong>: The battery should be placed in a <strong>safe location</strong> to avoid damage from bumps or accidents, and to prevent hazards if the battery fails.</li>
+<li><strong>Component Safety</strong>: Critical components should be <strong>protected from potential battery issues</strong>, such as leaks or explosions.</li>
+<li><strong>Ease of Reassembly</strong>: The robot should be <strong>easy to rebuild</strong>, with parts designed to assemble in only <strong>one way</strong> to minimize errors.</li>
+<li><strong>Availability of Parts</strong>: All parts should be <strong>commonly available</strong> in most markets to allow other teams to rebuild or service the robot if needed.</li>
+</ul>
+<h3 id="study-and-planning">Study and Planning</h3>
+<p>We meticulously planned the robot's design to meet these requirements. By prioritizing a compact and stable structure, we ensured that the robot could navigate the competition course effectively. The decision to use common assembly methods and readily available parts not only facilitated our building process but also made our design accessible to others.</p>
+<h2 id="initial-robot-design-and-iterations">Initial Robot Design and Iterations</h2>
+<p>Our journey began with initial prototypes and several iterations to refine our robot design. Throughout this process, we learned valuable lessons that informed our final design.</p>
+<h3 id="national-competition-lego-robot">National Competition: LEGO Robot</h3>
+<p>We participated in the <strong>national competition</strong> with a robot constructed using <strong>LEGO components</strong> due to their ease of use and availability. However, this version had several issues:</p>
+<ul>
+<li><strong>Size and Speed Issues</strong>: The robot was <strong>too big and slow</strong>, exceeding the size limitations we had set and lacking the required speed.</li>
+<li><strong>Obstacle Challenges</strong>: We couldn't manage to successfully complete the <strong>obstacle challenge and parking</strong>, which are critical parts of the competition.</li>
+<li><strong>Structural Limitations</strong>: LEGO components did not provide the <strong>sturdiness</strong> and customization required for the competition's demands.</li>
+</ul>
+<p><em>Image of LEGO Robot Used in National Competition:</em></p>
+<p><a href="https://github-production-user-asset-6210df.s3.amazonaws.com/130682580/337490248-3f184c4a-aa2b-491f-9ec5-0fe420d42f31.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241124%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20241124T153606Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=f0453b3dcbf27a713996a15e16b4535ea7a080e4f0b3ac95c5329351e6ec7839&amp;X-Amz-SignedHeaders=host">LEGO Robot</a></p>
+<h3 id="first-version-oversized-diy-robot">First Version: Oversized DIY Robot</h3>
+<p>After qualifying for the international stage, we decided to build a <strong>100% DIY robot</strong>, making all the mechanics and body ourselves while purchasing only the electronics. Our first DIY version had the following issues:</p>
+<ul>
+<li><strong>Size Issue</strong>: The robot was <strong>still too big</strong>, not meeting our compact size requirement of fitting within a 20cm cube.</li>
+<li><strong>Weight Problems</strong>: The larger size contributed to increased weight, affecting speed and maneuverability.</li>
+<li><strong>Inefficient Design</strong>: The oversized structure made it difficult to navigate the course effectively.</li>
+</ul>
+<p><em>Link of First DIY Robot Version:</em></p>
+<p><a href="https://private-user-images.githubusercontent.com/107891610/381666613-29b17698-be3b-4aab-8515-d6c245b77802.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgzNjgxNjcsIm5iZiI6MTc0ODM2Nzg2NywicGF0aCI6Ii8xMDc4OTE2MTAvMzgxNjY2NjEzLTI5YjE3Njk4LWJlM2ItNGFhYi04NTE1LWQ2YzI0NWI3NzgwMi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyN1QxNzQ0MjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMmVjNzI4MmMwMmEwODY4ZWZiOGU5ZTc0ZWUyMzNiOWZkZWNhYTNiYmFiNmQzNWYzMzU2ODk3MTdiZTU0ZDVkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.EbkuWmhp54LyALhJpwy3OZkJgt5QrNNmjvXyFxwD6d0">First DIY Robot</a></p>
+<h3 id="second-version-lack-of-differential-system">Second Version: Lack of Differential System</h3>
+<p>In the second iteration of our DIY robot, we attempted to reduce the size and weight but encountered new challenges:</p>
+<ul>
+<li><strong>No Differential System</strong>: The robot <strong>lacked a differential system</strong>, making turning difficult and inefficient.</li>
+<li><strong>Poor Maneuverability</strong>: The robot would <strong>drift a lot</strong> and took <strong>150cm</strong> to complete a full turn, which is unacceptable for tight course navigation.</li>
+<li><strong>Inefficient Turning Radius</strong>: The large turning radius prevented the robot from handling obstacles and precise movements required in the competition.</li>
+</ul>
+<p><em>Link of Second DIY Robot Version:</em></p>
+<p><a href="https://cad.onshape.com/documents/fbbf77d5a7d51852563af36e/w/afa3b15c16b20a57b3f67b6c/e/98887fbf0f458e0817d24d8b">Second DIY Robot</a></p>
+<h3 id="third-version-final-optimized-robot">Third Version: Final Optimized Robot</h3>
+<p>For the third version, we made significant changes to address the previous shortcomings:</p>
+<ul>
+<li><strong>Incorporation of Differential System</strong>: We added a <strong>differential system</strong> to allow smooth and efficient turning.</li>
+<li>
+<p><strong>Hardware Upgrade</strong>: We switched from using the <strong>NVIDIA Jetson Nano</strong> to the <strong>Raspberry Pi 4 Model B</strong>, which provided:</p>
+</li>
+<li>
+<p><strong>Improved Compatibility</strong>: Better compatibility with our control systems and peripherals.</p>
+</li>
+<li><strong>Weight Reduction</strong>: The Raspberry Pi is <strong>lighter</strong>, contributing to our goal of a lightweight robot.</li>
+<li>
+<p><strong>Energy Efficiency</strong>: Lower power consumption helped manage the robot's energy requirements.</p>
+</li>
+<li>
+<p><strong>Optimized Design</strong>: The robot now fits within the <strong>20cm cube</strong> constraint, has a <strong>low center of gravity</strong>, and features <strong>equal weight distribution</strong>.</p>
+</li>
+<li><strong>Enhanced Maneuverability</strong>: With the differential system, the robot can turn efficiently within the required <strong>40cm outside circle</strong>.</li>
+<li><strong>Sturdy and Modular Assembly</strong>: All parts are assembled using screws, nuts, and zip ties—no glue—making the robot sturdy yet easy to modify and improve.</li>
+<li><strong>Safety Features</strong>: The battery is placed in a safe location to avoid damage from bumps or accidents, and critical components are protected from potential battery issues.</li>
+</ul>
+<p><em>Link of Third DIY Robot Version:</em></p>
+<p><a href="https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/7f48b1d9bd685347e4768d04">Third DIY Robot</a></p>
+<p>This final version solved all the problems encountered in previous iterations, resulting in a robot that is compact, efficient, and competition-ready.</p>
+<h2 id="3d-cad-modeling-onshape">3D CAD Modeling - Onshape</h2>
+<p>To design and develop the robot, we used <strong>Onshape</strong>, a cloud-based CAD tool that allows for efficient collaboration and design flexibility. We had various options for CAD software, such as <strong>Fusion 360</strong> and <strong>CATIA</strong>, but we ultimately chose Onshape for several reasons:</p>
+<h3 id="why-we-chose-onshape">Why We Chose Onshape</h3>
+<ul>
+<li><strong>Cloud-Based</strong>: Onshape operates entirely in the cloud, allowing our team to collaborate from any location. This was essential since team members were working from different places.</li>
+<li><strong>Collaborative Design</strong>: Multiple team members can work on the same design simultaneously, ensuring faster iterations and feedback loops.</li>
+<li><strong>Free for Educational Use</strong>: Being students representing Morocco, Onshape’s free educational plan provided us with full access to powerful design tools without extra costs.</li>
+<li><strong>No Hardware Constraints</strong>: Onshape runs in a web browser, meaning we didn’t need high-end computers or complex software installations. This allowed everyone on the team to contribute regardless of their hardware limitations.</li>
+</ul>
+<p>You can learn more about Onshape here: <a href="https://www.onshape.com/">Onshape Website</a></p>
+<h3 id="video-of-onshape-demonstration">Video of Onshape Demonstration</h3>
+<p><a href="https://github.com/user-attachments/assets/29b17698-be3b-4aab-8515-d6c245b77802"><img alt="Watch the video" src="https://img.icons8.com/color/452/play--v1.png" /></a></p>
+<h3 id="screenshots-of-our-robot-3d-model-in-onshape">Screenshots of Our Robot 3D Model in Onshape</h3>
+<p><img alt="Robot Chassis Design" src="" /></p>
+<h3 id="other-cad-options-considered">Other CAD Options Considered</h3>
+<ul>
+<li><strong>Fusion 360</strong>: Hybrid cloud solution, limited collaboration, and high costs.</li>
+<li><strong>CATIA</strong>: Too complex and expensive for our needs.</li>
+</ul>
+<h3 id="onshape-advantages">Onshape Advantages</h3>
+<ul>
+<li><strong>Real-Time Collaboration</strong>: Multiple people can work on the design at the same time, accelerating the design process.</li>
+<li><strong>Accessible Anywhere</strong>: Since it’s cloud-based, we could work on designs from any device with an internet connection.</li>
+<li><strong>Powerful CAD Tools</strong>: Despite being browser-based, Onshape provides all the advanced CAD features we needed to design complex mechanical components for our robot.</li>
+<li><strong>Version Control</strong>: We could easily track changes, revert to previous versions, and work on multiple iterations without losing progress.</li>
+</ul>
+<h3 id="learning-onshape">Learning Onshape</h3>
+<p>We learned how to use Onshape through resources from the official Onshape website and a helpful playlist on YouTube.</p>
+<ul>
+<li><a href="https://www.onshape.com/learn">Onshape Official Website</a></li>
+<li><a href="https://youtube.com/playlist?list=PL4FdDkwWXT9p3IaT11JjJcnwnFWiHJuco&amp;si=v0Z2kmiZvLGKHOFY">Onshape YouTube Playlist</a></li>
+</ul>
+<h2 id="3d-printing">3D Printing</h2>
+<p>Once our designs were finalized in Onshape, we needed to choose a manufacturing method. We considered several techniques like <strong>laser cutting</strong>, <strong>CNC engraving</strong>, and <strong>3D printing</strong>, but we ultimately decided to use <strong>3D printing</strong> due to its flexibility and ability to produce complex parts for our robot.</p>
+<h3 id="why-we-chose-3d-printing">Why We Chose 3D Printing</h3>
+<ul>
+<li><strong>Complex Geometries</strong>: 3D printing allowed us to create complex and custom geometries that are difficult to achieve with laser cutting or CNC engraving.</li>
+<li><strong>Rapid Prototyping</strong>: We could quickly print and test various parts, allowing us to make fast iterations on our robot design.</li>
+<li><strong>Cost-Effective</strong>: 3D printing is often more affordable for one-off parts or prototypes compared to CNC engraving or laser cutting, which require more setup and material waste.</li>
+<li><strong>Less Material Waste</strong>: 3D printing only uses the material needed for the part, reducing waste and lowering costs.</li>
+</ul>
+<h3 id="printer-of-choice-creality-k1-max">Printer of Choice: Creality K1 Max</h3>
+<p>We selected the <strong>Creality K1 Max</strong> 3D printer for manufacturing our robot parts. This printer has several key advantages:</p>
+<ul>
+<li><strong>Large Build Volume</strong>: The K1 Max provides a large build area, allowing us to print large components of the robot in a single go without having to divide them into smaller parts.</li>
+<li><strong>High Speed</strong>: With fast print speeds, we were able to print our parts in a short amount of time, keeping up with the rapid pace of our project.</li>
+<li><strong>Precision</strong>: The Creality K1 Max delivers high accuracy and detail in its prints, ensuring that our robot's mechanical parts fit together perfectly.</li>
+<li><strong>Ease of Use</strong>: The printer is easy to set up and use, even for students, making it an ideal choice for quick prototyping.</li>
+</ul>
+<p>Learn more about the Creality K1 Max here: <a href="https://www.creality.com/products/creality-k1-max-3d-printer?spm=..404.header_1.1">Creality K1 Max Printer</a></p>
+<h3 id="3d-printed-robot-parts">3D Printed Robot Parts</h3>
+<p><img alt="3D Printed Robot Parts" src="https://raw.githubusercontent.com/DexterTaha/WRO-FE-2024-Mindcraft-International/main/images/Robot%20Creality%20Silcer.png" /></p>
+<h3 id="video-of-printing-a-part">Video of Printing a Part</h3>
+<p><a href="https://github.com/user-attachments/assets/a05f5144-69ca-4180-a867-5e9cf91d8875"><img alt="Watch the video" src="https://img.icons8.com/color/452/play--v1.png" /></a></p>
+<p><em>This video was made by us while printing the robot base of our robot.</em></p>
+<h3 id="why-we-didnt-choose-laser-cutting-or-cnc-engraving">Why We Didn't Choose Laser Cutting or CNC Engraving</h3>
+<ul>
+<li><strong>Laser Cutting</strong>: While laser cutting is great for creating flat, 2D parts, it is limited in producing complex 3D shapes and detailed mechanical components.</li>
+<li><strong>CNC Engraving</strong>: CNC is excellent for metal and wood parts but involves more setup time and higher costs, especially for custom parts. It also generates more material waste, making it less ideal for our project, which requires many iterations.</li>
+</ul>
+<h3 id="advantages-of-3d-printing">Advantages of 3D Printing</h3>
+<ul>
+<li><strong>Customization</strong>: We can easily make modifications to the design and print new parts within hours.</li>
+<li><strong>Quick Turnaround</strong>: 3D printing enabled us to quickly prototype, test, and refine parts, significantly reducing development time.</li>
+<li><strong>Sustainable</strong>: With 3D printing, there’s less waste of materials, aligning with our goal of sustainability for this project.</li>
+</ul>
+<h2 id="robot">Robot</h2>
+<h3 id="robot-assembly">Robot Assembly</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Robot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Robot Dimensions</td>
+<td><img alt="Robot Dimensions" src="" /></td>
+</tr>
+<tr>
+<td>Robot Assembly</td>
+<td><img alt="Robot Assembly" src="" /></td>
+</tr>
+<tr>
+<td>Robot View</td>
+<td><img alt="Robot View" src="" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="power-system">Power System</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Power System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Power System Assembly</td>
+<td><img alt="Power System Assembly" src="" /></td>
+</tr>
+<tr>
+<td>Power System View</td>
+<td><img alt="Power System View" src="" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="steering-system">Steering System</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Steering System</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steering System Assembly</td>
+<td><img alt="Steering System Assembly" src="" /></td>
+</tr>
+<tr>
+<td>Steering System View</td>
+<td><img alt="Steering System View" src="" /></td>
+</tr>
+</tbody>
+</table>
+<h2 id="robot-parts-details">Robot Parts Details</h2>
+<table>
+<thead>
+<tr>
+<th>Part Name</th>
+<th>Image</th>
+<th>3D File Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00- Robot Base</td>
+<td><img alt="Robot Base" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x01- Second Layer</td>
+<td><img alt="Second Layer" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x02- Third Layer</td>
+<td><img alt="Third Layer" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x03- Short Shaft</td>
+<td><img alt="Short Shaft" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x04- Long Shaft</td>
+<td><img alt="Long Shaft" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x05- Front Short Shaft</td>
+<td><img alt="Front Short Shaft" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x06- Bearing Support Front Bottom</td>
+<td><img alt="Bearing Support Front Bottom" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x07- Bearing Support Front Top</td>
+<td><img alt="Bearing Support Front Top" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x08- Steering Rack</td>
+<td><img alt="Steering Rack" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x09- Steering Connector</td>
+<td><img alt="Steering Connector" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x10- Axle Clamp</td>
+<td><img alt="Axle Clamp" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x11- Big Gear</td>
+<td><img alt="Big Gear" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x12- Gear</td>
+<td><img alt="Gear" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x13- Front Support Camera</td>
+<td><img alt="Front Support Camera" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x14- Back Support Camera</td>
+<td><img alt="Back Support Camera" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+<tr>
+<td>0x15- Connector Support Camera</td>
+<td><img alt="Connector Support Camera" src="" /></td>
+<td><a href="">Part Details</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>For our <strong>WRO Future Engineers robot project</strong>, using <strong>Onshape for CAD modeling</strong> and the <strong>Creality K1 Max for 3D printing</strong> has been a critical part of our design and manufacturing process. These tools allowed us to work collaboratively, iterate quickly, and produce complex parts efficiently, all while staying within the constraints of an educational project.</p>
+<p>Thank you for following our journey as we design a cutting-edge robot to represent <strong>Morocco</strong> on the global stage at the <strong>World Robot Olympiad</strong>!</p>
+<p>For more information and to follow our progress, check out our <a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft">Project Link</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "search.share", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
