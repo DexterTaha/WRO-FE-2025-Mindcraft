@@ -233,7 +233,7 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 | Part Name                           | Image                                                                                     | 3D File Link                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| 0x00- Robot Base                    | ![Robot Base]() | [Part Details]() |
+| 0x00- Robot Base                    | ![Robot Base](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x00-%20Robot%20Base.png) | [Part Details]() |
 | 0x01- Second Layer                  | ![Second Layer]() | [Part Details]() |
 | 0x02- Third Layer                   | ![Third Layer]() | [Part Details]() |
 | 0x03- Short Shaft                   | ![Short Shaft]() | [Part Details]() |
