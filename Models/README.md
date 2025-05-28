@@ -249,6 +249,8 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 | 0x13- Stando ff3mm                  | ![stando ff3mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x13-%20stando%20ff3mm.png) | [Part Details]() |
 | 0x14- Back Support Camera           | ![Back Support Camera](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x14-%20Back%20Support%20Camera.png) | [Part Details]() |
 | 0x15- Steering Conector             | ![Steering Conector](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x15-%20Steering%20Conector.png) | [Part Details]() |
+| 0x16- Scwer shaft                   | ![Scwer shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x16-%20scwer%20shaft.png) | [Part Details]() |
+| 0x17- Steering Rack                 | ![Steering Rack](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x17-%20Steering%20Rack.png) | [Part Details]() |
 
 ## Conclusion
 
