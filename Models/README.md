@@ -242,7 +242,7 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 | 0x06- Short Shaft                   | ![Short Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x06-%20Short%20Shaft.png) | [Part Details]() |
 | 0x07- Long Shaft                    | ![Long Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x07-%20Long%20Shaft.png) | [Part Details]() |
 | 0x08- Axle Clamp                    | ![Axle Clamp](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x08-%20Axle%20Clamp.png) | [Part Details]() |
-| 0x09- Steering Connector            | ![Steering Connector]() | [Part Details]() |
+| 0x09- Stand off 1mm                 | ![Stand off 1mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x09-%20stand%20off%201mm.png) | [Part Details]() |
 | 0x10- Axle Clamp                    | ![Axle Clamp]() | [Part Details]() |
 | 0x11- Big Gear                      | ![Big Gear]() | [Part Details]() |
 | 0x12- Gear                          | ![Gear]() | [Part Details]() |
