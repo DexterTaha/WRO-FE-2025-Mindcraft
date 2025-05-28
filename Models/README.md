@@ -234,14 +234,14 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 | Part Name                           | Image                                                                                     | 3D File Link                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | 0x00- Robot Base                    | ![Robot Base](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x00-%20Robot%20Base.png) | [Part Details]() |
-| 0x01- Second Layer                  | ![Second Layer]() | [Part Details]() |
-| 0x02- Third Layer                   | ![Third Layer]() | [Part Details]() |
-| 0x03- Short Shaft                   | ![Short Shaft]() | [Part Details]() |
-| 0x04- Long Shaft                    | ![Long Shaft]() | [Part Details]() |
-| 0x05- Front Short Shaft             | ![Front Short Shaft]() | [Part Details]() |
-| 0x06- Bearing Support Front Bottom  | ![Bearing Support Front Bottom]() | [Part Details]() |
-| 0x07- Bearing Support Front Top     | ![Bearing Support Front Top]() | [Part Details]() |
-| 0x08- Steering Rack                 | ![Steering Rack]() | [Part Details]() |
+| 0x01- Second Layer                  | ![Second Layer](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x01-%20Second%20Layer.png) | [Part Details]() |
+| 0x02- Wheel Support                 | ![Wheel Support](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x02-%20Wheel%20Support.png) | [Part Details]() |
+| 0x03- Gear                          | ![Gear](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x03-%20Gear.png) | [Part Details]() |
+| 0x04- Berring Support Right         | ![Berring Support Right](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x04-%20%20Berring%20Support%20Right.png) | [Part Details]() |
+| 0x05- Stand off 2mm                 | ![Stand off 2mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x05-%20stand%20off%202mm.png) | [Part Details]() |
+| 0x06- Short Shaft                   | ![Short Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x06-%20Short%20Shaft.png) | [Part Details]() |
+| 0x07- Long Shaft                    | ![Long Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x07-%20Long%20Shaft.png) | [Part Details]() |
+| 0x08- Axle Clamp                    | ![Axle Clamp](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x08-%20Axle%20Clamp.png) | [Part Details]() |
 | 0x09- Steering Connector            | ![Steering Connector]() | [Part Details]() |
 | 0x10- Axle Clamp                    | ![Axle Clamp]() | [Part Details]() |
 | 0x11- Big Gear                      | ![Big Gear]() | [Part Details]() |
