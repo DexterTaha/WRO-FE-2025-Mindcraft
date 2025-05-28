@@ -243,12 +243,12 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 | 0x07- Long Shaft                    | ![Long Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x07-%20Long%20Shaft.png) | [Part Details]() |
 | 0x08- Axle Clamp                    | ![Axle Clamp](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x08-%20Axle%20Clamp.png) | [Part Details]() |
 | 0x09- Stand off 1mm                 | ![Stand off 1mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x09-%20stand%20off%201mm.png) | [Part Details]() |
-| 0x10- Axle Clamp                    | ![Axle Clamp]() | [Part Details]() |
-| 0x11- Big Gear                      | ![Big Gear]() | [Part Details]() |
-| 0x12- Gear                          | ![Gear]() | [Part Details]() |
-| 0x13- Front Support Camera          | ![Front Support Camera]() | [Part Details]() |
-| 0x14- Back Support Camera           | ![Back Support Camera]() | [Part Details]() |
-| 0x15- Connector Support Camera      | ![Connector Support Camera]() | [Part Details]() |
+| 0x10- Big Gear                      | ![Big Gear](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x10-%20Big%20Gear.png) | [Part Details]() |
+| 0x11- Front Support Camera          | ![Front Support Camera](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x11-%20Front%20Support%20Camera.png) | [Part Details]() |
+| 0x12- Berring Support Left          | ![Berring Support Left](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x12-%20Berring%20Support%20Left.png) | [Part Details]() |
+| 0x13- Stando ff3mm                  | ![stando ff3mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x13-%20stando%20ff3mm.png) | [Part Details]() |
+| 0x14- Back Support Camera           | ![Back Support Camera](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x14-%20Back%20Support%20Camera.png) | [Part Details]() |
+| 0x15- Steering Conector             | ![Steering Conector](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x15-%20Steering%20Conector.png) | [Part Details]() |
 
 ## Conclusion
 
