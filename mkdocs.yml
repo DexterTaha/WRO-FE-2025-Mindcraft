@@ -2,7 +2,9 @@ site_name: MINDCRAFT WRO Future Engineers team
 site_url: https://mydomain.org/mysite
 theme:
   name: material
-  palette: 
+  logo: img/mindcraft logo.png 
+  favicon: img/mindcraft logo.png
+  palette:
 
     # Palette toggle for light mode
     - scheme: default
