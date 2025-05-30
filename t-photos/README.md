@@ -1,6 +1,6 @@
 <h3>Mindcraft Engineers Team Pic</h3>
 <div align="center">
-    <img src="" 
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/fc7a5c48013d571f234b63a02f6ab8d422b72a80/images/team.jpg" 
          alt="Engineers Github" width="500">
 </div>
 
