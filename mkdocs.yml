@@ -1,10 +1,11 @@
-site_name: MINDCRAFT WRO Future Engineers team
+site_name: My Docs
 site_url: https://mydomain.org/mysite
 theme:
   name: material
-  logo: img/mindcraft logo.png 
-  favicon: img/mindcraft logo.png
-  palette:
+  logo: images/logo.png
+  favicon: images/logo.png
+  custom_dir: overrides
+  palette: 
 
     # Palette toggle for light mode
     - scheme: default
@@ -56,6 +57,24 @@ nav:
       - Docs: docsfile/docs.md
   - Models:
       - Models: models/models.md
+      - Parts:
+          - Robot Base: models/Parts/robotbase.md
+          - Second layer: models/Parts/secondlayer.md
+          - Wheel Support: models/Parts/WheelSupport.md
+          - Gear: models/Parts/Gear.md
+          - Berring Support Right: models/Parts/BerringSupportRight.md
+          - stand off 2mm: models/Parts/standoff2mm.md
+          - Short Shaft: models/Parts/Short Shaft.md
+          - Long Shaft: models/Parts/Long Shaft.md
+          - Axle Clamp: models/Parts/Axle Clamp.md
+          - stand off 1mm: models/Parts/stand off 1mm.md
+          - Big Gear: models/Parts/Big Gear.md
+          - Front Support Camera: models/Parts/Front Support Camera.md
+          - Berring Support Left: models/Parts/Berring Support Left.md
+          - Back Support Camera: models/Parts/Back Support Camera.md
+          - Steering Conector: models/Parts/Steering Conector.md
+          - scwer shaft: models/Parts/scwer shaft.md
+          - Steering Rack: models/Parts/Steering Rack.md
   - Other:
       - BOM: otherfile/BOM.md
   - Schemes:

@@ -84,7 +84,7 @@ After qualifying for the international stage, we decided to build a **100% DIY r
 
 *Link of First DIY Robot Version:*
 
-[First DIY Robot](https://private-user-images.githubusercontent.com/107891610/381666613-29b17698-be3b-4aab-8515-d6c245b77802.mp4?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDgzNjgxNjcsIm5iZiI6MTc0ODM2Nzg2NywicGF0aCI6Ii8xMDc4OTE2MTAvMzgxNjY2NjEzLTI5YjE3Njk4LWJlM2ItNGFhYi04NTE1LWQ2YzI0NWI3NzgwMi5tcDQ_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTI3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUyN1QxNzQ0MjdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iMmVjNzI4MmMwMmEwODY4ZWZiOGU5ZTc0ZWUyMzNiOWZkZWNhYTNiYmFiNmQzNWYzMzU2ODk3MTdiZTU0ZDVkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.EbkuWmhp54LyALhJpwy3OZkJgt5QrNNmjvXyFxwD6d0)
+[First DIY Robot](https://cad.onshape.com/documents/08595aa7e5b1cdab597252fc/w/cfc7e06246a86472db038f97/e/671ce5308fe71051d562260c)
 
 ### Second Version: Lack of Differential System
 
@@ -186,7 +186,7 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 ### 3D Printed Robot Parts
 
-![3D Printed Robot Parts](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2024-Mindcraft-International/main/images/Robot%20Creality%20Silcer.png)
+![3D Printed Robot Parts](https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/main/images/Robot%20Creality%20Silcer.png)
 
 ### Video of Printing a Part
 
@@ -233,22 +233,24 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 | Part Name                           | Image                                                                                     | 3D File Link                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| 0x00- Robot Base                    | ![Robot Base]() | [Part Details]() |
-| 0x01- Second Layer                  | ![Second Layer]() | [Part Details]() |
-| 0x02- Third Layer                   | ![Third Layer]() | [Part Details]() |
-| 0x03- Short Shaft                   | ![Short Shaft]() | [Part Details]() |
-| 0x04- Long Shaft                    | ![Long Shaft]() | [Part Details]() |
-| 0x05- Front Short Shaft             | ![Front Short Shaft]() | [Part Details]() |
-| 0x06- Bearing Support Front Bottom  | ![Bearing Support Front Bottom]() | [Part Details]() |
-| 0x07- Bearing Support Front Top     | ![Bearing Support Front Top]() | [Part Details]() |
-| 0x08- Steering Rack                 | ![Steering Rack]() | [Part Details]() |
-| 0x09- Steering Connector            | ![Steering Connector]() | [Part Details]() |
-| 0x10- Axle Clamp                    | ![Axle Clamp]() | [Part Details]() |
-| 0x11- Big Gear                      | ![Big Gear]() | [Part Details]() |
-| 0x12- Gear                          | ![Gear]() | [Part Details]() |
-| 0x13- Front Support Camera          | ![Front Support Camera]() | [Part Details]() |
-| 0x14- Back Support Camera           | ![Back Support Camera]() | [Part Details]() |
-| 0x15- Connector Support Camera      | ![Connector Support Camera]() | [Part Details]() |
+| 0x00- Robot Base                    | ![Robot Base](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x00-%20Robot%20Base.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x00-%20Robot%20Base) |
+| 0x01- Second Layer                  | ![Second Layer](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x01-%20Second%20Layer.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x01-%20Second%20Layer) |
+| 0x02- Wheel Support                 | ![Wheel Support](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x02-%20Wheel%20Support.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x02-%20Wheel%20Support) |
+| 0x03- Gear                          | ![Gear](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x03-%20Gear.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x03-%20Gear) |
+| 0x04- Berring Support Right         | ![Berring Support Right](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x04-%20%20Berring%20Support%20Right.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x04-%20%20Berring%20Support%20Right) |
+| 0x05- Stand off 2mm                 | ![Stand off 2mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x05-%20stand%20off%202mm.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x05-%20stand%20off%202mm) |
+| 0x06- Short Shaft                   | ![Short Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x06-%20Short%20Shaft.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x06-%20Short%20Shaft) |
+| 0x07- Long Shaft                    | ![Long Shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x07-%20Long%20Shaft.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x07-%20Long%20Shaft) |
+| 0x08- Axle Clamp                    | ![Axle Clamp](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x08-%20Axle%20Clamp.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x08-%20Axle%20Clamp) |
+| 0x09- Stand off 1mm                 | ![Stand off 1mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x09-%20stand%20off%201mm.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x09-%20stand%20off%201mm) |
+| 0x10- Big Gear                      | ![Big Gear](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x10-%20Big%20Gear.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x10-%20Big%20Gear) |
+| 0x11- Front Support Camera          | ![Front Support Camera](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x11-%20Front%20Support%20Camera.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x11-%20Front%20Support%20Camera) |
+| 0x12- Berring Support Left          | ![Berring Support Left](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x12-%20Berring%20Support%20Left.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x12-%20Berring%20Support%20Left) |
+| 0x13- Stando ff3mm                  | ![stando ff3mm](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x13-%20stando%20ff3mm.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x13-%20stando%20ff3mm) |
+| 0x14- Back Support Camera           | ![Back Support Camera](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x14-%20Back%20Support%20Camera.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x14-%20Back%20Support%20Camera) |
+| 0x15- Steering Conector             | ![Steering Conector](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x15-%20Steering%20Conector.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x15-%20Steering%20Conector) |
+| 0x16- Scwer shaft                   | ![Scwer shaft](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x16-%20scwer%20shaft.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x16-%20scwer%20shaft) |
+| 0x17- Steering Rack                 | ![Steering Rack](https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/images/0x17-%20Steering%20Rack.png) | [Part Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models/Parts/0x17-%20Steering%20Rack) |
 
 ## Conclusion
 
