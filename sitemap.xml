@@ -2,34 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://mydomain.org/mysite/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/blog/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/docsfile/docs/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/models/models/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Axle%20Clamp/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Back%20Support%20Camera/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Berring%20Support%20Left/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/BerringSupportRight/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Big%20Gear/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Front%20Support%20Camera/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Gear/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Long%20Shaft/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Short%20Shaft/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Steering%20Conector/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/Steering%20Rack/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/WheelSupport/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/robotbase/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/scwer%20shaft/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/secondlayer/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/stand%20off%201mm/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/stando%20ff3mm/</loc>
+         <lastmod>2025-05-30</lastmod>
+    </url>
+    <url>
+         <loc>https://mydomain.org/mysite/models/Parts/standoff2mm/</loc>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/otherfile/BOM/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/schemesfile/schemes/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/t-photosfile/t-photos/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
     <url>
          <loc>https://mydomain.org/mysite/v-photos/v-photos/</loc>
-         <lastmod>2025-05-27</lastmod>
+         <lastmod>2025-05-30</lastmod>
     </url>
 </urlset>
