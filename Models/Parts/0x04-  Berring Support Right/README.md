@@ -24,7 +24,7 @@
 <div align="left">
   <h2>Video Printing:</h2>
   <p align="center">
-    <a href="" target="_blank">
+    <a href="https://www.youtube.com/watch?v=Nt8qGdUqP_g&list=PLf8kIvXqxCoALgCahbOKRA_qO1OjeBXYe&index=4" target="_blank">
       <img src="https://img.youtube.com/vi/J01qLRWSCVE/maxresdefault.jpg" alt="Watch the video" width="800">
     </a>
   </p>
