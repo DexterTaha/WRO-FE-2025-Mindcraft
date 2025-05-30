@@ -7,7 +7,7 @@
 <div align="left">
   <h2>Drawing PNG:</h2>
   <p align="center">
-    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x00-%20Robot%20Base/Drawing%20Robot%20Base.png" alt="Robot Base Drawing" width="1000">
+    <img src="" width="1000">
   </p>
 </div>
 
@@ -25,7 +25,7 @@
   <h2>Video Printing:</h2>
   <p align="center">
     <a href="" target="_blank">
-      <img src="https://www.youtube.com/watch?v=tKZ1T-7CiLc&list=PLf8kIvXqxCoALgCahbOKRA_qO1OjeBXYe&index=1" alt="Watch the video" width="800">
+      <img src="https://img.youtube.com/vi/J01qLRWSCVE/maxresdefault.jpg" alt="Watch the video" width="800">
     </a>
   </p>
   <p>Click the image above to watch the video.</p>
