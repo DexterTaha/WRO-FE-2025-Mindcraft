@@ -6,8 +6,8 @@
 
 <h3>OUR Team Fun Pic 🤦‍♂️</h3>
 <div align="center">
-    <img src="" 
-         alt="Team Fun Pic" width="500">
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/c205c8dca81bcb738de7ec15a5b4c2d882848ce1/images/fun_pic.jpeg" 
+         alt="Team Fun Pic" width="800">
     <p>Our team's fun moment captured perfectly!</p>
 </div>
 
