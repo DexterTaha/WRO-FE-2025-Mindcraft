@@ -2,8 +2,9 @@
 
 ## 👥 Team
 
-[a href="https://www.mindcraft.ma" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white" alt="Team Website"/></a>
-[a href="https://www.youtube.com/@MindcraftWRO-kw8vp" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white" alt="Team Youtube"/></a>
+[![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
+[![Team Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@MindcraftWRO-kw8vp)
+
 
 📌 This repository provides information and knowledge regarding the ongoing progress, evolution, and development of our self-driving robot vehicle, which was created and coded by us, Salmane Derdeb and Taha TAIDI LAAMIRI as participants in the Future Engineers 2025 division of the World Robot Olympiad (WRO).
 
@@ -18,7 +19,6 @@
 🎥 <a href="https://www.youtube.com/watch?v=_J15lf6uhwo&t=2s" target="_blank" rel="noopener noreferrer">Watch the challenge explanation video</a>
 
 Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf" target="_blank" rel="noopener noreferrer">Download the WRO 2025 Future Engineers — Self-Driving Cars official rules (PDF)</a>
-<a href="https://example.com" target="_blank">Click here</a>
 
 ## 📁 Project Structure
 
