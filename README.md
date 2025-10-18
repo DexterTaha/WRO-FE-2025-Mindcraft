@@ -18,6 +18,7 @@
 🎥 <a href="https://www.youtube.com/watch?v=_J15lf6uhwo&t=2s" target="_blank" rel="noopener noreferrer">Watch the challenge explanation video</a>
 
 Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf" target="_blank" rel="noopener noreferrer">Download the WRO 2025 Future Engineers — Self-Driving Cars official rules (PDF)</a>
+<a href="https://example.com" target="_blank">Click here</a>
 
 ## 📁 Project Structure
 
