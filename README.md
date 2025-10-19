@@ -7,6 +7,7 @@
   <img alt="Project logo" src="https://img.shields.io/badge/Project-WRO--FE--2025--Mindcraft-4b5563?style=for-the-badge&logo=robot" />
 </p>
 
+[![GitHub Stars](https://img.shields.io/github/stars/DexterTaha/WRO-FE-2025-Mindcraft.svg)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/stargazers)
 ![OS](https://img.shields.io/badge/OS-Linux-red?style=flat&logo=linux)
 [![Made with Python](https://img.shields.io/badge/Made%20with-Python%203.8%2B-1f425f.svg?logo=python)](https://www.python.org/)
 [![C++](https://img.shields.io/badge/C%2B%2B-ISO%20C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
