@@ -100,6 +100,12 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | Own Design and manufacturing of vehicle and components, with off the shelf electrical components, such as motors and sensors. |
 | [Design Description]()                                                                                                        |
 
+## License
+
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
+
+Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
+
 ## 🧠 Our Centre
 
 [![Centre Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)](https://www.mindcraft.ma/)
