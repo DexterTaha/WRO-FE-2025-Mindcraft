@@ -1,12 +1,35 @@
 # 🤖 MINDCRAFT WRO Future Engineers team
 
-## 👥 Team
-
-[![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
-[![Team Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@MindcraftWRO-kw8vp)
+📌 This repository documents the ongoing research, design, and development of our self-driving robotic vehicle, engineered and programmed by Salmane Derdeb, Taha Taidi Laamiri, and Rayane Ghacha for the World Robot Olympiad (WRO) 2025 – Future Engineers Division. The project represents the fusion of embedded systems (ESP32 and Raspberry Pi), perception technologies (computer vision and LiDAR-based mapping), and intelligent control logic implemented in Python and C++. It showcases our continuous effort to build a robust, fully autonomous system capable of performing complex navigation and task-solving challenges with precision and adaptability.
 
 
-📌 This repository provides information and knowledge regarding the ongoing progress, evolution, and development of our self-driving robot vehicle, which was created and coded by us, Salmane Derdeb and Taha TAIDI LAAMIRI as participants in the Future Engineers 2025 division of the World Robot Olympiad (WRO).
+<p align="center">
+  <img alt="Project logo" src="https://img.shields.io/badge/Project-WRO--FE--2025--Mindcraft-4b5563?style=for-the-badge&logo=robot" />
+</p>
+
+![OS](https://img.shields.io/badge/OS-Linux-red?style=flat&logo=linux)
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python%203.8%2B-1f425f.svg?logo=python)](https://www.python.org/)
+[![C++](https://img.shields.io/badge/C%2B%2B-ISO%20C%2B%2B-00599C?logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
+[![Top language](https://img.shields.io/github/languages/top/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft)
+[![Repo size](https://img.shields.io/github/repo-size/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/DexterTaha/WRO-FE-2025-Mindcraft/ci.yml?branch=main)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/actions)
+[![Docs](https://img.shields.io/badge/Docs-MkDocs-blue?style=flat)](https://dextertaha.github.io/WRO-FE-2025-Mindcraft/)
+[![License](https://img.shields.io/github/license/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/LICENSE)
+[![Open issues](https://img.shields.io/github/issues/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/issues)
+[![Contributors](https://img.shields.io/github/contributors/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/graphs/contributors)
+[![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft)
+
+## 🌟 Highlights
+
+- **Innovative mobility system:** Built on a custom-designed chassis engineered for balance, rigidity, and modularity. The vehicle features a **rear-wheel differential drive system** for propulsion and a **front-wheel Ackermann steering mechanism** controlled by a high-torque servo motor. DC motors is driven by a **TB6612FNG motor driver**, with encoder feedback for precise closed-loop speed and position control. A **buzzer** provides real-time debugging feedback, and a **push button** is used for controlled start and system activation.  
+
+- **Optimized power and sensing setup:** Powered by a **12 V Li-ion 3C 2.2A battery system**, the design separates power lines for motors and logic circuits to ensure stability and reduce interference. The robot integrates an **RPLIDAR C1** for mapping and obstacle detection, a **Raspberry Pi Camera 3 Wide** for real-time vision color detection, and a **BNO055 IMU** for orientation sensing. All sensors are carefully placed for accurate perception and reliable navigation.  
+
+- **Autonomous navigation and perception:** Combines **computer vision** and **LiDAR-based mapping** to perform environment recognition, obstacle avoidance, and adaptive path planning. Data fusion from LiDAR, camera, and IMU enables the robot to drive smoothly and make intelligent decisions in real time.  
+
+- **Cross-platform architecture:** The system runs high-level perception and control on the **Raspberry Pi 4 (Python)** while the **ESP32 (C/C++)** handles low-level motor control, servo steering, and feedback loops. This distributed design ensures fast response, modularity, and efficient hardware utilization.  
+
+- **Open-source and fully documented:** All **CAD models**, **wiring diagrams**, **source code**, and **build instructions** are openly available for others to learn from and replicate. Full documentation, including setup guides and engineering notes, is published through **MkDocs** at [dextertaha.github.io/WRO-FE-2025-Mindcraft](https://dextertaha.github.io/WRO-FE-2025-Mindcraft/).
 
 ### 🌍 World Robot Olympiad (WRO)
 
@@ -105,6 +128,12 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
+
+## 👥 Team
+
+[![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
+[![Team Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@MindcraftWRO-kw8vp)
+
 
 ## 🧠 Our Centre
 
