@@ -1,0 +1,8 @@
+mkdocs>=1.4
+mkdocs-material>=9.0
+mkdocs-git-revision-date-localized-plugin
+mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-redirects
+pymdown-extensions
+python-markdown-math
