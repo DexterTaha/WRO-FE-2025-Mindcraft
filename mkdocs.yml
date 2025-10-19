@@ -1,46 +1,40 @@
-site_name: My Docs
-site_url: https://mydomain.org/mysite
+site_name: WRO-FE-2025 - Mindcraft
+site_description: Documentation for the Mindcraft WRO Future Engineers 2025 self-driving robot project
+repo_name: DexterTaha/WRO-FE-2025-Mindcraft
+repo_url: https://github.com/DexterTaha/WRO-FE-2025-Mindcraft
+# Optionally set site_url if you will publish to GitHub Pages (edit before deploy)
+# site_url: https://<your-github-username>.github.io/WRO-FE-2025-Mindcraft
+
 theme:
   name: material
   logo: images/logo.png
   favicon: images/logo.png
   custom_dir: overrides
-  palette: 
-
-    # Palette toggle for light mode
+  palette:
     - scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
-
-    # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-
   features:
     - navigation.instant
-    - navigation.instant.progress
-    - navigation.instant.preview
     - navigation.tracking
-    - navigation.tabs
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
     - navigation.expand
-    # - toc.integrate
     - navigation.top
     - search.suggest
     - search.highlight
-    - search.share
     - content.code.copy
 
 plugins:
   - search
   - tags
   - blog
-
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -51,9 +45,10 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+# Navigation - keep this mapping in sync with files under the `docs/` folder.
 nav:
   - Home: index.md
-  - Docs: 
+  - Docs:
       - Docs: docsfile/docs.md
   - Models:
       - Models: models/models.md

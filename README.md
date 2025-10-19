@@ -155,7 +155,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 ├── 📁 docs
 ├── 📁 images
 ├── 📁 other
-│   ├── 📁 BOM(Bill Of Materials
+│   ├── 📁 BOM(Bill Of Materials)
 │   ├── 📁 team-photos
 │   └── 📁 video
 ├── 📁 schemes

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 mkdocs>=1.4
 mkdocs-material>=9.0
 mkdocs-git-revision-date-localized-plugin
@@ -6,3 +7,14 @@ mkdocs-awesome-pages-plugin
 mkdocs-redirects
 pymdown-extensions
 python-markdown-math
+=======
+mkdocs>=1.4
+mkdocs-material>=9.0
+mkdocs-git-revision-date-localized-plugin
+mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-redirects
+pymdown-extensions
+python-markdown-math
+
+>>>>>>> f2b2ce44b73e0950e4295c4f5775c123f0609583
