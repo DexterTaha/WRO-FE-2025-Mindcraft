@@ -26,6 +26,97 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+
+## Table of Contents
+> [!TIP]
+> Click the arrow below 👇 to expand the **Table of Contents**. All items are clickable links to folders or README.md files.
+
+<details>
+<summary>Table of Contents</summary>
+
+1. [Top-level README](./README.md)
+
+2. [Models (3D files & parts)](./Models/)  
+   - [Models README](./Models/README.md)  
+   - [Parts folder](./Models/Parts/)  
+     - [0x00 - Robot Base](./Models/Parts/0x00-%20Robot%20Base/)  
+     - [0x01 - Second Layer](./Models/Parts/0x01-%20Second%20Layer/)  
+     - [0x02 - Wheel Support](./Models/Parts/0x02-%20Wheel%20Support/)  
+     - [0x03 - Gear](./Models/Parts/0x03-%20Gear/)  
+     - [0x04 - Berring Support Right](./Models/Parts/0x04-%20%20Berring%20Support%20Right/)  
+     - [0x05 - stand off 2mm](./Models/Parts/0x05-%20stand%20off%202mm/)  
+     - [0x06 - Short Shaft](./Models/Parts/0x06-%20Short%20Shaft/)  
+     - [0x07 - Long Shaft](./Models/Parts/0x07-%20Long%20Shaft/)  
+     - [0x08 - Axle Clamp](./Models/Parts/0x08-%20Axle%20Clamp/)  
+     - [0x09 - stand off 1mm](./Models/Parts/0x09-%20stand%20off%201mm/)  
+     - [0x10 - Big Gear](./Models/Parts/0x10-%20Big%20Gear/)  
+     - [0x11 - Front Support Camera](./Models/Parts/0x11-%20Front%20Support%20Camera/)  
+     - [0x12 - Berring Support Left](./Models/Parts/0x12-%20Berring%20Support%20Left/)  
+     - [0x13 - stando ff3mm](./Models/Parts/0x13-%20stando%20ff3mm/)  
+     - [0x14 - Back Support Camera](./Models/Parts/0x14-%20Back%20Support%20Camera/)  
+     - [0x15 - Steering Conector](./Models/Parts/0x15-%20Steering%20Conector/)  
+     - [0x16 - scwer shaft](./Models/Parts/0x16-%20scwer%20shaft/)  
+     - [0x17 - Steering Rack](./Models/Parts/0x17-%20Steering%20Rack/)
+
+3. [other (BOM & components)](./other/)  
+   - [other README](./other/README.md)  
+   - [BOM (Bill Of Materials) folder](./other/BOM(Bill%20Of%20Materials)/)  
+     - [BOM README](./other/BOM(Bill%20Of%20Materials)/README.md)  
+   - [component Details folder](./other/component%20Details/)  
+     - [component Details README](./other/component%20Details/README.md)  
+     - Components (subfolders) — each folder is clickable:
+       - [0x00 - Raspberry Pi 4B](./other/component%20Details/0x00-Raspberry%20Pi%204B/)  
+       - [0x01 - Raspberry pi pico](./other/component%20Details/0x01-Raspberry%20pi%20pico/)  
+       - [0x02 - LIDAR](./other/component%20Details/0x02-LIDAR/)  
+       - [0x03 - GYROSCOPE Sensor BMO055](./other/component%20Details/0x03-GYROSCOPE%20Sensor%20BMO055/)  
+       - [0x04 - PiCamera 3 wide](./other/component%20Details/0x04-PiCamera%203%20wide/)  
+       - [0x05 - DC Brushed Motor with Encoder](./other/component%20Details/0x05-DC%20Brushed%20Motor%20with%20Encoder/)  
+       - [0x06 - Wheels](./other/component%20Details/0x06-Wheels/)  
+       - [0x07 - TB1266FNG Motor Driver](./other/component%20Details/0x07-TB1266FNG%20Motor%20Driver/)  
+       - [0x08 - Servo motor Metal Gear Box 180°](./other/component%20Details/0x08-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/)  
+       - [0x09 - Lipo 3S 2200mah 11.1V 50C](./other/component%20Details/0x09-Lipo%203S%202200mah%2011.1V%2050C/)  
+       - [0x10 - IMAX B6AC V2](./other/component%20Details/0x10-IMAX%20B6AC%20V2/)  
+       - [0x11 - 7806 Transistor](./other/component%20Details/0x11-7806%20Transistor/)  
+       - [0x12 - 7805 Transistor](./other/component%20Details/0x12-7805%20Transistor/)  
+       - [0x13 - 7809 Transistor](./other/component%20Details/0x13-7809%20Transistor/)  
+       - [0x14 - Push button](./other/component%20Details/0x14-Push%20button/)  
+       - [0x15 - Buzzer Alarm Batterie Lipo](./other/component%20Details/0x15-Buzzer%20Alarm%20Batterie%20Lipo/)  
+       - [0x16 - Servo Tester](./other/component%20Details/0x16-Servo%20Tester/)  
+       - [0x17 - Servobras](./other/component%20Details/0x17-Servobras/)  
+       - [0x18 - SD card 64GB](./other/component%20Details/0x18-SD%20card%2064GB/)  
+       - [0x19 - RBG Led](./other/component%20Details/0x19-RBG%20Led/)  
+       - [0x20 - Switch](./other/component%20Details/0x20-Switch/)
+
+4. [schemes (circuit files)](./schemes/)  
+   - [schemes README](./schemes/README.md)
+
+5. [src ( source code )](./src%20(%20source%20code%20)/)  
+   - [PI4B folder](./src%20(%20source%20code%20)/PI4B/)  
+   - [PICO folder](./src%20(%20source%20code%20)/PICO/)
+
+6. [t-photos (team photos)](./t-photos/)  
+   - [t-photos README](./t-photos/README.md)
+
+7. [v-photos (vehicle photos)](./v-photos/)  
+   - [v-photos README](./v-photos/README.md)
+
+8. [videos](./videos/)  
+   - [videos README](./videos/README.md)  
+   - Subfolders:
+     - [Obstacle Challenge](./videos/Obstacle%20Challenge/)  
+     - [Open Challenge](./videos/Open%20Challenge/)  
+     - [Project Presentation](./videos/Project%20Presentation/)  
+     - [Robot Parts Printing](./videos/Robot%20Parts%20Printing/)  
+     - [Sensors Test](./videos/Sensors%20Test/)
+
+</details>
+
+> [!NOTE]
+>
+> The folders, images and supplementary docs in this repository are provided as documentation and for reference only. They are not required to recreate the robot hardware, nor are they mandatory for judging. The files and media help explain our design and process but do not imply required parts or exact build steps for competition entry.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 🌟 Highlights
 
 - **Innovative mobility system:** Built on a custom-designed chassis engineered for balance, rigidity, and modularity. The vehicle features a **rear-wheel differential drive system** for propulsion and a **front-wheel Ackermann steering mechanism** controlled by a high-torque servo motor. DC motors is driven by a **TB6612FNG motor driver**, with encoder feedback for precise closed-loop speed and position control. A **buzzer** provides real-time debugging feedback, and a **push button** is used for controlled start and system activation.  
