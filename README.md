@@ -124,12 +124,6 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | Own Design and manufacturing of vehicle and components, with off the shelf electrical components, such as motors and sensors. |
 | [Design Description]()                                                                                                        |
 
-## License
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
-
-Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
-
 ## 👥 Team
 
 [![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
@@ -143,6 +137,15 @@ Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAI
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/mindcraft.ma)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/mindcraft.ma)
 
+Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
+
+## License
+>You can check out the full license [here](https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
+
+This project is licensed under the terms of the **MIT** license.
+
+
 
 Like the work? 😍
+
 Consider giving the repository a star 😎
