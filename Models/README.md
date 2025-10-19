@@ -3,6 +3,11 @@
 This section covers the **CAD modeling and manufacturing process** behind the development of our robot for the **WRO Future Engineers competition**, explaining our design tools, choices, and manufacturing techniques. The following highlights the key decisions in our process and why they benefit the project.
 
 ## Table of Contents
+> [!TIP]
+> Click the arrow below 👇 to expand the **Table of Contents**, all items are **clickable** links to their sections.
+
+<details>
+<summary>Table of Contents</summary>
 
 1. [Design Considerations Before CAD Modeling](#design-considerations-before-cad-modeling)
    - [Key Requirements](#key-requirements)
@@ -31,6 +36,9 @@ This section covers the **CAD modeling and manufacturing process** behind the de
    - [Steering System](#steering-system)
 6. [Robot Parts Details](#robot-parts-details)
 7. [Conclusion](#conclusion)
+
+</details>
+
 
 ---
 
