@@ -5,6 +5,7 @@
 
 📌 This repository documents the ongoing research, design, and development of our self-driving robotic vehicle, engineered and programmed by Salmane Derdeb, Taha Taidi Laamiri, and Rayane Ghacha for the World Robot Olympiad (WRO) 2025 – Future Engineers Division. The project represents the fusion of embedded systems (ESP32 and Raspberry Pi), perception technologies (computer vision and LiDAR-based mapping), and intelligent control logic implemented in Python and C++. It showcases our continuous effort to build a robust, fully autonomous system capable of performing complex navigation and task-solving challenges with precision and adaptability.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 <p align="center">
   <img alt="Project logo" src="https://img.shields.io/badge/Project-WRO--FE--2025--Mindcraft-4b5563?style=for-the-badge&logo=robot" />
@@ -23,6 +24,8 @@
 [![Contributors](https://img.shields.io/github/contributors/DexterTaha/WRO-FE-2025-Mindcraft)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/graphs/contributors)
 [![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft)
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 🌟 Highlights
 
 - **Innovative mobility system:** Built on a custom-designed chassis engineered for balance, rigidity, and modularity. The vehicle features a **rear-wheel differential drive system** for propulsion and a **front-wheel Ackermann steering mechanism** controlled by a high-torque servo motor. DC motors is driven by a **TB6612FNG motor driver**, with encoder feedback for precise closed-loop speed and position control. A **buzzer** provides real-time debugging feedback, and a **push button** is used for controlled start and system activation.  
@@ -35,6 +38,9 @@
 
 - **Open-source and fully documented:** All **CAD models**, **wiring diagrams**, **source code**, and **build instructions** are openly available for others to learn from and replicate. Full documentation, including setup guides and engineering notes, is published through **MkDocs** at [dextertaha.github.io/WRO-FE-2025-Mindcraft](https://dextertaha.github.io/WRO-FE-2025-Mindcraft/).
 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ### 🌍 World Robot Olympiad (WRO)
 
 > The World Robot Olympiad (WRO) is a prestigious international robotics competition that ignites the imaginations of students worldwide. It challenges participants to showcase their creativity, problem-solving skills, and technical prowess in designing and programming robots for a variety of tasks and challenges.
@@ -46,6 +52,9 @@
 🎥 <a href="https://www.youtube.com/watch?v=_J15lf6uhwo&t=2s" target="_blank" rel="noopener noreferrer">Watch the challenge explanation video</a>
 
 Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025-Future-Engineers-Self-Driving-Cars-General-Rules.pdf" target="_blank" rel="noopener noreferrer">Download the WRO 2025 Future Engineers — Self-Driving Cars official rules (PDF)</a>
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📁 Project Structure
 
@@ -67,6 +76,9 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 ├── 📄 LICENSE
 └── 📄 README.md
 ```
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # 🏁 WRO Future Engineers Competition
 
@@ -127,11 +139,17 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | Own Design and manufacturing of vehicle and components, with off the shelf electrical components, such as motors and sensors. |
 | [Design Description]()                                                                                                        |
 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 👥 Team
 
 [![Team Website](https://img.shields.io/badge/Website-Visit-brightgreen?style=for-the-badge&logo=web&logoColor=white)]()
 [![Team Youtube](https://img.shields.io/badge/Youtube-%23FF0000.svg?style=for-the-badge&logo=Youtube&logoColor=white)](https://www.youtube.com/@MindcraftWRO-kw8vp)
 
+
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧠 Our Centre
 
@@ -142,18 +160,24 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 
 Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## License
 >You can check out the full license [here](https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
 
 
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+Like the work? 😍
+
+Consider giving the repository a star 😎
+
 <p align="right">
   <a href="#top">
     <img src="https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square" alt="Back to top" />
   </a>
 </p>
-
-Like the work? 😍
-
-Consider giving the repository a star 😎
