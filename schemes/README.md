@@ -17,7 +17,7 @@
 <details>
 <summary><b>📂 Table of Contents</b></summary>
 
-1. [Hardware Overview](./Docs/1_Hardware_Overview/README.md)  
+1. [🧩 Hardware Overview](#🧩-Hardware-Overview)  
 2. [Wiring Diagram](./Docs/2_Wiring_Diagram/README.md)  
 3. [About Fritzing](./Docs/3_About_Fritzing/README.md)  
 4. [Download Fritzing](./Docs/4_Download_Fritzing/README.md)  
