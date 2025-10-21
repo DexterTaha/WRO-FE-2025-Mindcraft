@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Robot Base</h1>
+  <h1>Wheel Support</h1>
 </div>
 
 <p></p>
@@ -7,7 +7,7 @@
 <div align="left">
   <h2>Drawing PNG:</h2>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/Models/Parts/0x02-%20Wheel%20Support/Drawing%20Wheel%20Support.png" width="1000">
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x07-%20Wheel%20Support/Drawing%20Wheel%20Support.png" width="1000">
   </p>
 </div>
 

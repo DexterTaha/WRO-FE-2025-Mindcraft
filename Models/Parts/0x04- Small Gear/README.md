@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Robot Base</h1>
+  <h1>Small Gear</h1>
 </div>
 
 <p></p>
@@ -7,7 +7,7 @@
 <div align="left">
   <h2>Drawing PNG:</h2>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/Models/Parts/0x03-%20Gear/Drawing%20Big.png" alt="Robot Base Drawing" width="1000">
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x04-%20Small%20Gear/Drawing%20Small%20Gear.png" alt="Robot Base Drawing" width="1000">
   </p>
 </div>
 
