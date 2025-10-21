@@ -6,20 +6,28 @@
 
 ---
 
-## 📌 Table of Contents
+## 📘 Project Documentation Index
 
-* [Hardware Overview](#hardware-overview)
-* [Wiring Diagram](#wiring-diagram)
-* [About Fritzing](#about-fritzing)
-* [Download Fritzing](#download-fritzing)
-* [Power Management](#power-management)
-* [Communication Architecture](#communication-architecture)
-* [Component Responsibilities](#component-responsibilities)
-* [System Data Flow](#system-data-flow)
-* [Pin Mapping](#pin-mapping)
-* [Media](#media)
+> [!TIP]
+> Click the arrow below 👇 to expand the **Table of Contents**.  
+> Every item is a clickable link to a folder or README file in this repository.
 
----
+<details>
+<summary><b>📂 Table of Contents</b></summary>
+
+1. [Hardware Overview](./Docs/1_Hardware_Overview/README.md)  
+2. [Wiring Diagram](./Docs/2_Wiring_Diagram/README.md)  
+3. [About Fritzing](./Docs/3_About_Fritzing/README.md)  
+4. [Download Fritzing](./Docs/4_Download_Fritzing/README.md)  
+5. [Power Management](./Docs/5_Power_Management/README.md)  
+6. [Communication Architecture](./Docs/6_Communication_Architecture/README.md)  
+7. [Component Responsibilities](./Docs/7_Component_Responsibilities/README.md)  
+8. [System Data Flow](./Docs/8_System_Data_Flow/README.md)  
+9. [Pin Mapping](./Docs/9_Pin_Mapping/README.md)  
+10. [Media](./Docs/10_Media/README.md)
+
+</details>
+
 
 ## 🧩 Hardware Overview
 
