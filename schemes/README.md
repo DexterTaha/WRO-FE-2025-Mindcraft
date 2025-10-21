@@ -1,10 +1,12 @@
+<a name="top"></a>
+
 # 🤖 WRO-FE 2025 Mindcraft Robot System Documentation
 
 ![Hardware Architecture](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Hardware%20Architecture.png)
 
 > Comprehensive documentation for the WRO Future Engineers 2025 robot designed by **Team Mindcraft**. This robot integrates a Raspberry Pi 4B and ESP 32 with vision processing, sensor fusion, and custom power management to achieve autonomous navigation and obstacle avoidance.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📌 Table of Contents
 
@@ -28,6 +30,7 @@
 
 </details>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧩 Hardware Overview
 
@@ -49,7 +52,7 @@
 | `0x15`    | **Buzzer**                  | System feedback (tones/melody)                  |
 | `0x19`    | **RGB LED**                 | Status indication                               |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🗺️ Wiring Diagram
 
@@ -65,7 +68,7 @@ A visual schematic is available in the repo:
 
 👉 **Local Download (.fzz)**: <button style="padding: 10px 16px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;" onclick="window.location.href='/mnt/data/dbd61b93-c1bc-48fd-b559-80db10cae37b.png'">Download Circuit File (.fzz)</button>
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🛠️ About Fritzing
 
@@ -80,7 +83,7 @@ A visual schematic is available in the repo:
 
 Fritzing helps document projects like this one by providing a clear and modifiable graphical circuit overview for prototyping, testing, and presentation.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔋 Power Management
 
@@ -101,8 +104,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 > [!NOTE]
 > Proper **ground plane** shared across devices
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📡 Communication Architecture
 
@@ -115,7 +117,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 | **PWM**  | ESP 32 → Servo + Motor Driver      | Output                |
 | **GPIO** | ESP 32 ← Button, Pico → Buzzer/LED | Input/Output          |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧠 Component Responsibilities
 
@@ -135,7 +137,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
   * RGB LED status
   * Button for manual control
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔁 System Data Flow
 
@@ -152,7 +154,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 * Raspberry Pi handles vision & sensing.
 * ESP 32 executes precise low-level actions.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📌 Pin Mapping (Pico)
 
@@ -168,7 +170,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 | PUSH BUTTON                 |    19    |
 | BUZZER                      |    4     |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🖼️ Media
 
@@ -176,7 +178,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 > Robot front view showing camera, LIDAR, custom regulators, and modular stacking.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ✅ Status
 
@@ -184,4 +186,8 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 * ✅ Custom MicroPython code on ESP 32 for modular control
 * ✅ Camera + LIDAR interfaced and tested
 
----
+<p align="right">
+  <a href="#top">
+    <img src="https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square" alt="Back to top" />
+  </a>
+</p>
