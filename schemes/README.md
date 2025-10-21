@@ -46,9 +46,9 @@
 A visual schematic is available in the repo:
 
 ![Robot Circuit Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/schemes.png)
-![View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Circuit.png)
+![View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit_bb.png)
 📌 **High-resolution version** of the full circuit:
-🔗 [View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Circuit.png)
+🔗 [View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit_bb.png)
 
 📥 **Download the Fritzing (.fzz) project file:**
 🔗 [Download circuit.fzz from GitHub](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit.fzz)
