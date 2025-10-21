@@ -27,12 +27,14 @@
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
-## Table of Contents
+## 📌 Table of Contents
+
 > [!TIP]
-> Click the arrow below 👇 to expand the **Table of Contents**. All items are clickable links to folders or README.md files.
+> Click the arrow below 👇 to expand the **Table of Contents**.  
+> Every item is a clickable link to a folder or README file in this repository.
 
 <details>
-<summary>Table of Contents</summary>
+<summary><b>📂 Table of Contents</b></summary>
 
 1. [Top-level README](./README.md)
 
