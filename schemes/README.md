@@ -2,7 +2,7 @@
 
 ![Hardware Architecture](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Hardware%20Architecture.png)
 
-> Comprehensive documentation for the WRO Future Engineers 2025 robot designed by **Team Mindcraft**. This robot integrates a Raspberry Pi 4B and Raspberry Pi Pico with vision processing, sensor fusion, and custom power management to achieve autonomous navigation and obstacle avoidance.
+> Comprehensive documentation for the WRO Future Engineers 2025 robot designed by **Team Mindcraft**. This robot integrates a Raspberry Pi 4B and ESP 32 with vision processing, sensor fusion, and custom power management to achieve autonomous navigation and obstacle avoidance.
 
 ---
 
@@ -34,7 +34,7 @@
 | Code      | Component                   | Role                                            |
 | --------- | --------------------------- | ----------------------------------------------- |
 | `0x00`    | **Raspberry Pi 4B**         | Image processing, LIDAR handling, high-level AI |
-| `0x01`    | **Raspberry Pi Pico**       | Low-level control (motors, steering, sensors)   |
+| `0x01`    | **ESP 32**                  | Low-level control (motors, steering, sensors)   |
 | `0x02`    | **RP LIDAR C1**             | Long-range obstacle detection (UART)            |
 | `0x03`    | **BNO055 IMU**              | Orientation and motion sensing (I2C)            |
 | `0x04`    | **PiCamera 3 Wide**         | Real-time image input (CSI to Pi)               |
@@ -44,7 +44,7 @@
 | `0x08`    | **Servo Motor (180°)**      | Front wheel steering system                     |
 | `0x09`    | **LiPo Battery 3S (11.1V)** | Main power supply                               |
 | `0x10`    | **IMAX B6AC Charger**       | Recharges LiPo safely                           |
-| `0x11–13` | **7805, 7806, 7809**        | Custom voltage regulation                       |
+| `0x11–13` | **Voltage Regulator**        | Custom voltage regulation                       |
 | `0x14`    | **Tactile Button**          | Manual start/stop input                         |
 | `0x15`    | **Buzzer**                  | System feedback (tones/melody)                  |
 | `0x19`    | **RGB LED**                 | Status indication                               |
@@ -74,7 +74,9 @@ A visual schematic is available in the repo:
 🔧 **Download Fritzing**:
 👉 [https://fritzing.org/download](https://fritzing.org/download)
 
-*Available for Windows, macOS, and Linux.*
+> [!NOTE]
+> *Available for Windows, macOS, and Linux.*
+
 
 Fritzing helps document projects like this one by providing a clear and modifiable graphical circuit overview for prototyping, testing, and presentation.
 
@@ -89,27 +91,29 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ### ➤ Custom Regulator Circuit
 
-| Regulator | Output Voltage | Connected Components   |
-| --------- | -------------- | ---------------------- |
-| **7805**  | 5V             | Pico, BNO055, display  |
-| **7806**  | 6V             | Servo motor            |
-| **7809**  | 9V             | Motor driver TB1266FNG |
+| Regulator      | Output Voltage | Connected Components   |
+| -------------- | -------------- | ---------------------- |
+| **First one**  | 5V             | ESP 32, BNO055, PI 4B  |
+| **Second one** | 6V             | Servo motor            |
+| **Third one**  | 9V             | Motor driver TB1266FNG |
 
-* **100 µF Capacitors (6x total)**: Stabilization at input/output
-* Proper **ground plane** shared across devices
+
+> [!NOTE]
+> Proper **ground plane** shared across devices
+
 
 ---
 
 ## 📡 Communication Architecture
 
-| Protocol | Devices                          | Direction             |
-| -------- | -------------------------------- | --------------------- |
-| **I2C**  | Pico ↔ BNO055                    | Bidirectional         |
-| **I2C**  | Pi ↔ Pico                        | Pi sends commands     |
-| **UART** | Pi ↔ LIDAR                       | Serial stream (TX/RX) |
-| **SPI**  | Pico → ST7789 Display            | Output only           |
-| **PWM**  | Pico → Servo + Motor Driver      | Output                |
-| **GPIO** | Pico ← Button, Pico → Buzzer/LED | Input/Output          |
+| Protocol | Devices                            | Direction             |
+| -------- | ---------------------------------- | --------------------- |
+| **I2C**  | PI 4B ↔ BNO055                     | Input                 |
+| **I2C**  | Pi ↔ ESP 32                        | Pi sends commands     |
+| **UART** | Pi ↔ LIDAR                         | Serial stream (TX/RX) |
+| **PWM**  | ESP 32 → Servo Motor               | Output only           |
+| **PWM**  | ESP 32 → Servo + Motor Driver      | Output                |
+| **GPIO** | ESP 32 ← Button, Pico → Buzzer/LED | Input/Output          |
 
 ---
 
@@ -119,10 +123,9 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 * AI & CV (OpenCV + camera)
 * LIDAR data parsing
-* Sends steering/speed commands to Pico
-* GUI or ROS if needed
+* Sends steering/speed commands to ESP 32
 
-### 🟦 Raspberry Pi Pico
+### 🟦 ESP 32
 
 * Interprets I2C commands from Pi
 * Handles:
@@ -131,8 +134,6 @@ Fritzing helps document projects like this one by providing a clear and modifiab
   * Steering servo
   * RGB LED status
   * Button for manual control
-  * Display output
-* Feedback via serial or display
 
 ---
 
@@ -141,7 +142,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 ```plaintext
 [Camera + LIDAR]
        ↓
-[Raspberry Pi 4B]  ←→  [Raspberry Pi Pico]
+[Raspberry Pi 4B]  ←→  [ESP 32]
        ↓                     ↓
 [AI Decision]         [PWM + GPIO Control]
        ↓                     ↓
@@ -149,25 +150,23 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 ```
 
 * Raspberry Pi handles vision & sensing.
-* Pico executes precise low-level actions.
+* ESP 32 executes precise low-level actions.
 
 ---
 
 ## 📌 Pin Mapping (Pico)
 
-| Pin     | Signal      | Connected Device |
-| ------- | ----------- | ---------------- |
-| GP0     | I2C0 SDA    | BNO055           |
-| GP1     | I2C0 SCL    | BNO055           |
-| GP2     | PWM         | Left Motor       |
-| GP3     | PWM         | Right Motor      |
-| GP4     | PWM         | Servo Motor      |
-| GP5     | GPIO        | RGB LED Red      |
-| GP6     | GPIO        | RGB LED Green    |
-| GP7     | GPIO        | RGB LED Blue     |
-| GP8     | Digital Out | Buzzer           |
-| GP9     | Digital In  | Button           |
-| GP10-13 | SPI         | ST7789 Display   |
+| Component / Function        | GPIO Pin |
+| --------------------------- | :------: |
+| PWB (Motor or Power Switch) |    14    |
+| BI2 (Motor Input 2)         |    12    |
+| BI1 (Motor Input 1)         |    26    |
+| STBY (Motor Driver Standby) |    25    |
+| SERVO PWM Signal            |    27    |
+| ENCODER B Phase             |    32    |
+| ENCODER A Phase             |    33    |
+| PUSH BUTTON                 |    19    |
+| BUZZER                      |    4     |
 
 ---
 
@@ -182,8 +181,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 ## ✅ Status
 
 * ✅ Fully integrated sensors and power system
-* ✅ Custom MicroPython code on Pico for modular control
+* ✅ Custom MicroPython code on ESP 32 for modular control
 * ✅ Camera + LIDAR interfaced and tested
-* 🧪 Final tuning of motion control in progress
 
 ---
