@@ -1,6 +1,10 @@
+<a name="top"></a>
+
 # WRO Future Engineers Robot - Models
 
 This section covers the **CAD modeling and manufacturing process** behind the development of our robot for the **WRO Future Engineers competition**, explaining our design tools, choices, and manufacturing techniques. The following highlights the key decisions in our process and why they benefit the project.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📌 Table of Contents
 
@@ -41,8 +45,7 @@ This section covers the **CAD modeling and manufacturing process** behind the de
 
 </details>
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Design Considerations Before CAD Modeling
 
@@ -67,6 +70,8 @@ Before we began the CAD modeling process, we conducted a thorough study to estab
 ### Study and Planning
 
 We meticulously planned the robot's design to meet these requirements. By prioritizing a compact and stable structure, we ensured that the robot could navigate the competition course effectively. The decision to use common assembly methods and readily available parts not only facilitated our building process but also made our design accessible to others.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Initial Robot Design and Iterations
 
@@ -132,6 +137,8 @@ For the third version, we made significant changes to address the previous short
 
 This final version solved all the problems encountered in previous iterations, resulting in a robot that is compact, efficient, and competition-ready.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 3D CAD Modeling - Onshape
 
 To design and develop the robot, we used **Onshape**, a cloud-based CAD tool that allows for efficient collaboration and design flexibility. We had various options for CAD software, such as **Fusion 360** and **CATIA**, but we ultimately chose Onshape for several reasons:
@@ -171,6 +178,8 @@ We learned how to use Onshape through resources from the official Onshape websit
 
 - [Onshape Official Website](https://www.onshape.com/learn)
 - [Onshape YouTube Playlist](https://youtube.com/playlist?list=PL4FdDkwWXT9p3IaT11JjJcnwnFWiHJuco&si=v0Z2kmiZvLGKHOFY)
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 3D Printing
 
@@ -215,6 +224,8 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 - **Quick Turnaround**: 3D printing enabled us to quickly prototype, test, and refine parts, significantly reducing development time.
 - **Sustainable**: With 3D printing, there’s less waste of materials, aligning with our goal of sustainability for this project.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## Robot
 
 ### Robot Assembly
@@ -238,6 +249,8 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 |-------------------|--------------------------------------------------------------|
 | Steering System Assembly | ![Steering System Assembly]() |
 | Steering System View     | ![Steering System View]() |
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # Robot Parts Details
 
@@ -266,6 +279,8 @@ Notes:
 - I used HTML <img> tags with a width of 120px so images appear smaller in the table while keeping the original aspect ratio.
 - If you'd like them even smaller or responsive, say a target width (e.g., 80, 100, 140) and I will update the table accordingly.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## Conclusion
 
 For our **WRO Future Engineers robot project**, using **Onshape for CAD modeling** and the **Creality K1 Max for 3D printing** has been a critical part of our design and manufacturing process. These tools allowed us to work collaboratively, iterate quickly, and produce complex parts efficiently, all while staying within the constraints of an educational project.
@@ -273,3 +288,9 @@ For our **WRO Future Engineers robot project**, using **Onshape for CAD modeling
 Thank you for following our journey as we design a cutting-edge robot to represent **Morocco** on the global stage at the **World Robot Olympiad**!
 
 For more information and to follow our progress, check out our [Project Link](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft).
+
+<p align="right">
+  <a href="#top">
+    <img src="https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square" alt="Back to top" />
+  </a>
+</p>
