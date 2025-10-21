@@ -1,5 +1,7 @@
 # 🤖 WRO-FE 2025 Mindcraft Robot System Documentation
 
+![Hardware Architecture](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Hardware%20Architecture.png)
+
 > Comprehensive documentation for the WRO Future Engineers 2025 robot designed by **Team Mindcraft**. This robot integrates a Raspberry Pi 4B and Raspberry Pi Pico with vision processing, sensor fusion, and custom power management to achieve autonomous navigation and obstacle avoidance.
 
 ---
@@ -45,7 +47,7 @@
 
 A visual schematic is available in the repo:
 
-![Robot Circuit Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/schemes.png)
+![Software System Architecture](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/Software%20System%20Architecture.png)
 ![View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit_bb.png)
 📌 **High-resolution version** of the full circuit:
 🔗 [View Circuit Image](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/circuit_bb.png)
