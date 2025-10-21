@@ -30,7 +30,7 @@ width="1500" alt="Raspberry"></td>
                 <td data-label="Setup"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x02-ESP%2032/Setup">Setup</a></td>
                 <td data-label="3D Model"><a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details/0x02-ESP%2032/3D%20Models">3D Model</a></td>
                 <td data-label="Description">Microcontroller</td>
-                <td data-label="Image"><img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/e0ca3d18acca4e6c24058f27a92695fc994182f8/images/pico%20wh.png" height="auto" width="1000" alt="ESP"></td>
+                <td data-label="Image"><img src="![Image](https://github.com/user-attachments/assets/c3af2f58-19b8-4826-855f-7d7108d7353b)" height="auto" width="1000" alt="ESP"></td>
             </tr>
             <tr>
                 <td data-label="Code">0x03</td>
