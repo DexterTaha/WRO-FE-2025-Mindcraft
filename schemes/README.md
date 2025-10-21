@@ -6,7 +6,7 @@
 
 ---
 
-## 📘 Project Documentation Index
+## 📌 Table of Contents
 
 > [!TIP]
 > Click the arrow below 👇 to expand the **Table of Contents**.  
