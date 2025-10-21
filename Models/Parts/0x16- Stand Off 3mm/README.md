@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Axle Clamp</h1>
+  <h1>Stand Off 3mm</h1>
 </div>
 
 <p></p>
@@ -7,7 +7,7 @@
 <div align="left">
   <h2>Drawing PNG:</h2>
   <p align="center">
-    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x15-%20Axle%20Clamp/Drawing%20Axle%20Clamp.png" alt="Robot Base Drawing" width="1000">
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x16-%20Stand%20Off%203mm/Isometric%20Stand%20off%203mm.png" alt="Stand Off 3mm Drawing" width="1000">
   </p>
 </div>
 

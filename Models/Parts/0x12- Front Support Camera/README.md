@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Robot Base</h1>
+  <h1>Front Support Camera</h1>
 </div>
 
 <p></p>
@@ -7,7 +7,7 @@
 <div align="left">
   <h2>Drawing PNG:</h2>
   <p align="center">
-    <img src="https://raw.githubusercontent.com/DexterTaha/WRO-FE-2025-Mindcraft/refs/heads/main/Models/Parts/0x11-%20Front%20Support%20Camera/Drawing%20Front%20Support%20Camera.png" alt="Robot Base Drawing" width="1000">
+    <img src="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Parts/0x12-%20Front%20Support%20Camera/Drawing%20Front%20Support%20Camera.png" alt="Front Support Camera Drawing" width="1000">
   </p>
 </div>
 
@@ -24,7 +24,7 @@
 <div align="left">
   <h2>Video Printing:</h2>
   <p align="center">
-    <a href="https://www.youtube.com/watch?v=qS5zd-e40zw&list=PLf8kIvXqxCoALgCahbOKRA_qO1OjeBXYe&index=5" target="_blank">
+    <a href="" target="_blank">
       <img src="https://img.youtube.com/vi/J01qLRWSCVE/maxresdefault.jpg" alt="Watch the video" width="800">
     </a>
   </p>
