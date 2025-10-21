@@ -10,48 +10,49 @@ This section covers the **CAD modeling and manufacturing process** behind the de
 
 > [!TIP]
 > Click the arrow below 👇 to expand the **Table of Contents**.  
-> Every item is a clickable link to a folder or README file in this repository.
+> Every item is a clickable link to a section in this README.
 
 <details>
 <summary><b>📂 Table of Contents</b></summary>
 
-1. [Design Considerations Before CAD Modeling](#design-considerations-before-cad-modeling)
-   - [Key Requirements](#key-requirements)
-   - [Study and Planning](#study-and-planning)
-2. [Initial Robot Design and Iterations](#initial-robot-design-and-iterations)
-   - [National Competition: LEGO Robot](#national-competition-lego-robot)
-   - [First Version: Oversized DIY Robot](#first-version-oversized-diy-robot)
-   - [Second Version: Lack of Differential System](#second-version-lack-of-differential-system)
-   - [Third Version: Final Optimized Robot](#third-version-final-optimized-robot)
-3. [3D CAD Modeling - Onshape](#3d-cad-modeling---onshape)
-   - [Why We Chose Onshape](#why-we-chose-onshape)
-   - [Video of Onshape Demonstration](#video-of-onshape-demonstration)
-   - [Screenshots of Our Robot 3D Model in Onshape](#screenshots-of-our-robot-3d-model-in-onshape)
-   - [Other CAD Options Considered](#other-cad-options-considered)
-   - [Onshape Advantages](#onshape-advantages)
-   - [Learning Onshape](#learning-onshape)
-4. [3D Printing](#3d-printing)
-   - [Why We Chose 3D Printing](#why-we-chose-3d-printing)
-   - [Printer of Choice: Creality K1 Max](#printer-of-choice-creality-k1-max)
-   - [3D Printed Robot Parts](#3d-printed-robot-parts)
-   - [Video of Printing a Part](#video-of-printing-a-part)
-   - [Why We Didn't Choose Laser Cutting or CNC Engraving](#why-we-didnt-choose-laser-cutting-or-cnc-engraving)
-5. [Robot](#robot)
-   - [Robot Assembly](#robot-assembly)
-   - [Power System](#power-system)
-   - [Steering System](#steering-system)
-6. [Robot Parts Details](#robot-parts-details)
-7. [Conclusion](#conclusion)
+1. [1. 🧩 Design Considerations Before CAD Modeling](#design-considerations-before-cad-modeling)
+   - [1.1 Key Requirements](#key-requirements)
+   - [1.2 Study and Planning](#study-and-planning)
+2. [2. 🔁 Initial Robot Design and Iterations](#initial-robot-design-and-iterations)
+   - [2.1 National Competition: LEGO Robot](#national-competition-lego-robot)
+   - [2.2 First Version: Oversized DIY Robot](#first-version-oversized-diy-robot)
+   - [2.3 Second Version: Lack of Differential System](#second-version-lack-of-differential-system)
+   - [2.4 Third Version: Final Optimized Robot](#third-version-final-optimized-robot)
+3. [3. 🧰 3D CAD Modeling - Onshape](#3d-cad-modeling-onshape)
+   - [3.1 Why We Chose Onshape](#why-we-chose-onshape)
+   - [3.2 Video of Onshape Demonstration](#video-of-onshape-demonstration)
+   - [3.3 Screenshots of Our Robot 3D Model in Onshape](#screenshots-of-our-robot-3d-model-in-onshape)
+   - [3.4 Other CAD Options Considered](#other-cad-options-considered)
+   - [3.5 Onshape Advantages](#onshape-advantages)
+   - [3.6 Learning Onshape](#learning-onshape)
+4. [4. 🖨️ 3D Printing](#3d-printing)
+   - [4.1 Why We Chose 3D Printing](#why-we-chose-3d-printing)
+   - [4.2 Printer of Choice: Creality K1 Max](#printer-of-choice-creality-k1-max)
+   - [4.3 3D Printed Robot Parts](#3d-printed-robot-parts)
+   - [4.4 Video of Printing a Part](#video-of-printing-a-part)
+   - [4.5 Why We Didn't Choose Laser Cutting or CNC Engraving](#why-we-didnt-choose-laser-cutting-or-cnc-engraving)
+   - [4.6 Advantages of 3D Printing](#advantages-of-3d-printing)
+5. [5. 🤖 Robot](#robot)
+   - [5.1 Robot Assembly](#robot-assembly)
+   - [5.2 Power System](#power-system)
+   - [5.3 Steering System](#steering-system)
+6. [6. 🧩 Robot Parts Details](#robot-parts-details)
+7. [7. ✅ Conclusion](#conclusion)
 
 </details>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Design Considerations Before CAD Modeling
+## 1. 🧩 Design Considerations Before CAD Modeling <a id="design-considerations-before-cad-modeling"></a>
 
 Before we began the CAD modeling process, we conducted a thorough study to establish the key requirements and considerations for our robot design. Our primary goal was to create a robot that is efficient, reliable, and optimized for the competition's challenges. The following points outline the main factors we considered:
 
-### Key Requirements
+### 1.1 Key Requirements <a id="key-requirements"></a>
 
 - **Compact Size**: Our strategy required the robot to be smaller than a **20cm cube** to navigate efficiently through the competition environment.
 - **Turning Radius**: The robot must be able to turn within an outside circle of maximum **40cm**, enabling it to maneuver in tight spaces.
@@ -67,17 +68,17 @@ Before we began the CAD modeling process, we conducted a thorough study to estab
 - **Ease of Reassembly**: The robot should be **easy to rebuild**, with parts designed to assemble in only **one way** to minimize errors.
 - **Availability of Parts**: All parts should be **commonly available** in most markets to allow other teams to rebuild or service the robot if needed.
 
-### Study and Planning
+### 1.2 Study and Planning <a id="study-and-planning"></a>
 
 We meticulously planned the robot's design to meet these requirements. By prioritizing a compact and stable structure, we ensured that the robot could navigate the competition course effectively. The decision to use common assembly methods and readily available parts not only facilitated our building process but also made our design accessible to others.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Initial Robot Design and Iterations
+## 2. 🔁 Initial Robot Design and Iterations <a id="initial-robot-design-and-iterations"></a>
 
 Our journey began with initial prototypes and several iterations to refine our robot design. Throughout this process, we learned valuable lessons that informed our final design.
 
-### National Competition: LEGO Robot
+### 2.1 National Competition: LEGO Robot <a id="national-competition-lego-robot"></a>
 
 We participated in the **national competition** with a robot constructed using **LEGO components** due to their ease of use and availability. However, this version had several issues:
 
@@ -89,7 +90,7 @@ We participated in the **national competition** with a robot constructed using *
 
 [LEGO Robot](https://github-production-user-asset-6210df.s3.amazonaws.com/130682580/337490248-3f184c4a-aa2b-491f-9ec5-0fe420d42f31.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20241124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20241124T153606Z&X-Amz-Expires=300&X-Amz-Signature=f0453b3dcbf27a713996a15e16b4535ea7a080e4f0b3ac95c5329351e6ec7839&X-Amz-SignedHeaders=host)
 
-### First Version: Oversized DIY Robot
+### 2.2 First Version: Oversized DIY Robot <a id="first-version-oversized-diy-robot"></a>
 
 After qualifying for the international stage, we decided to build a **100% DIY robot**, making all the mechanics and body ourselves while purchasing only the electronics. Our first DIY version had the following issues:
 
@@ -101,7 +102,7 @@ After qualifying for the international stage, we decided to build a **100% DIY r
 
 [First DIY Robot](https://cad.onshape.com/documents/08595aa7e5b1cdab597252fc/w/cfc7e06246a86472db038f97/e/671ce5308fe71051d562260c)
 
-### Second Version: Lack of Differential System
+### 2.3 Second Version: Lack of Differential System <a id="second-version-lack-of-differential-system"></a>
 
 In the second iteration of our DIY robot, we attempted to reduce the size and weight but encountered new challenges:
 
@@ -113,8 +114,7 @@ In the second iteration of our DIY robot, we attempted to reduce the size and we
 
 [Second DIY Robot](https://cad.onshape.com/documents/fbbf77d5a7d51852563af36e/w/afa3b15c16b20a57b3f67b6c/e/98887fbf0f458e0817d24d8b)
 
-
-### Third Version: Final Optimized Robot
+### 2.4 Third Version: Final Optimized Robot <a id="third-version-final-optimized-robot"></a>
 
 For the third version, we made significant changes to address the previous shortcomings:
 
@@ -134,16 +134,15 @@ For the third version, we made significant changes to address the previous short
 
 [Third DIY Robot](https://cad.onshape.com/documents/1c6f1405e84d0c390333223c/w/c90b719cdc670bdbfb16a84e/e/7f48b1d9bd685347e4768d04)
 
-
 This final version solved all the problems encountered in previous iterations, resulting in a robot that is compact, efficient, and competition-ready.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 3D CAD Modeling - Onshape
+## 3. 🧰 3D CAD Modeling - Onshape <a id="3d-cad-modeling-onshape"></a>
 
 To design and develop the robot, we used **Onshape**, a cloud-based CAD tool that allows for efficient collaboration and design flexibility. We had various options for CAD software, such as **Fusion 360** and **CATIA**, but we ultimately chose Onshape for several reasons:
 
-### Why We Chose Onshape
+### 3.1 Why We Chose Onshape <a id="why-we-chose-onshape"></a>
 
 - **Cloud-Based**: Onshape operates entirely in the cloud, allowing our team to collaborate from any location. This was essential since team members were working from different places.
 - **Collaborative Design**: Multiple team members can work on the same design simultaneously, ensuring faster iterations and feedback loops.
@@ -152,27 +151,27 @@ To design and develop the robot, we used **Onshape**, a cloud-based CAD tool tha
 
 You can learn more about Onshape here: [Onshape Website](https://www.onshape.com/)
 
-### Video of Onshape Demonstration
+### 3.2 Video of Onshape Demonstration <a id="video-of-onshape-demonstration"></a>
 
 [![Watch the video](https://img.icons8.com/color/452/play--v1.png)](https://github.com/user-attachments/assets/29b17698-be3b-4aab-8515-d6c245b77802)
 
-### Screenshots of Our Robot 3D Model in Onshape
+### 3.3 Screenshots of Our Robot 3D Model in Onshape <a id="screenshots-of-our-robot-3d-model-in-onshape"></a>
 
 ![Robot Chassis Design]()
 
-### Other CAD Options Considered
+### 3.4 Other CAD Options Considered <a id="other-cad-options-considered"></a>
 
 - **Fusion 360**: Hybrid cloud solution, limited collaboration, and high costs.
 - **CATIA**: Too complex and expensive for our needs.
 
-### Onshape Advantages
+### 3.5 Onshape Advantages <a id="onshape-advantages"></a>
 
 - **Real-Time Collaboration**: Multiple people can work on the design at the same time, accelerating the design process.
 - **Accessible Anywhere**: Since it’s cloud-based, we could work on designs from any device with an internet connection.
 - **Powerful CAD Tools**: Despite being browser-based, Onshape provides all the advanced CAD features we needed to design complex mechanical components for our robot.
 - **Version Control**: We could easily track changes, revert to previous versions, and work on multiple iterations without losing progress.
 
-### Learning Onshape
+### 3.6 Learning Onshape <a id="learning-onshape"></a>
 
 We learned how to use Onshape through resources from the official Onshape website and a helpful playlist on YouTube.
 
@@ -181,18 +180,18 @@ We learned how to use Onshape through resources from the official Onshape websit
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 3D Printing
+## 4. 🖨️ 3D Printing <a id="3d-printing"></a>
 
 Once our designs were finalized in Onshape, we needed to choose a manufacturing method. We considered several techniques like **laser cutting**, **CNC engraving**, and **3D printing**, but we ultimately decided to use **3D printing** due to its flexibility and ability to produce complex parts for our robot.
 
-### Why We Chose 3D Printing
+### 4.1 Why We Chose 3D Printing <a id="why-we-chose-3d-printing"></a>
 
 - **Complex Geometries**: 3D printing allowed us to create complex and custom geometries that are difficult to achieve with laser cutting or CNC engraving.
 - **Rapid Prototyping**: We could quickly print and test various parts, allowing us to make fast iterations on our robot design.
 - **Cost-Effective**: 3D printing is often more affordable for one-off parts or prototypes compared to CNC engraving or laser cutting, which require more setup and material waste.
 - **Less Material Waste**: 3D printing only uses the material needed for the part, reducing waste and lowering costs.
 
-### Printer of Choice: Creality K1 Max
+### 4.2 Printer of Choice: Creality K1 Max <a id="printer-of-choice-creality-k1-max"></a>
 
 We selected the **Creality K1 Max** 3D printer for manufacturing our robot parts. This printer has several key advantages:
 
@@ -203,22 +202,22 @@ We selected the **Creality K1 Max** 3D printer for manufacturing our robot parts
 
 Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www.creality.com/products/creality-k1-max-3d-printer?spm=..404.header_1.1)
 
-### 3D Printed Robot Parts
+### 4.3 3D Printed Robot Parts <a id="3d-printed-robot-parts"></a>
 
 ![3D Printed Robot Parts](https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/main/images/Robot%20Creality%20Silcer.png)
 
-### Video of Printing a Part
+### 4.4 Video of Printing a Part <a id="video-of-printing-a-part"></a>
 
 [![Watch the video](https://img.icons8.com/color/452/play--v1.png)](https://github.com/user-attachments/assets/a05f5144-69ca-4180-a867-5e9cf91d8875)
 
 *This video was made by us while printing the robot base of our robot.*
 
-### Why We Didn't Choose Laser Cutting or CNC Engraving
+### 4.5 Why We Didn't Choose Laser Cutting or CNC Engraving <a id="why-we-didnt-choose-laser-cutting-or-cnc-engraving"></a>
 
 - **Laser Cutting**: While laser cutting is great for creating flat, 2D parts, it is limited in producing complex 3D shapes and detailed mechanical components.
 - **CNC Engraving**: CNC is excellent for metal and wood parts but involves more setup time and higher costs, especially for custom parts. It also generates more material waste, making it less ideal for our project, which requires many iterations.
 
-### Advantages of 3D Printing
+### 4.6 Advantages of 3D Printing <a id="advantages-of-3d-printing"></a>
 
 - **Customization**: We can easily make modifications to the design and print new parts within hours.
 - **Quick Turnaround**: 3D printing enabled us to quickly prototype, test, and refine parts, significantly reducing development time.
@@ -226,9 +225,9 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Robot
+## 5. 🤖 Robot <a id="robot"></a>
 
-### Robot Assembly
+### 5.1 Robot Assembly <a id="robot-assembly"></a>
 
 |                   | Robot                                                         |
 |-------------------|---------------------------------------------------------------|
@@ -236,14 +235,14 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 | Robot Assembly    | ![Robot Assembly]() |
 | Robot View        | ![Robot View]() |
 
-### Power System
+### 5.2 Power System <a id="power-system"></a>
 
 |                   | Power System                                                 |
 |-------------------|--------------------------------------------------------------|
 | Power System Assembly | ![Power System Assembly]() |
 | Power System View     | ![Power System View]() |
 
-### Steering System
+### 5.3 Steering System <a id="steering-system"></a>
 
 |                   | Steering System                                              |
 |-------------------|--------------------------------------------------------------|
@@ -252,7 +251,7 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-# Robot Parts Details
+## 6. 🧩 Robot Parts Details <a id="robot-parts-details"></a>
 
 | Part Name                           | Image                                                                                     | 3D File Link                                                                                       |
 |-------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -281,7 +280,7 @@ Notes:
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Conclusion
+## 7. ✅ Conclusion <a id="conclusion"></a>
 
 For our **WRO Future Engineers robot project**, using **Onshape for CAD modeling** and the **Creality K1 Max for 3D printing** has been a critical part of our design and manufacturing process. These tools allowed us to work collaboratively, iterate quickly, and produce complex parts efficiently, all while staying within the constraints of an educational project.
 
