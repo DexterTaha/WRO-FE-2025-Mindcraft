@@ -12,27 +12,27 @@
 
 > [!TIP]
 > Click the arrow below 👇 to expand the **Table of Contents**.  
-> Every item is a clickable link to a folder or README file in this repository.
+> Every item is a clickable link to a section in this README.
 
 <details>
 <summary><b>📂 Table of Contents</b></summary>
 
-1. [🧩 Hardware Overview](#🧩-Hardware-Overview)  
-2. [Wiring Diagram](./Docs/2_Wiring_Diagram/README.md)  
-3. [About Fritzing](./Docs/3_About_Fritzing/README.md)  
-4. [Download Fritzing](./Docs/4_Download_Fritzing/README.md)  
-5. [Power Management](./Docs/5_Power_Management/README.md)  
-6. [Communication Architecture](./Docs/6_Communication_Architecture/README.md)  
-7. [Component Responsibilities](./Docs/7_Component_Responsibilities/README.md)  
-8. [System Data Flow](./Docs/8_System_Data_Flow/README.md)  
-9. [Pin Mapping](./Docs/9_Pin_Mapping/README.md)  
-10. [Media](./Docs/10_Media/README.md)
+1. [🧩 Hardware Overview](#hardware-overview)  
+2. [🗺️ Wiring Diagram](#wiring-diagram)  
+3. [🛠️ About Fritzing](#about-fritzing)  
+4. [🔋 Power Management](#power-management)  
+5. [📡 Communication Architecture](#communication-architecture)  
+6. [🧠 Component Responsibilities](#component-responsibilities)  
+7. [🔁 System Data Flow](#system-data-flow)  
+8. [📌 Pin Mapping (Pico)](#pin-mapping-pico)  
+9. [🖼️ Media](#media)  
+10. [✅ Status](#status)
 
 </details>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🧩 Hardware Overview
+## 🧩 Hardware Overview <a id="hardware-overview"></a>
 
 | Code      | Component                   | Role                                            |
 | --------- | --------------------------- | ----------------------------------------------- |
@@ -54,7 +54,7 @@
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🗺️ Wiring Diagram
+## 🗺️ Wiring Diagram <a id="wiring-diagram"></a>
 
 A visual schematic is available in the repo:
 
@@ -70,7 +70,7 @@ A visual schematic is available in the repo:
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🛠️ About Fritzing
+## 🛠️ About Fritzing <a id="about-fritzing"></a>
 
 **Fritzing** is an open-source hardware design tool that makes it easy to create electronics schematics and PCB layouts using a visual breadboard-style interface. It's ideal for makers, students, and robotics teams.
 
@@ -85,7 +85,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🔋 Power Management
+## 🔋 Power Management <a id="power-management"></a>
 
 ### ➤ LiPo Battery (3S, 11.1V, 2200mAh)
 
@@ -106,7 +106,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 📡 Communication Architecture
+## 📡 Communication Architecture <a id="communication-architecture"></a>
 
 | Protocol | Devices                            | Direction             |
 | -------- | ---------------------------------- | --------------------- |
@@ -119,7 +119,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🧠 Component Responsibilities
+## 🧠 Component Responsibilities <a id="component-responsibilities"></a>
 
 ### 🟪 Raspberry Pi 4B
 
@@ -139,7 +139,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🔁 System Data Flow
+## 🔁 System Data Flow <a id="system-data-flow"></a>
 
 ```plaintext
 [Camera + LIDAR]
@@ -156,7 +156,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 📌 Pin Mapping (Pico)
+## 📌 Pin Mapping (Pico) <a id="pin-mapping-pico"></a>
 
 | Component / Function        | GPIO Pin |
 | --------------------------- | :------: |
@@ -172,7 +172,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🖼️ Media
+## 🖼️ Media <a id="media"></a>
 
 ![Robot Photo](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/870c603c6b6652d93f061301c1c845767c204ded/v-photos/real%20images/top-view.JPG)
 
@@ -180,7 +180,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## ✅ Status
+## ✅ Status <a id="status"></a>
 
 * ✅ Fully integrated sensors and power system
 * ✅ Custom MicroPython code on ESP 32 for modular control
