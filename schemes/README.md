@@ -111,11 +111,11 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 | Protocol | Devices                            | Direction             |
 | -------- | ---------------------------------- | --------------------- |
 | **I2C**  | PI 4B ↔ BNO055                     | Input                 |
-| **I2C**  | Pi ↔ ESP 32                        | Pi sends commands     |
-| **UART** | Pi ↔ LIDAR                         | Serial stream (TX/RX) |
+| **I2C**  | PI 4B ↔ ESP 32                        | Pi sends commands     |
+| **UART** | PI 4B ↔ LIDAR                         | Serial stream (TX/RX) |
 | **PWM**  | ESP 32 → Servo Motor               | Output only           |
 | **PWM**  | ESP 32 → Servo + Motor Driver      | Output                |
-| **GPIO** | ESP 32 ← Button, Pico → Buzzer/LED | Input/Output          |
+| **GPIO** | ESP 32 ← Button, ESP 32 → Buzzer/LED | Input/Output          |
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
