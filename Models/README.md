@@ -231,9 +231,9 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 |                   | Robot                                                         |
 |-------------------|---------------------------------------------------------------|
-| Robot Dimensions  | ![Robot Dimensions]() |
-| Robot Assembly    | ![Robot Assembly]() |
-| Robot View        | ![Robot View]() |
+| Robot Dimensions  | ![Robot Dimensions](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Dimensions%20Robot.png) |
+| Robot Assembly    | ![Robot Assembly](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Parts%20Robot.png) |
+| Robot View        | ![Robot View](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Views%20Robot.png) |
 
 ### 5.2 Power System <a id="power-system"></a>
 
