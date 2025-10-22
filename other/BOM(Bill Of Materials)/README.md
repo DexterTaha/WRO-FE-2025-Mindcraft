@@ -1,3 +1,11 @@
+<a name="top"></a>
+
+# Bill of Materials
+
+Core components, documentation, setup guides, 3D models, and reference images.
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 <body>
     <h1>Bill of Materials</h1>
     <table>
@@ -180,3 +188,11 @@ width="1500" alt="Raspberry"></td>
     </table>
 </body>
 </html>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<p align="right">
+  <a href="#top">
+    <img src="https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square" alt="Back to top" />
+  </a>
+</p>
