@@ -30,3 +30,20 @@
 *.exe
 *.out
 *.app
+
+# Python / virtualenv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# MkDocs build output
+site/
+
+# OS files
+.DS_Store
+Thumbs.db
