@@ -239,15 +239,15 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 
 |                   | Power System                                                 |
 |-------------------|--------------------------------------------------------------|
-| Power System Assembly | ![Power System Assembly]() |
-| Power System View     | ![Power System View]() |
+| Power System Assembly | ![Power System Assembly](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Parts%20Power.png) |
+| Power System View     | ![Power System View](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Views%20Power.png) |
 
 ### 5.3 Steering System <a id="steering-system"></a>
 
 |                   | Steering System                                              |
 |-------------------|--------------------------------------------------------------|
-| Steering System Assembly | ![Steering System Assembly]() |
-| Steering System View     | ![Steering System View]() |
+| Steering System Assembly | ![Steering System Assembly](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Parts%20Steering.png) |
+| Steering System View     | ![Steering System View](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Views%20Steering.png) |
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
