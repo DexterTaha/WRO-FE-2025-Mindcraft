@@ -180,7 +180,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | Mobility management discussion should cover how the vehicle movements are managed. What motors are selected, how they are selected and implemented. A brief discussion regarding the vehicle chassis design /selection can be provided as well as the mounting of all components to the vehicle chassis/structure. The discussion may include engineering principles such as speed, torque, power etc. usage. Building or assembly instructions can be provided together with 3D CAD files to 3D print parts. |
 | [Robot Parts & Design](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models)   |
 | [Power System](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#power-system)   |
-| [Steering System](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#steering-syste)  |
+| [Steering System](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#steering-system)  |
 | [Sensing Units](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#sensing-units) |
 
 ---
