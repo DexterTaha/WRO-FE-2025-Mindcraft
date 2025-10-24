@@ -41,6 +41,7 @@ This section covers the **CAD modeling and manufacturing process** behind the de
    - [5.1 Robot Assembly](#robot-assembly)
    - [5.2 Power System](#power-system)
    - [5.3 Steering System](#steering-system)
+   - [5.4 Sensing Units](#sensing-units)
 6. [6. 🧩 Robot Parts Details](#robot-parts-details)
 7. [7. ✅ Conclusion](#conclusion)
 
@@ -248,6 +249,13 @@ Learn more about the Creality K1 Max here: [Creality K1 Max Printer](https://www
 |-------------------|--------------------------------------------------------------|
 | Steering System Assembly | ![Steering System Assembly](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Parts%20Steering.png) |
 | Steering System View     | ![Steering System View](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/Drawing%20Views%20Steering.png) |
+
+### 5.4 Sensing Units <a id="sensing-units"></a>
+
+|                   | Sensing Units                                              |
+|-------------------|--------------------------------------------------------------|
+| Sensing Units Assembly | ![Sensing Units Assembly]() |
+| Sensing Units View     | ![Sensing Units View]() |
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
