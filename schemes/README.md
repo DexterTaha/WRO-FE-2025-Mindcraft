@@ -142,7 +142,7 @@ Fritzing helps document projects like this one by providing a clear and modifiab
 ## 🔁 System Data Flow <a id="system-data-flow"></a>
 
 ```plaintext
-[Camera + LIDAR]
+[Camera + LIDAR + IMU]
        ↓
 [Raspberry Pi 4B]  ←→  [ESP 32]
        ↓                     ↓
