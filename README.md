@@ -190,7 +190,6 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | Power and Sense management discussion should cover the power source for the vehicle as well as the sensors required to provide the vehicle with information to negotiate the different challenges. The discussion can include the reasons for selecting various sensors and how they are being used on the vehicle together with power consumption. The discussion could include a wiring diagram with BOM for the vehicle that includes all aspects of professional wiring diagrams. |
 | [Bill of Materials (BOM)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/BOM(Bill%20Of%20Materials))  |
 | [Component Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details)  |
-| [Power Source](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details)  |
 | [Wiring Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#wiring-diagram)  |
 | [Power Managementm and Consumption](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-managementm)  |
 | [Sensors](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#system-data-flow)  |
