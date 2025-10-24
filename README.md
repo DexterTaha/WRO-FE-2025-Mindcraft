@@ -191,7 +191,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | [Bill of Materials (BOM)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/BOM(Bill%20Of%20Materials))  |
 | [Component Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details)  |
 | [Wiring Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#wiring-diagram)  |
-| [Power Managementm and Consumption](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-managementm)  |
+| [Power Managementm and Consumption](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-management)  |
 | [Sensors](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#system-data-flow)  |
 
 ---
