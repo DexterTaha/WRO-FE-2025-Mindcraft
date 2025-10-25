@@ -6,31 +6,68 @@
 #include <Wire.h>
 
 // -----------------------------------------------------------
-// ------------------- GLOBAL DEFINITIONS --------------------
+// ------------- Test ESP32 basic functions  -----------------
 // -----------------------------------------------------------
+inline void test_esp() {
+  Serial.println("Starting test_esp: printing numbers 0..9");
+  for (int i = 0; i < 10; ++i) {
+    Serial.println(i);
+    delay(200);
+  }
+  Serial.println("test_esp finished.");
+}
 
+// -----------------------------------------------------------
+// ---------------------- I2C Handling -----------------------
+// -----------------------------------------------------------
 #define I2C_ADDRESS 0x08
-#define SERVO_PIN   27
-#define BUZZER_PIN  4
+
+extern String i2cBuffer;
+
+inline void onI2CReceive(int len) {
+  while (Wire.available()) {
+    char c = Wire.read();
+    if (c == '\n' || c == '\r') {
+      i2cBuffer.trim();
+
+      if (i2cBuffer.startsWith("M_SPEED:")) {
+        int val = i2cBuffer.substring(8).toInt();
+        if (val >= 0 && val <= 100) {
+          motorSpeedPercent = val;
+          Serial.printf("[I2C] Motor speed set to %d%%\n", motorSpeedPercent);
+        }
+      } 
+      else if (i2cBuffer.startsWith("SERVO_ANG:")) {
+        int angle = i2cBuffer.substring(10).toInt();
+        if (angle >= servoMin && angle <= servoMax) {
+          setServo(angle);
+        }
+      }
+
+      i2cBuffer = "";
+    } else {
+      i2cBuffer += c;
+    }
+  }
+}
+
+inline void initI2C() {
+  Wire.begin(I2C_ADDRESS); // ESP32 as slave
+  Wire.onReceive(onI2CReceive);
+  Serial.printf("I2C slave initialized at address 0x%02X\n", I2C_ADDRESS);
+}
 
 // -----------------------------------------------------------
-// -------------------- GLOBAL VARIABLES ---------------------
+// ---------------- Servo motor control ----------------------
 // -----------------------------------------------------------
+#define SERVO_PIN   27
 
 extern Servo myServo;
 extern int servoMin;
 extern int servoMax;
 extern int servoStep;
-extern int checkDelayMs;
 extern int servoMid;
 extern int servoCurrent;
-extern int motorSpeedPercent;
-
-extern String i2cBuffer;
-
-// -----------------------------------------------------------
-// ---------------- Servo motor control ----------------------
-// -----------------------------------------------------------
 
 inline void initServo() {
   myServo.attach(SERVO_PIN);
@@ -60,6 +97,7 @@ inline void steer(int percent) {
 // -----------------------------------------------------------
 // ---------------------- BUZZER control----------------------
 // -----------------------------------------------------------
+#define BUZZER_PIN  4
 
 const int BUZZER_LEDC_CHANNEL = 0;
 const int BUZZER_LEDC_FREQ = 2000;
@@ -95,43 +133,6 @@ inline void buzzerError() {
   playTone(220, 200);
   playTone(196, 200);
   playTone(220, 200);
-}
-
-// -----------------------------------------------------------
-// ---------------------- I2C Handling -----------------------
-// -----------------------------------------------------------
-
-inline void onI2CReceive(int len) {
-  while (Wire.available()) {
-    char c = Wire.read();
-    if (c == '\n' || c == '\r') {
-      i2cBuffer.trim();
-
-      if (i2cBuffer.startsWith("M_SPEED:")) {
-        int val = i2cBuffer.substring(8).toInt();
-        if (val >= 0 && val <= 100) {
-          motorSpeedPercent = val;
-          Serial.printf("[I2C] Motor speed set to %d%%\n", motorSpeedPercent);
-        }
-      } 
-      else if (i2cBuffer.startsWith("SERVO_ANG:")) {
-        int angle = i2cBuffer.substring(10).toInt();
-        if (angle >= servoMin && angle <= servoMax) {
-          setServo(angle);
-        }
-      }
-
-      i2cBuffer = "";
-    } else {
-      i2cBuffer += c;
-    }
-  }
-}
-
-inline void initI2C() {
-  Wire.begin(I2C_ADDRESS); // ESP32 as slave
-  Wire.onReceive(onI2CReceive);
-  Serial.printf("I2C slave initialized at address 0x%02X\n", I2C_ADDRESS);
 }
 
 #endif
