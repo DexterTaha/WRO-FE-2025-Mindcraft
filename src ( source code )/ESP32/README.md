@@ -91,7 +91,8 @@ The PWM duty cycle is set proportionally to the requested speed percentage:
 
 
 
-$Duty = \frac{speedPercent \times (2^{MOTOR_LEDC_RES} - 1)}{100}$.
+$$Duty = \frac{speedPercent \times (2^{MOTOR\_LEDC\_RES} - 1)}{100}$$
+
 
 For **8-bit resolution**:
 
@@ -122,9 +123,9 @@ dutyCycle = (75 * 255) / 100; // ≈ 191
 
 Pulses per millimeter:
 
-\[
+$$
 \text{pulsesPerMm} = \frac{\pi \times D}{P} = 5.528
-\]
+$$
 
 To move 100 mm, motor must generate:
 
@@ -161,17 +162,17 @@ encoderCount++;
 
 From -100% (left) to +100% (right):
 
-\[
+$$
 \text{angle} = \text{SERVO_MIN} + \left(\frac{\text{percent} + 100}{200}\right) \times (\text{SERVO_MAX} - \text{SERVO_MIN})
-\]
+$$
 
 **Example:**
 
 For percent = 50:
 
-\[
+$$
 \text{angle} = 35 + \frac{150}{200} \times 110 = 117.5^\circ \approx 118^\circ
-\]
+$$
 
 ---
 
@@ -192,9 +193,9 @@ Startup and shutdown sequences use melodic tones.
 Onboard button (PIN 19) is used to adjust speed manually for debugging. Each press increases speed by 25%, wrapping around after 100%.  
 Debounce time:
 
-\[
+$$
 t_{debounce} = 50\,ms
-\]
+$$
 
 ---
 
@@ -322,6 +323,7 @@ Buzzer tone stop
 - Buzzer tones for events
 - Manual speed testing button
 - Modular code for easy integration
+
 
 
 
