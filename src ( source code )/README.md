@@ -21,25 +21,32 @@ src ( source code )/
 
 We improved our robot across **five key versions**, learning and tuning at each stage:
 
-| Version   | Focus                        | Key Features                                      |
-|-----------|----------------------------- |---------------------------------------------------|
-| **v1.0**  | Manual control               | Pi sends basic serial commands to ESP32            |
-| **v1.1**  | Reliable I²C motor protocol  | Smooth motor & servo control, encoder feedback     |
-| **v2.0**  | LIDAR wall-following         | Introduced real-time navigation, sector filtering  |
-| **v2.1**  | IMU-supported arc turns      | BNO055 yaw for sharp, accurate corner maneuvers    |
-| **v3.0**  | Autonomous multi-lap mission | 3 laps + return, on-the-fly wall selection         |
-| **v3.1**  | Stability & multithreading   | Stable PID, robust threading, safe lap handling    |
+## 🧱 Iteration Timeline
+
+| Version | Focus | Key Features | Problems Solved |
+|----------|--------|---------------|------------------|
+| **v1.0** | Manual Control Prototype | Pi sends basic serial commands to ESP32 for forward/backward/stop control. | Established initial communication between Raspberry Pi and ESP32. |
+| **v2.0** | I²C Motor Control | Reliable I²C protocol for motor & servo, encoder feedback support. | Eliminated unstable UART latency and inconsistent motor timing. |
+| **v3.0** | LIDAR Wall-Following | Implemented real-time distance scanning and sector filtering. | Robot could now follow a wall autonomously using LIDAR data. |
+| **v4.0** | IMU-Supported Arc Turns | Added BNO055 yaw feedback for precise 90° arcs and turning. | Solved drift issues in corner turns and improved orientation accuracy. |
+| **v5.0** | Autonomous Multi-Lap Mission | Completed 3 autonomous laps with wall-follow + turn logic. | Solved navigation loop errors and added lap counting & recovery. |
+| **v6.0** | Multithreaded Stability | Introduced threading for LIDAR, control loops, and IMU updates. | Fixed frame delays, improved real-time responsiveness and PID consistency. |
+| **v7.0 (Final)** | Competition-Ready System | Tuned PID, safe threading, stop logic, 3-lap + return mission. | Solved oscillation, steering jitter, and ensured smooth lap transitions. |
+
 
 ### **Visual Summary of Iteration**
 ```mermaid
 timeline
     title Robot Development Stages
-    2024-10 : v1.0 Manual remote
-    2024-11 : v1.1 I2C comms
-    2025-02 : v2.0 LIDAR PID
-    2025-04 : v2.1 IMU arcs
-    2025-06 : v3.0 Full laps
-    2025-09 : v3.1 Threaded + tuned (final)
+    section 2024
+      April  : v1.0 Manual remote control
+      September : v1.1 I2C communication established
+      Novemner : v2.0 LIDAR-based wall following
+    section 2025
+      February : v2.1 IMU-guided arc turns
+      April    : v3.0 Full autonomous lap logic
+      September: v3.1 Threaded PID & tuning
+      November : v3.2 Final competition version
 ```
 
 
