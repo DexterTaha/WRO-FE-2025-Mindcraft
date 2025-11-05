@@ -1,53 +1,182 @@
-# Robot Strategy for WRO Future Engineers
+# 🏁 Open Challenge – Strategy Overview
 
-In this competition, our robot needs to figure out where to go and how to avoid obstacles using **sensors** like LiDAR and a camera. Here’s how it works:
-
----
-
-## 1. **Understanding the Zones**
-
-- There are special shapes on the board: two **X-shapes** and four **T-shapes**. These are called **Zones**.
-- Our robot uses **4 sensors** to find out where these Zones are.
-- After that, the robot locates itself based on these zones and gets ready to move!
-
-![zones](https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/71f4f0625fcd301564ceb619e6b7f5b077dd08b7/images/zones.png)
----
-
-## 2. **Looking for Obstacles**
-
-- There are **24 possible places** where obstacles could be. We call them **P1, P2, P3, … up to P24**.
-- The robot **pretends** these obstacles are there and checks their actual location using a **LiDAR sensor** (like a robot eye!).
-- Then it uses a **camera** to figure out the color of the obstacles:
-  - **Red** = Dangerous
-  - **Green** = Safe
-  - **None** = No obstacle
-    
-![obstacles](https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/9781a5c67df650d096feca76e06a3b82906b8b59/images/obstacles.png)
+This document outlines the **strategy** for the Raspberry Pi-controlled wall-following robot in the WRO Future Engineers 2025 Open Challenge.  
+It focuses on **high-level decision-making, navigation logic, and visualizations**, without reference to code.
 
 ---
 
-## 3. **Storing the Information**
+## 🎯 Mission Goals
 
-- Each place, like P1, P2, etc., gets a value:
-  - If there’s **no obstacle**, the value is **0**.
-  - If there’s a **Green obstacle**, the value is **1**.
-  - If there’s a **Red obstacle**, the value is **2**.
-  
-For example:
-```powershell
-P1 = 0 (no obstacle)
-P2 = 2 (red obstacle)
-p3 = 1 (green obstacle)
+- Complete **3 laps** along the designated wall path.  
+- Maintain **precise lateral distance** from the chosen wall.  
+- Execute **accurate 90° arcs** when turning corners.  
+- Detect front obstacles and **stop safely**.  
+- Return to the **exact starting position** after completing laps.  
+
+**Constraints**:  
+
+- Robot starts facing a wall.  
+- No prior map; decisions are based **on-the-fly sensor data**.  
+- Sensors: **LIDAR** (distance & angle), **IMU** (yaw, pitch, roll), optional encoders.  
+- Actuators: **Rear Ackermann steering**, motors controlled via I²C.
+
+---
+
+## 🧭 Step 1 – Startup and Initial Assessment
+
+1. **Move backward slowly** until the front distance is below a threshold.  
+2. **Measure median distances** to the left, right, and front sectors using LIDAR:  
+   - Right: 10°–50°  
+   - Left: 130°–170°  
+   - Front: 80°–100°  
+3. **Decide wall side**:  
+   - Follow the wall with the **larger median distance**, ensuring easier navigation.  
+
+**Visual representation**:
+
+```mermaid
+flowchart TD
+Start[Robot Power-On] --> BackwardMove[Move Backward to Front Threshold]
+BackwardMove --> Measure[Measure Median LIDAR Distances]
+Measure --> Decision{Right > Left?}
+Decision -->|Yes| RightWall[Follow Right Wall]
+Decision -->|No| LeftWall[Follow Left Wall]
 ```
 
 
 ---
 
-## 4. **Finding the Target**
+## 🧭 Step 2 – Wall-Following PID Loop
 
-- After knowing where the obstacles are, the robot uses its **LiDAR** to trace the path to the **target**.
-- Then it moves carefully to avoid the obstacles and reach its goal!
+**Objective:** Maintain a constant lateral distance to the chosen wall.
 
-![variables](https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/blob/9ee2800d892db4f2527620af95ed6c12a5400082/images/variables.png)
+**Sensors:** LIDAR sector (right or left), IMU yaw for stability.
 
-This is the basic idea of how our robot works in the competition!
+**Control Logic:**
+
+- Compute distance error: 
+
+  \[
+  \text{error} = \text{target_distance} - \text{measured_distance}
+  \]
+
+- Apply PID correction to rear steering.  
+
+**Key Points:**
+
+- Use median filtering to reject spurious LIDAR readings.  
+- Maintain relative yaw stability to avoid drift during long straight segments.  
+
+**Visualization:**
+
+```mermaid
+flowchart TD
+StartPID[Start Wall-Follow] --> MeasureDist[Measure LIDAR Distance]
+MeasureDist --> ComputeError[Compute Lateral Error]
+ComputeError --> PID[PID Controller]
+PID --> AdjustSteering[Adjust Rear Steering]
+AdjustSteering --> LoopBack[Loop Back to Measure LIDAR Distance]
+```
+
+
+---
+
+## 🧭 Step 3 – Obstacle Detection & Lap Completion
+
+**Detection:** Front LIDAR distance falls below a threshold consistently for several consecutive readings.
+
+**Action:** Stop wall-following and execute a 90° backward arc using IMU feedback.
+
+**Lap Loop:**
+
+- Repeat wall-following until obstacle detected.  
+- Execute arc turn.  
+- Continue to next segment.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+WallFollow[Wall-Following Active] --> FrontCheck[Front Distance <= Threshold?]
+FrontCheck -->|No| WallFollow
+FrontCheck -->|Yes| StopRobot[Stop & Prepare Arc]
+StopRobot --> ArcTurn[Execute 90° Backward Arc]
+ArcTurn --> WallFollow
+```
+
+
+---
+
+## 🧭 Step 4 – Return to Starting Position
+
+**Objective:** After completing all laps, return to the starting front distance.
+
+**Strategy:**
+
+- Resume wall-following on previously chosen wall.  
+- Monitor front LIDAR distance to match starting threshold.  
+- Execute final alignment arcs if necessary.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+StartReturn[Start Return Phase] --> WallFollowReturn[Wall-Following]
+WallFollowReturn --> MonitorFront[Monitor Front Distance]
+MonitorFront -->|Reached| FinalArc[Execute Final Arc]
+FinalArc --> Align[Align to Exact Starting Position]
+Align --> Stop[Stop Motors]
+```
+
+
+---
+
+## 🔑 Key Strategy Principles
+
+- **Adaptive Wall Selection:** Robot evaluates left/right median distance to choose wall dynamically.  
+- **Robust PID Wall-Following:** Smooth steering corrections based on median LIDAR distance and IMU yaw. Handles sensor noise and avoids oscillations.  
+- **Threaded Sensor Monitoring:** LIDAR, IMU, and front-distance checks run asynchronously to wall-following.  
+- **Arc Turns Using IMU:** 90° backward turns rely on yaw feedback for accuracy. Steering angle scaled to prevent overshoot.  
+- **Front Distance Filtering:** Requires multiple consecutive measurements to confirm obstacles, avoiding false stops.  
+- **Return Path Symmetry:** Final return uses same wall-following logic and thresholds to ensure precise alignment.
+
+---
+
+## 🖼️ Visualization Summary
+
+```mermaid
+flowchart LR
+Start[Start] --> Measure[Measure Initial Distances]
+Measure --> WallDecision{Select Wall}
+WallDecision --> LeftWall[Left Wall]
+WallDecision --> RightWall[Right Wall]
+LeftWall --> LapLoop[Repeat Lap Loop]
+RightWall --> LapLoop
+LapLoop --> Obstacle[Front Obstacle Detected]
+Obstacle --> ArcTurn[Perform 90° Arc]
+ArcTurn --> LapLoop
+LapLoop --> Return[Return Phase]
+Return --> AlignFinal[Final Alignment]
+AlignFinal --> Stop[Stop Motors]
+```
+
+
+---
+
+## 🧩 Optional Visual Enhancements
+
+- Include median distance graphs per lap for front/left/right LIDAR sectors.  
+- Yaw vs. time plot to visualize arc completion.  
+- Steering angle vs. error to illustrate PID correction.
+
+---
+
+✅ **Summary**
+
+The Open Challenge strategy is built on:
+
+- Adaptive, real-time wall selection  
+- Robust PID wall-following  
+- IMU-assisted arc turns  
+- Threaded monitoring for obstacle detection  
+- Precision return to starting position
