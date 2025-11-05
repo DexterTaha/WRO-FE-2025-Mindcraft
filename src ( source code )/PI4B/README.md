@@ -102,8 +102,8 @@ flowchart TD
 
 **To compile & run:**
 ```bash
-g++ robot_lap_challenge.cpp -o robot_challenge -pthread
-sudo ./robot_challenge
+g++ main.cpp -o i2c_send -pthread
+sudo ./i2c_send
 ```
 
 ---
