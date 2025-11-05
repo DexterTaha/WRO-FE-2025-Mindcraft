@@ -9,9 +9,9 @@ Here you'll find all the **core control systems** powering our autonomous robot 
 ## 📂 Directory Overview
 
 ```
-src/
-├── raspberry_pi/         # High-level control, navigation, sensor fusion (C++)
-└── esp/                  # Low-level motor, servo, encoder control (C++/Arduino)
+src ( source code )/
+├── PI4B/         # High-level control, navigation, sensor fusion (C++)
+└── ESP32/                  # Low-level motor, servo, encoder control (C++/Arduino)
 ```
 
 ---
