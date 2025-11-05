@@ -116,8 +116,8 @@ StopMotors --> End
 **Build & Run:**
 
 ```bash
-g++ main.cpp -o robot_control -pthread
-sudo ./robot_control
+g++ main.cpp -o i2c_send -pthread
+sudo ./i2c_send
 ```
 
 
