@@ -1,7 +1,7 @@
 # 🤖 WRO Future Engineers 2025
 ### **Mindcraft Team – Autonomous Robot Source Code**
 
-Welcome to the `src/` directory of our **Open Challenge 2025** robot codebase!  
+Welcome to the `src/` directory of our robot codebase!  
 Here you'll find all the **core control systems** powering our autonomous robot for WRO Future Engineers, blending **Raspberry Pi intelligence**, **ESP32 motion control**, and robust **LIDAR-IMU navigation**.
 
 ---
