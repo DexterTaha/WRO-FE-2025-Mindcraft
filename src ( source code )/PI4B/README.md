@@ -135,16 +135,3 @@ All 4 laps completed.
 
 ---
 
-## 💡 **Open Challenge Extensions**
-
-- Adapt to new wall shapes or obstacles.
-- Integrate trajectory logging and replay.
-- Use encoder + IMU fusion for even higher precision.
-- Implement autonomous sector selection with learning-based heuristics.
-
----
-
-## 📄 **License**
-
-Public domain. Use this as a base for competitions, teaching, or upgrading your robot navigation stack!
-
