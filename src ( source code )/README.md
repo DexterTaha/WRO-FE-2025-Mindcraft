@@ -102,7 +102,7 @@ Raspberry Pi 4B
 
 ---
 
-## 🚀 Navigation Strategy
+## 🚀 Open Challenge Strategy
 
 The robot autonomously performs **3 laps** around the arena, using only LIDAR and IMU data (no cameras).  
 Rear Ackermann steering allows tight, precise 90° arc turns at corners, guided by IMU yaw readings.
