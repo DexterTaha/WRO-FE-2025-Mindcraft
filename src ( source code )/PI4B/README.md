@@ -40,7 +40,7 @@ $$
 - Right wall: 10°–50°  
 - Left wall: 130°–170°  
 - Front: 80°–100°  
-- Convert mm → cm: \(d_{\text{cm}} = d_{\text{median}} / 10\)
+- Convert mm → cm: $d_{\text{cm}} = d_{\text{median}} / 10$
 
 #### 2. Wall-Follow PID
 $$
@@ -60,18 +60,16 @@ $$
 \text{targetYaw} = \text{currentYaw} \pm 90^\circ
 $$
 
-- Loop until \( | \text{currentYaw} - \text{targetYaw} | < 1^\circ \)
+- Loop until $| \text{currentYaw} - \text{targetYaw}| < 1^\circ$
 - Steering scaled with `steerPercent`
 - Speed modulation:
-$$
-v_\text{cmd} = v_\text{base} - \frac{\text{correction}}{50}
-$$
+$v\_cmd = v\_base - \text{correction} / 50$
+
 
 #### 4. Front Obstacle Detection
 Require **consecutive readings**:
-$$
-d_\text{front} \le d_\text{threshold} \quad \text{for } n_\text{consecutive} = 3
-$$
+$d\_front \le d\_threshold \text{ for } n\_consecutive = 3$
+
 
 ---
 
