@@ -164,7 +164,6 @@ All 4 laps completed.
 
 ---
 
-## 🏗️ Obstacle Challenge (Placeholder)
+## 🏗️ Obstacle Challenge
 
-Section reserved for modifications regarding obstacle handling.  
-Add your obstacle detection and avoidance logic here.
+
