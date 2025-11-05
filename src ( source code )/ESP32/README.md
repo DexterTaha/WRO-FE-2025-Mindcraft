@@ -91,9 +91,9 @@ The PWM duty cycle is set proportionally to the requested speed percentage:
 
 
 
-$$
-\text{Duty} = \frac{\text{speedPercent} \times (2^{\text{MOTOR\_LEDC\_RES}} - 1)}{100}
-$$
+```math
+Duty = (speedPercent × (2^MOTOR_LEDC_RES - 1)) / 100
+```
 
 For **8-bit resolution**:
 
@@ -324,5 +324,6 @@ Buzzer tone stop
 - Buzzer tones for events
 - Manual speed testing button
 - Modular code for easy integration
+
 
 
