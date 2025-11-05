@@ -16,6 +16,36 @@ src/
 
 ---
 
+
+## 🔄 Iterative Development Timeline
+
+We improved our robot across **five key versions**, learning and tuning at each stage:
+
+| Version   | Focus                        | Key Features                                      |
+|-----------|----------------------------- |---------------------------------------------------|
+| **v1.0**  | Manual control               | Pi sends basic serial commands to ESP32            |
+| **v1.1**  | Reliable I²C motor protocol  | Smooth motor & servo control, encoder feedback     |
+| **v2.0**  | LIDAR wall-following         | Introduced real-time navigation, sector filtering  |
+| **v2.1**  | IMU-supported arc turns      | BNO055 yaw for sharp, accurate corner maneuvers    |
+| **v3.0**  | Autonomous multi-lap mission | 3 laps + return, on-the-fly wall selection         |
+| **v3.1**  | Stability & multithreading   | Stable PID, robust threading, safe lap handling    |
+
+### **Visual Summary of Iteration**
+```mermaid
+timeline
+    title Robot Development Stages
+    2024-10 : v1.0 Manual remote
+    2024-11 : v1.1 I2C comms
+    2025-02 : v2.0 LIDAR PID
+    2025-04 : v2.1 IMU arcs
+    2025-06 : v3.0 Full laps
+    2025-09 : v3.1 Threaded + tuned (final)
+```
+
+
+
+---
+
 ## 🧠 System Architecture
 
 ```mermaid
@@ -134,32 +164,6 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ---
 
-## 🔄 Iterative Development Timeline
-
-We improved our robot across **five key versions**, learning and tuning at each stage:
-
-| Version   | Focus                        | Key Features                                      |
-|-----------|----------------------------- |---------------------------------------------------|
-| **v1.0**  | Manual control               | Pi sends basic serial commands to ESP32            |
-| **v1.1**  | Reliable I²C motor protocol  | Smooth motor & servo control, encoder feedback     |
-| **v2.0**  | LIDAR wall-following         | Introduced real-time navigation, sector filtering  |
-| **v2.1**  | IMU-supported arc turns      | BNO055 yaw for sharp, accurate corner maneuvers    |
-| **v3.0**  | Autonomous multi-lap mission | 3 laps + return, on-the-fly wall selection         |
-| **v3.1**  | Stability & multithreading   | Stable PID, robust threading, safe lap handling    |
-
-### **Visual Summary of Iteration**
-```mermaid
-timeline
-    title Robot Development Stages
-    2024-10 : v1.0 Manual remote
-    2024-11 : v1.1 I2C comms
-    2025-02 : v2.0 LIDAR PID
-    2025-04 : v2.1 IMU arcs
-    2025-06 : v3.0 Full laps
-    2025-09 : v3.1 Threaded + tuned (final)
-```
-
----
 
 ## ⚙️ PID Tuning Table
 
