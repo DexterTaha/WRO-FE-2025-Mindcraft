@@ -56,9 +56,7 @@ Decision -->|No| LeftWall[Follow Left Wall]
 
 - Compute distance error: 
 
-  $$
-  \text{error} = \text{target_distance} - \text{measured_distance}
-  $$
+   $error = target\_distance - measured\_distance$
 
 - Apply PID correction to rear steering.  
 
