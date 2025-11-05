@@ -33,9 +33,9 @@ The Pi integrates **LIDAR, IMU, and serial/I²C communication** to make **real-t
 ### 🧮 Sensor Data & Math
 
 #### 1. LIDAR Median Distance
-\[
+$$
 d_{\text{median}} = \text{median}\{ d_i \,|\, \theta_i \in [\theta_\text{min}, \theta_\text{max}], q_i \ge Q_\text{th} \}
-\]
+$$
 
 - Right wall: 10°–50°  
 - Left wall: 130°–170°  
@@ -43,35 +43,35 @@ d_{\text{median}} = \text{median}\{ d_i \,|\, \theta_i \in [\theta_\text{min}, \
 - Convert mm → cm: \(d_{\text{cm}} = d_{\text{median}} / 10\)
 
 #### 2. Wall-Follow PID
-\[
+$$
 \text{error} = d_\text{target} - d_\text{median}
-\]
+$$
 
-\[
+$$
 \text{correction} = K_p \cdot \text{error} + K_i \int \text{error}\,dt + K_d \frac{d(\text{error})}{dt}
-\]
+$$
 
-\[
+$$
 \text{steerAngle} = \text{clamp}(90 + \text{correction}, 0, 180)
-\]
+$$
 
 #### 3. Arc Turns
-\[
+$$
 \text{targetYaw} = \text{currentYaw} \pm 90^\circ
-\]
+$$
 
 - Loop until \( | \text{currentYaw} - \text{targetYaw} | < 1^\circ \)
 - Steering scaled with `steerPercent`
 - Speed modulation:
-\[
+$$
 v_\text{cmd} = v_\text{base} - \frac{\text{correction}}{50}
-\]
+$$
 
 #### 4. Front Obstacle Detection
 Require **consecutive readings**:
-\[
+$$
 d_\text{front} \le d_\text{threshold} \quad \text{for } n_\text{consecutive} = 3
-\]
+$$
 
 ---
 
