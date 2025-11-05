@@ -73,18 +73,19 @@ Rear Ackermann steering allows tight, precise 90° arc turns at corners, guided 
 ### **Mission Flow**
 ```mermaid
 flowchart TD
-    Start --> Init[Initialize]
-    Init --> Measure[Measure Initial Distances]
-    Measure --> Decide[Decide Wall Side]
-    Decide --> Approach[Move Backward to Wall]
-    Approach --> LapLoop[Lap Loop]
-    LapLoop --> WallFollow[PID Wall-Follow (Thread)]
-    WallFollow --> Obstacle[Stop & 90° Arc]
+    Start([Start]) --> Init([Initialize])
+    Init --> Measure([Measure Initial Distances])
+    Measure --> Decide([Decide Wall Side])
+    Decide --> Approach([Move Backward to Wall])
+    Approach --> LapLoop([Lap Loop])
+    LapLoop --> WallFollow([PID Wall-Follow Thread])
+    WallFollow --> Obstacle([Stop & 90° Arc])
     Obstacle --> LapLoop
-    LapLoop --> Return[Return to Starting Wall]
-    Return --> Align[Final Alignment]
-    Align --> StopMotors[Stop Motors & Center]
-    StopMotors --> End
+    LapLoop --> Return([Return to Starting Wall])
+    Return --> Align([Final Alignment])
+    Align --> StopMotors([Stop Motors & Center])
+    StopMotors --> End([End])
+
 ```
 
 ---
