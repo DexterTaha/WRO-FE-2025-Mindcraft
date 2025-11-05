@@ -1,4 +1,4 @@
-# 🤖 WRO Future Engineers 2025 – Open Challenge  
+# 🤖 WRO Future Engineers 2025
 ### **Mindcraft Team – Autonomous Robot Source Code**
 
 Welcome to the `src/` directory of our **Open Challenge 2025** robot codebase!  
