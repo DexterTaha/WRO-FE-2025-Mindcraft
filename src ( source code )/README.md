@@ -127,9 +127,9 @@ flowchart TD
 
 ---
 
-## 🧮 Control Logic and Threads
+### 🧮 Control Logic and Threads
 
-### PID Wall-Following (Left/Right)
+#### PID Wall-Following (Left/Right)
 ```cpp
 error = targetDistance - measuredDistance;
 integral += error * dt;
@@ -142,16 +142,16 @@ steerAngle = clamp(90 + output, 0, 180);
 - Limits servo angle for rear steering.
 - PID tuned for stable, smooth tracking.
 
-### 🌀 90° Arc Turns
+#### 🌀 90° Arc Turns
 - `arc90Back(direction, steerPercent)` executes fast 90° backward arcs.
 - Robot steers rear wheels with fixed angle, moves backward, tracking IMU yaw.
 - Stops once 90° yaw delta is reached.
 
-#### **Direction:**
+##### **Direction:**
 - **1** = left arc
 - **-1** = right arc
 
-### 🧭 LIDAR Sectors
+#### 🧭 LIDAR Sectors
 | Sector | Angle Range (°)   | Function                  |
 |--------|-------------------|---------------------------|
 | Front  | 80–100            | Obstacle/Finish detection |
@@ -160,7 +160,7 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ---
 
-## 🧵 Raspberry Pi Thread Map
+### 🧵 Raspberry Pi Thread Map
 
 | Thread                 | Role                                       |
 |------------------------|--------------------------------------------|
@@ -172,7 +172,7 @@ steerAngle = clamp(90 + output, 0, 180);
 ---
 
 
-## ⚙️ PID Tuning Table
+### ⚙️ PID Tuning Table
 
 | Mode           | Kp  | Ki  | Kd   | Description          |
 |----------------|-----|-----|------|----------------------|
@@ -182,7 +182,7 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ---
 
-## 🛡️ Safety & Robustness Features
+### 🛡️ Safety & Robustness Features
 
 - **Ctrl+C interrupt** → Safely stops threads & motors
 - **Median filtering** → Filters noisy LIDAR data
@@ -192,7 +192,7 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ---
 
-## 📊 Typical Console Output
+### 📊 Typical Console Output
 
 ```
 Listening on 127.0.0.1:5005
@@ -208,7 +208,7 @@ Lap 1 complete.
 
 ---
 
-## 🏅 Summary
+### 🏅 Summary
 
 ✅ Autonomous wall-following  
 ✅ Rear Ackermann steering  
@@ -216,3 +216,8 @@ Lap 1 complete.
 ✅ Multi-threaded PID control  
 ✅ LIDAR-only navigation  
 ✅ Automatic 3-lap completion & return
+
+
+--- 
+
+## Obstacle Challenge
