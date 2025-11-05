@@ -89,18 +89,17 @@ The TB6612FNG driver is controlled with:
 
 The PWM duty cycle is set proportionally to the requested speed percentage:
 
-```math
 
-\[
-\text{Duty} = \frac{\text{speedPercent} \times (2^{\text{MOTOR_LEDC_RES}} - 1)}{100}
-\]
 
-For 8-bit resolution:
+$$
+\text{Duty} = \frac{\text{speedPercent} \times (2^{\text{MOTOR\_LEDC\_RES}} - 1)}{100}
+$$
 
-\[
-\text{maxDuty} = 2^{8} - 1 = 255
-\]
-```
+For **8-bit resolution**:
+
+$$
+\text{maxDuty} = 2^8 - 1 = 255
+$$
 
 **Example:**
 
@@ -325,4 +324,5 @@ Buzzer tone stop
 - Buzzer tones for events
 - Manual speed testing button
 - Modular code for easy integration
+
 
