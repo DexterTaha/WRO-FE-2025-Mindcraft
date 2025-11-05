@@ -162,10 +162,9 @@ encoderCount++;
 
 From -100% (left) to +100% (right):
 
-$$
-\text{angle} = \text{SERVO_MIN} + \left(\frac{\text{percent} + 100}{200}\right) \times (\text{SERVO_MAX} - \text{SERVO_MIN})
-$$
-
+```math
+\text{angle} = \text{SERVO\_MIN} + \left(\frac{\text{percent} + 100}{200}\right) \times (\text{SERVO\_MAX} - \text{SERVO\_MIN}) 
+```
 **Example:**
 
 For percent = 50:
@@ -277,13 +276,13 @@ Motor direction: Reverse, speedPercent=80
 
 ```mermaid
 flowchart TD
-A[Start] --> B[Setup Pins]
-B --> C[Attach Encoder Interrupts]
-C --> D[Initialize Motor + Servo]
-D --> E[Start I2C (Slave Mode)]
-E --> F[Register I2C Handlers]
-F --> G[Play Startup Melody]
-G --> H[Begin Loop]
+    A[Start] --> B[Setup Pins]
+    B --> C[Attach Encoder Interrupts]
+    C --> D[Initialize Motor + Servo]
+    D --> E["Start I2C - Slave Mode"]
+    E --> F[Register I2C Handlers]
+    F --> G[Play Startup Melody]
+    G --> H[Begin Loop]
 ```
 
 
@@ -323,6 +322,7 @@ Buzzer tone stop
 - Buzzer tones for events
 - Manual speed testing button
 - Modular code for easy integration
+
 
 
 
