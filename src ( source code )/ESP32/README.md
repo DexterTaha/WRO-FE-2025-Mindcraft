@@ -4,7 +4,7 @@
 This directory contains the **ESP32 firmware** responsible for **low-level control** of the robot’s motor, steering, and sensors.  
 It acts as an **I²C slave**, receiving commands from the **Raspberry Pi** (master) and executing them precisely in real time.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧠 Overview
 
@@ -16,7 +16,7 @@ It acts as an **I²C slave**, receiving commands from the **Raspberry Pi** (mast
 - Provide **audible feedback** via a buzzer.
 - Allow **manual control** with an onboard button for testing.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧩 System Diagram
 
@@ -45,7 +45,7 @@ B -->|Button Input| G[Speed Button]
 | PUSH BUTTON                  | 19       |
 | BUZZER                      | 4        |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔄 Communication Protocol
 
@@ -65,7 +65,7 @@ The ESP32 acts as an I²C slave device with address 0x08.
 |------------------|--------------------------------|
 | <encoderCount>   | Returns current encoder count (as string) |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚙️ Motor Control
 
@@ -108,7 +108,7 @@ dutyCycle = (75 * 255) / 100; // ≈ 191
 ```
 
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧮 Encoder-Based Distance Calculation
 
@@ -146,7 +146,7 @@ encoderCount++;
 - Clockwise rotation → increment
 - Counter-clockwise → decrement
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧭 Servo Steering System
 
@@ -173,7 +173,7 @@ $$
 \text{angle} = 35 + \frac{150}{200} \times 110 = 117.5^\circ \approx 118^\circ
 $$
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔊 Buzzer Feedback System
 
@@ -185,7 +185,7 @@ $$
 
 Startup and shutdown sequences use melodic tones.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔘 Button Input
 
@@ -196,7 +196,7 @@ $$
 t_{debounce} = 50\,ms
 $$
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚡ Quick Start
 
@@ -218,7 +218,7 @@ platformio run --target upload
 
 - Open serial monitor at the baud rate set in `src/main.cpp` (default 115200) to view logs and test output.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## ⚙️ Servo Configuration (in `src/main.cpp`)
 
@@ -233,7 +233,7 @@ steer(<percent>);
 ```
 
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔌 I²C Communication Example
 
@@ -256,8 +256,7 @@ ESP32 executes:
 Motor direction: Reverse, speedPercent=80
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧪 Testing Routines
 
@@ -270,7 +269,7 @@ Motor direction: Reverse, speedPercent=80
 | motorStop()       | Cuts motor PWM and disables standby  |
 | handleButton()    | Adjusts speedPercent cyclically on button press |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧰 Initialization Flow
 
@@ -285,14 +284,13 @@ flowchart TD
     G --> H[Begin Loop]
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🪫 Power Management
 
 `motorStandby(false)` is used to fully disable the driver. Servo and buzzer consume power only during motion or tone playback. Idle loop checks every 1 second for encoder updates to reduce overhead.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📟 Serial Output Example
 
@@ -310,8 +308,7 @@ Motor stopped
 Buzzer tone stop
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧩 Summary
 
@@ -322,10 +319,3 @@ Buzzer tone stop
 - Buzzer tones for events
 - Manual speed testing button
 - Modular code for easy integration
-
-
-
-
-
-
-
