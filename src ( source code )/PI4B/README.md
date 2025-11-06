@@ -3,7 +3,7 @@
 This README explains the **Raspberry Pi-side logic** for controlling a rear-steering, multi-lap robot challenge.  
 The Pi integrates **LIDAR, IMU, and serial/I²C communication** to make **real-time navigation decisions**, execute wall-following PID control, and perform precise arcs.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🏁 **Open Challenge**
 
@@ -17,7 +17,7 @@ The Pi integrates **LIDAR, IMU, and serial/I²C communication** to make **real-t
   4. Stop at detected front obstacles and execute **90° backward arcs** (IMU-guided).
   5. Return to **starting front distance**.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 📦 Code Architecture
 
@@ -28,7 +28,7 @@ The Pi integrates **LIDAR, IMU, and serial/I²C communication** to make **real-t
 - **I²C Communication:** `sendCommand()` sends speed/steering commands to ESP32.
 - **Arc Turns:** `arc90Back()` executes precise 90° turns using IMU feedback.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🧮 Sensor Data & Math
 
@@ -70,8 +70,7 @@ $v\_cmd = v\_base - \text{correction} / 50$
 Require **consecutive readings**:
 $d\_front \le d\_threshold \text{ for } n\_consecutive = 3$
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🖥️ Main Loop Flowchart
 
@@ -90,8 +89,7 @@ AlignFinal --> StopMotors[Stop Motors & Center Steering]
 StopMotors --> End
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔑 Key Design Decisions
 
@@ -101,7 +99,7 @@ StopMotors --> End
 - Adaptive wall choice based on initial median distances  
 - Speed clamping to prevent stalling or overshoot  
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🛠️ Setup & Execution
 
@@ -120,8 +118,7 @@ g++ main.cpp -o i2c_send -pthread
 sudo ./i2c_send
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📟 Sample Output
 
@@ -138,8 +135,7 @@ Arc completed
 All 4 laps completed.
 ```
 
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📊 Tuning Recommendations
 
@@ -152,7 +148,7 @@ All 4 laps completed.
 | baseSpeedPercent   | Robot speed         | 60–200              |
 | steerPercent      | Arc sharpness       | 30–120              |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📚 References / Math Summary
 
@@ -162,8 +158,7 @@ All 4 laps completed.
 - Arc yaw calculation  
 - Front obstacle detection threshold  
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🏗️ Obstacle Challenge
-
 
