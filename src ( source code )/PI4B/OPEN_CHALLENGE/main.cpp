@@ -507,14 +507,14 @@ int main() {
     float Li = readLIDAR_median_cm(latest_points, 130, 170);
 
     std::cout << "Initial distances: Fi="<<Fi<<", Ri="<<Ri<<", Li="<<Li<<std::endl;
-    sendCommand("SERVO_ANG:105");  // center steering
+    sendCommand("SERVO_ANG:104");  // center steering
 
 
 
 
 
     sendCommand("M_SPEED:-100");  // start moving backward
-    while (readLIDAR_median_cm(latest_points, 80, 100) > 50) std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    while (readLIDAR_median_cm(latest_points, 80, 100) > 60) std::this_thread::sleep_for(std::chrono::milliseconds(50));
     sendCommand("M_STOP");
 
     // --- Wait for valid LIDAR readings ---
@@ -546,8 +546,10 @@ int main() {
         // -------------- DIRECTION CLOCKWISE --------------
 
         // ------------------- MAIN LAP LOOP -------------------
-        for (int lap = 0; lap < 3; ++lap) {
+        for (int lap = 0; lap < 10; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
+
+            arc90Back(1, 60);
 
             
 
@@ -587,7 +589,7 @@ int main() {
             sendCommand("SERVO_ANG:90");
 
             // Perform lap turn
-            arc90Back(1, 60);
+            
 
             // Optional short delay before next lap
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
@@ -596,6 +598,8 @@ int main() {
 
 
         std::cout << "Returning to starting front distance...\n";
+
+        arc90Back(1, 60);
 
         // Reset control flag
         wallFollowStop = false;
@@ -659,10 +663,10 @@ int main() {
         
     } else {
         // ------------------- MAIN LAP LOOP -------------------
-        for (int lap = 0; lap < 3; ++lap) {
+        for (int lap = 0; lap < 2; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
 
-            
+            arc90Back(-1, 40);
 
             wallFollowStop = false;
 
@@ -700,15 +704,19 @@ int main() {
             sendCommand("SERVO_ANG:90");
 
             // Perform lap turn
-            arc90Back(-1, 30);
+            
 
             // Optional short delay before next lap
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
         }
 
+        
+
 
 
         std::cout << "Returning to starting front distance...\n";
+
+        arc90Back(-1, 30);
 
         // Reset control flag
         wallFollowStop = false;
@@ -860,6 +868,5 @@ int main() {
 
 
 // }
-
 
 
