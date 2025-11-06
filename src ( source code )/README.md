@@ -4,7 +4,7 @@
 Welcome to the `src/` directory of our robot codebase!  
 Here you'll find all the **core control systems** powering our autonomous robot for WRO Future Engineers, blending **Raspberry Pi intelligence**, **ESP32 motion control**, and robust **LIDAR-IMU navigation**.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 📂 Directory Overview
 
@@ -14,8 +14,7 @@ src ( source code )/
 └── ESP32/                  # Low-level motor, servo, encoder control (C++/Arduino)
 ```
 
----
-
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔄 Iterative Development Timeline
 
@@ -33,7 +32,6 @@ We improved our robot across **five key versions**, learning and tuning at each 
 | **v6.0** | Multithreaded Stability | Introduced threading for LIDAR, control loops, and IMU updates. | Fixed frame delays, improved real-time responsiveness and PID consistency. |
 | **v7.0 (Final)** | Competition-Ready System | Tuned PID, safe threading, stop logic, 3-lap + return mission. | Solved oscillation, steering jitter, and ensured smooth lap transitions. |
 
-
 ### **Visual Summary of Iteration**
 ```mermaid
 timeline
@@ -49,9 +47,7 @@ timeline
       November : v3.2 Final competition version
 ```
 
-
-
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧠 System Architecture
 
@@ -79,7 +75,7 @@ graph TD
 | I2C Bus (400 kHz)    | Pi ⇄ ESP32 comms                            |
 | UDP Socket           | Real-time LIDAR data to Pi                  |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧩 Communication Protocols
 
@@ -100,7 +96,7 @@ Raspberry Pi 4B
 └── /tmp/bno_imu.txt <─────────  BNO055 (Python script)
 ```
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🚀 Open Challenge Strategy
 
@@ -125,7 +121,7 @@ flowchart TD
 
 ```
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🧮 Control Logic and Threads
 
@@ -158,7 +154,7 @@ steerAngle = clamp(90 + output, 0, 180);
 | Left   | 130–170           | Left wall-follow          |
 | Right  | 10–50             | Right wall-follow         |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🧵 Raspberry Pi Thread Map
 
@@ -169,8 +165,7 @@ steerAngle = clamp(90 + output, 0, 180);
 | Wall-Follow Thread     | PID wall-alignment (starts & stops laps)   |
 | IMU Writer (external)  | Updates `/tmp/bno_imu.txt` from Python     |
 
----
-
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### ⚙️ PID Tuning Table
 
@@ -180,7 +175,7 @@ steerAngle = clamp(90 + output, 0, 180);
 | Arc rotation   | 2.0 | 0.0 | 0.1  | Smooth turns         |
 | Yaw correction | 0.3 | 0.0 | 0.0  | Direction stability  |
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🛡️ Safety & Robustness Features
 
@@ -190,7 +185,7 @@ steerAngle = clamp(90 + output, 0, 180);
 - **Timeout checks** → Prevent stuck motion
 - **Thread control flags** → Reliable lap termination
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 📊 Typical Console Output
 
@@ -206,7 +201,7 @@ Performing 90° backward arc LEFT...
 Lap 1 complete.
 ```
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### 🏅 Summary
 
@@ -217,7 +212,6 @@ Lap 1 complete.
 ✅ LIDAR-only navigation  
 ✅ Automatic 3-lap completion & return
 
-
---- 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🚦 Obstacle Challenge
