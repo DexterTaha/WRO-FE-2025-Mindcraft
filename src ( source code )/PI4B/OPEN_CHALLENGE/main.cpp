@@ -663,7 +663,7 @@ int main() {
         
     } else {
         // ------------------- MAIN LAP LOOP -------------------
-        for (int lap = 0; lap < 2; ++lap) {
+        for (int lap = 0; lap < 10; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
 
             arc90Back(-1, 40);
