@@ -1,4 +1,4 @@
-# 🤖 WRO Future Engineers 2025
+# 1. 🤖 WRO Future Engineers 2025
 ### **Mindcraft Team – Autonomous Robot Source Code**
 
 Welcome to the `src/` directory of our robot codebase!  
@@ -6,21 +6,50 @@ Here you'll find all the **core control systems** powering our autonomous robot 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 📂 Directory Overview
+## 📌 Table of Contents — Mindcraft Source Tree
+
+> [!TIP]
+> Click the arrow below 👇 to expand the **Table of Contents**.  
+> Every item is a clickable link to a section in this README.
+
+<details>
+<summary><b>📂 Table of Contents</b></summary>
+
+1. [1. 🤖 WRO Future Engineers 2025](#1-🤖-wro-future-engineers-2025)  
+2. [2. 📂 Directory Overview](#2-📂-directory-overview)  
+3. [3. 🔄 Iterative Development Timeline](#3-🔄-iterative-development-timeline)  
+   - [3.1 🧱 Iteration Timeline](#31-🧱-iteration-timeline)  
+4. [4. 🧠 System Architecture](#4-🧠-system-architecture)  
+5. [5. 🧩 Communication Protocols](#5-🧩-communication-protocols)  
+6. [6. 🚀 Open Challenge Strategy](#6-🚀-open-challenge-strategy)  
+   - [6.1 Mission Flow](#61-mission-flow)  
+   - [6.2 Control Logic and Threads](#62-control-logic-and-threads)  
+   - [6.3 Raspberry Pi Thread Map](#63-raspberry-pi-thread-map)  
+   - [6.4 PID Tuning Table](#64-pid-tuning-table)  
+7. [7. 🛡️ Safety & Robustness Features](#7-🛡️-safety--robustness-features)  
+8. [8. 📊 Typical Console Output](#8-📊-typical-console-output)  
+9. [9. 🏅 Summary](#9-🏅-summary)  
+10. [10. 🚦 Obstacle Challenge](#10-🚦-obstacle-challenge)
+
+</details>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+## 2. 📂 Directory Overview
 
 ```
 src ( source code )/
 ├── PI4B/         # High-level control, navigation, sensor fusion (C++)
-└── ESP32/                  # Low-level motor, servo, encoder control (C++/Arduino)
+└── ESP32/        # Low-level motor, servo, encoder control (C++/Arduino)
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🔄 Iterative Development Timeline
+## 3. 🔄 Iterative Development Timeline
 
 We improved our robot across **five key versions**, learning and tuning at each stage:
 
-## 🧱 Iteration Timeline
+## 3.1 🧱 Iteration Timeline
 
 | Version | Focus | Key Features | Problems Solved |
 |----------|--------|---------------|------------------|
@@ -49,7 +78,7 @@ timeline
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🧠 System Architecture
+## 4. 🧠 System Architecture
 
 ```mermaid
 graph TD
@@ -77,9 +106,9 @@ graph TD
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🧩 Communication Protocols
+## 5. 🧩 Communication Protocols
 
-### 🛰️ Raspberry Pi ↔ ESP32 (I²C)
+### 5.1 🛰️ Raspberry Pi ↔ ESP32 (I²C)
 | Command         | Description                          | Example         |
 |-----------------|--------------------------------------|-----------------|
 | M_SPEED:<val>   | Motor speed (-255..+255)             | M_SPEED:-200    |
@@ -87,7 +116,7 @@ graph TD
 | M_STOP          | Stop all motors                      | M_STOP          |
 | ENC:<val>       | Encoder feedback (ESP32→Pi)          | ENC:15324       |
 
-### 🔌 Connections
+### 5.2 🔌 Connections
 ```
 Raspberry Pi 4B
 │
@@ -98,12 +127,12 @@ Raspberry Pi 4B
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🚀 Open Challenge Strategy
+## 6. 🚀 Open Challenge Strategy
 
 The robot autonomously performs **3 laps** around the arena, using only LIDAR and IMU data (no cameras).  
 Rear Ackermann steering allows tight, precise 90° arc turns at corners, guided by IMU yaw readings.
 
-### **Mission Flow**
+### 6.1 Mission Flow
 ```mermaid
 flowchart TD
     Start([Start]) --> Init([Initialize])
@@ -118,12 +147,11 @@ flowchart TD
     Return --> Align([Final Alignment])
     Align --> StopMotors([Stop Motors & Center])
     StopMotors --> End([End])
-
 ```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### 🧮 Control Logic and Threads
+### 6.2 Control Logic and Threads
 
 #### PID Wall-Following (Left/Right)
 ```cpp
@@ -147,7 +175,7 @@ steerAngle = clamp(90 + output, 0, 180);
 - **1** = left arc
 - **-1** = right arc
 
-#### 🧭 LIDAR Sectors
+#### 6.3 🧭 LIDAR Sectors
 | Sector | Angle Range (°)   | Function                  |
 |--------|-------------------|---------------------------|
 | Front  | 80–100            | Obstacle/Finish detection |
@@ -156,7 +184,7 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### 🧵 Raspberry Pi Thread Map
+### 6.3 Raspberry Pi Thread Map
 
 | Thread                 | Role                                       |
 |------------------------|--------------------------------------------|
@@ -167,7 +195,7 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### ⚙️ PID Tuning Table
+### 6.4 ⚙️ PID Tuning Table
 
 | Mode           | Kp  | Ki  | Kd   | Description          |
 |----------------|-----|-----|------|----------------------|
@@ -177,17 +205,17 @@ steerAngle = clamp(90 + output, 0, 180);
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### 🛡️ Safety & Robustness Features
+## 7. 🛡️ Safety & Robustness Features
 
-- **Ctrl+C interrupt** → Safely stops threads & motors
-- **Median filtering** → Filters noisy LIDAR data
-- **Steering limits** → Servo angles clamped 0–180°
-- **Timeout checks** → Prevent stuck motion
+- **Ctrl+C interrupt** → Safely stops threads & motors  
+- **Median filtering** → Filters noisy LIDAR data  
+- **Steering limits** → Servo angles clamped 0–180°  
+- **Timeout checks** → Prevent stuck motion  
 - **Thread control flags** → Reliable lap termination
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### 📊 Typical Console Output
+## 8. 📊 Typical Console Output
 
 ```
 Listening on 127.0.0.1:5005
@@ -203,7 +231,7 @@ Lap 1 complete.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### 🏅 Summary
+## 9. 🏅 Summary
 
 ✅ Autonomous wall-following  
 ✅ Rear Ackermann steering  
@@ -214,4 +242,8 @@ Lap 1 complete.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 🚦 Obstacle Challenge
+## 10. 🚦 Obstacle Challenge
+
+(Section reserved for obstacle course notes / challenge results.)
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
