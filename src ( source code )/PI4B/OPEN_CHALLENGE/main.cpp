@@ -22,6 +22,8 @@ using namespace std;
 using namespace std::chrono;
 
 std::atomic<bool> wallFollowStop(false);  // new flag to control wall-following per lap
+std::atomic<bool> arcInProgress(false);  // atomic for thread safety
+
 
 
 // ------------------- GLOBALS -------------------
@@ -38,6 +40,9 @@ std::atomic<bool> ctrl_c_pressed(false);
 // I2C configuration
 const char* I2C_BUS = "/dev/i2c-1";  
 const int ESP32_ADDR = 0x08;         
+constexpr const char* GREEN = "\033[32m";
+constexpr const char* RED   = "\033[31m";
+constexpr const char* RESET = "\033[0m";
 
 // PID constants for arc
 float Kp = 2.0, Ki = 0.0, Kd = 0.1;
@@ -47,16 +52,16 @@ void ctrlc_handler(int) { ctrl_c_pressed = true; }
 
 // ------------------- I2C COMMANDS -------------------
 bool sendCommand(const string& cmd) {
-    int file = open(I2C_BUS, O_RDWR);
-    if (file < 0) { cerr << "❌ Failed to open I2C bus\n"; return false; }
-    if (ioctl(file, I2C_SLAVE, ESP32_ADDR) < 0) { cerr << "❌ Failed to connect to I2C\n"; close(file); return false; }
-    string fullCmd = cmd + "\n";
-    if (write(file, fullCmd.c_str(), fullCmd.length()) != (ssize_t)fullCmd.length()) {
-        cerr << "❌ Failed to write to I2C device\n"; close(file); return false;
-    }
-    close(file);
-    cout << "✅ Sent: " << fullCmd;
-    return true;
+  int file = open(I2C_BUS, O_RDWR);
+  if (file < 0) { cerr << "❌ Failed to open I2C bus\n"; return false; }
+  if (ioctl(file, I2C_SLAVE, ESP32_ADDR) < 0) { cerr << "❌ Failed to connect to I2C\n"; close(file); return false; }
+  string fullCmd = cmd + "\n";
+  if (write(file, fullCmd.c_str(), fullCmd.length()) != (ssize_t)fullCmd.length()) {
+    cerr << "❌ Failed to write to I2C device\n"; close(file); return false;
+  }
+  close(file);
+  cout << "✅ Sent: " << fullCmd;
+  return true;
 }
 
 // ------------------- ENCODER & IMU -------------------
@@ -176,7 +181,8 @@ void arc(int direction, float baseSpeed, float degrees, float steerPercent=100.0
     steerAngle = max(0, min(180, steerAngle));
     sendCommand("SERVO_ANG:" + to_string(steerAngle));
 
-    while (true) {
+    while (!ctrl_c_pressed) {
+if (ctrl_c_pressed) break;
         imu = readIMUData();
         float currentYaw = imu.yaw;
         float error = targetYaw - currentYaw;
@@ -209,53 +215,49 @@ void arc(int direction, float baseSpeed, float degrees, float steerPercent=100.0
     sendCommand("SERVO_ANG:90");
     cout << "Arc completed\n";
 }
+void arc90Back(int direction, int steerPercent = 120, float stopThresholdDeg = 30.0f) {
+    arcInProgress = true;  // prevent other threads from stopping motors
 
+    std::cout << "\nStarting 90° backward arc "
+              << (direction > 0 ? "LEFT" : "RIGHT") << " (rear steering)\n";
 
-
-void arc90Back(int direction, int steerPercent = 120) {
-    cout << "\nStarting ultra-fast 90° backward arc "
-         << (direction > 0 ? "LEFT" : "RIGHT") << " (rear steering)\n";
-
-    // --- Read starting yaw ---
     IMUData imu = readIMUData();
     float startYaw = imu.yaw;
 
-    // --- Compute target yaw for exact 90° rotation ---
-    float targetYaw = fmod(startYaw - direction * 90.0f, 360.0f);
+    float targetYaw = fmod(startYaw + direction * 90.0f, 360.0f);
     if (targetYaw < 0) targetYaw += 360.0f;
 
-    // --- Rear steering: partial turn, fixed outside loop ---
-    // Adjust for rear steering physically reversed
-    int steerAngle = 90 + int(direction * steerPercent);
-    steerAngle = max(0, min(180, steerAngle)); // clamp
-    sendCommand("SERVO_ANG:" + to_string(steerAngle));
-    cout << "Steering angle set to " << steerAngle << endl;
+    int steerAngle = 90 - int(direction * steerPercent);
+    steerAngle = std::max(0, std::min(180, steerAngle));
+    sendCommand("SERVO_ANG:" + std::to_string(steerAngle));
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-    // --- Start full backward speed ---
-    sendCommand("M_SPEED:-200");  // backward speed 100%
+    sendCommand("M_SPEED:-80");
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
-    // --- Loop until robot reaches target yaw ---
-    while (true) {
+    while (!ctrl_c_pressed) {
         imu = readIMUData();
         float currentYaw = imu.yaw;
 
-        // Compute shortest angle difference
         float diff = targetYaw - currentYaw;
         if (diff > 180.0f) diff -= 360.0f;
         if (diff < -180.0f) diff += 360.0f;
 
-        if (fabs(diff) < 1.0f) break;  // stop at 1° tolerance
-        this_thread::sleep_for(chrono::milliseconds(10));  // fast update
+        if (fabs(diff) < stopThresholdDeg) break;
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
     }
 
-    // --- Full stop and straighten rear steering ---
     sendCommand("M_STOP");
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
     sendCommand("SERVO_ANG:90");
-    this_thread::sleep_for(chrono::milliseconds(200)); // stabilize
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-    cout << "Ultra-fast backward 90° arc completed. Rear steering centered.\n";
+    arcInProgress = false;  // allow other threads to send commands
+
+    std::cout << "✅ Backward 90° arc completed. Final yaw ≈ "
+              << imu.yaw << "° (target " << targetYaw << "°)\n";
 }
-
 
 
 // ------------------- GO -------------------
@@ -265,7 +267,8 @@ void go(int direction = 1, int speedPercent = 200, float Kp_steer = 0.3, float m
     float startYaw = imu.yaw;
 
     while (!ctrl_c_pressed) {
-        imu = readIMUData();
+      if (ctrl_c_pressed) break;  
+      imu = readIMUData();
         float currentYaw = imu.yaw;
 
         float relativeYaw = currentYaw - startYaw;
@@ -305,7 +308,8 @@ void lidarReceiver(int sock) {
     char buffer[buffer_size];
 
     while (!ctrl_c_pressed) {
-        sockaddr_in sender_addr{};
+if (ctrl_c_pressed) break;  
+      sockaddr_in sender_addr{};
         socklen_t sender_len = sizeof(sender_addr);
 
         ssize_t len = recvfrom(sock, buffer, buffer_size - 1, 0,
@@ -349,11 +353,11 @@ void lidarReceiver(int sock) {
 
 
 void followRightWallRearStableYaw(float targetDistanceCm = 30.0f,
-                                  float baseSpeedPercent = 80,
+                                  float baseSpeedPercent = 30,
                                   float Kp = 2.0f,
                                   float Ki = 0.0f,
                                   float Kd = 0.5f,
-                                  float maxSteerCorrection = 20.0f)
+                                  float maxSteerCorrection = 10.0f)
 {
     float integral = 0.0f;
     float prevError = 0.0f;
@@ -410,7 +414,7 @@ void followRightWallRearStableYaw(float targetDistanceCm = 30.0f,
 
 
 void followLeftWallRearStableYaw(float targetDistanceCm = 30.0f,
-                                  float baseSpeedPercent = 80,
+                                  float baseSpeedPercent = 30,
                                   float Kp = 2.0f,
                                   float Ki = 0.0f,
                                   float Kd = 0.5f,
@@ -468,6 +472,60 @@ void followLeftWallRearStableYaw(float targetDistanceCm = 30.0f,
 }
 
 
+void bootMenuCheck() {
+    cout << "==== ROBOT BOOT MENU ====\n";
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    // --- IMU check ---
+    cout << "Checking IMU... ";
+    IMUData imu = readIMUData();
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    if (imu.total_rot != 0 || imu.yaw != 0.0f || imu.roll != 0.0f) {
+        cout << GREEN << "IMU available" << RESET << "\n";
+    } else {
+        cout << RED << "IMU NOT detected!" << RESET << "\n";
+    }
+
+    // --- LIDAR check ---
+    cout << "Checking LIDAR... ";
+    this_thread::sleep_for(chrono::milliseconds(500));
+
+    // Try to read median distance in front 30° sector (angle 345° → 15°)
+    float medianFrontCm = readLIDAR_median_cm(latest_points, 345.0f, 15.0f);
+    if (medianFrontCm > 0) {
+        cout << GREEN << "LIDAR available" << RESET 
+             << " | Front distance ≈ " << medianFrontCm << " cm\n";
+    } else {
+        cout << RED << "LIDAR NOT detected!" << RESET << "\n";
+    }
+
+    cout << "\nBoot check complete. Starting robot...\n";
+    this_thread::sleep_for(chrono::milliseconds(500));
+}
+
+
+
+
+
+// int main() {
+//     signal(SIGINT, ctrlc_handler);   // optional, in case user wants Ctrl+C during boot
+
+//     // Reset flags
+//     ctrl_c_pressed = false;
+//     wallFollowStop = false;
+
+
+
+//     // Run boot menu check
+//     bootMenuCheck();
+
+//     sendCommand("SERVO_ANG:104");
+
+//     // At this stage, you can continue with full robot initialization
+//     // Or exit if you only want boot menu for now
+//     return 0;
+// }
 
 int main() {
     signal(SIGINT, ctrlc_handler);
@@ -507,14 +565,15 @@ int main() {
     float Li = readLIDAR_median_cm(latest_points, 130, 170);
 
     std::cout << "Initial distances: Fi="<<Fi<<", Ri="<<Ri<<", Li="<<Li<<std::endl;
-    sendCommand("SERVO_ANG:104");  // center steering
+    sendCommand("SERVO_ANG:98");  // center steering
+    std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
 
 
 
 
-    sendCommand("M_SPEED:-100");  // start moving backward
-    while (readLIDAR_median_cm(latest_points, 80, 100) > 60) std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    sendCommand("M_SPEED:-60");  // start moving backward
+    while (readLIDAR_median_cm(latest_points, 80, 100) > 65) std::this_thread::sleep_for(std::chrono::milliseconds(50));
     sendCommand("M_STOP");
 
     // --- Wait for valid LIDAR readings ---
@@ -542,22 +601,24 @@ int main() {
 
 
     if (direction == -1) {
-
-        // -------------- DIRECTION CLOCKWISE --------------
+        std::thread wallFollowThread;  // reusable thread variable
 
         // ------------------- MAIN LAP LOOP -------------------
         for (int lap = 0; lap < 10; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
 
-            arc90Back(1, 60);
+            arcInProgress = true;
 
-            
+            // --- Perform the arc first (blocking, protected) ---
+            arc90Back(-1, 60);
+            std::this_thread::sleep_for(std::chrono::milliseconds(200)); // cooldown
+            arcInProgress = false;
 
+            // --- Start wall-follow after arc ---
             wallFollowStop = false;
 
-            // Start wall-following in a thread
-            std::thread wallFollowThread([]() {
-                followRightWallRearStableYaw(30.0f, -200, 1.0f, 0.0f, 0.5f, 30.0f);
+            wallFollowThread = std::thread([&]() {
+                followRightWallRearStableYaw(30.0f, -50, 1.0f, 0.0f, 0.5f, 15.0f);
             });
 
             // Wait for front distance <= threshold
@@ -568,111 +629,117 @@ int main() {
             while (!distanceReached && !ctrl_c_pressed) {
                 float dist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
-                // Only consider reasonable distances
-                if (dist > 10.0f && dist <= 60.0f) {
+                if (dist > 50.0f && dist <= 70.0f) {
                     consecutive++;
                     if (consecutive >= requiredConsecutive) {
                         distanceReached = true;
-                        wallFollowStop = true;
-                        sendCommand("M_STOP");
-                        std::cout << "[⚠️ WAIT LIDAR] Object detected at " << dist << " cm → STOP\n";
+                        if (!arcInProgress) {  // do not stop during arc
+                            wallFollowStop = true;
+                            sendCommand("M_STOP");
+                            std::cout << "[⚠️ WAIT LIDAR] Object detected at "
+                                    << dist << " cm → STOP\n";
+                        }
                     }
                 } else {
-                    consecutive = 0; // reset if invalid or out of range
+                    consecutive = 0;
                 }
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(50));
             }
 
-            // Stop wall-following thread cleanly
-            wallFollowThread.join();
+            // Stop wall-follow thread cleanly
+            if (wallFollowThread.joinable()) wallFollowThread.join();
             sendCommand("SERVO_ANG:90");
 
-            // Perform lap turn
-            
-
-            // Optional short delay before next lap
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
         }
 
-
-
         std::cout << "Returning to starting front distance...\n";
 
-        arc90Back(1, 60);
+        // Final arc
+        arc90Back(-1, 60);
 
-        // Reset control flag
+        // Wall-follow toward starting position
         wallFollowStop = false;
+        const float ARC_RADIUS_CM = 30.0f;
+        const float rightThreshold = Ri + ARC_RADIUS_CM;
 
-        // Start wall-following thread along the previously chosen wall side
-        std::thread wallFollowThread([direction]() {
-            followRightWallRearStableYaw(30.0f, -200, 1.0f, 0.0f, 0.5f, 30.0f);
+        wallFollowThread = std::thread([&]() {
+            followRightWallRearStableYaw(30.0f, -60, 1.0f, 0.0f, 0.5f, 10.0f);
         });
 
-
-        const float ARC_RADIUS_CM = 25.0f;
-
-
-        const float rightThreshold = Ri + ARC_RADIUS_CM;
         bool reachedRight = false;
-
         while (!reachedRight && !ctrl_c_pressed) {
             float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
             if (frontDist <= rightThreshold) {
                 reachedRight = true;
-                wallFollowStop = true;
-                sendCommand("M_STOP");
-                std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+                if (!arcInProgress) {
+                    wallFollowStop = true;
+                    sendCommand("M_STOP");
+                    std::cout << "[⚠️ FINAL] Front distance reached: "
+                            << frontDist << " cm → STOP\n";
+                }
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }
 
-        // Stop wall-following thread cleanly
-        wallFollowThread.join();
+        if (wallFollowThread.joinable()) wallFollowThread.join();
 
-        // Perform the final arc
-        arc90Back(1, 60);
+        // Final arc
+        arc90Back(-1, 60);
 
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
 
-        sendCommand("SERVO_ANG:104");
-        sendCommand("M_SPEED:-100");
+        // Wall-follow final stretch
+        wallFollowStop = false;
+        wallFollowThread = std::thread([&]() {
+            followRightWallRearStableYaw(rightThreshold, -60, 1.0f, 0.0f, 0.5f, 10.0f);
+        });
 
-        const float frontThreshold = Fi;
+        const float frontThreshold = Fi + 10.0f;
         bool reachedFront = false;
-
-
         while (!reachedFront && !ctrl_c_pressed) {
             float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
             if (frontDist <= frontThreshold) {
                 reachedFront = true;
-                wallFollowStop = true;
-                sendCommand("M_STOP");
-                std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+                if (!arcInProgress) {
+                    wallFollowStop = true;
+                    sendCommand("M_STOP");
+                    std::cout << "[⚠️ FINAL] Front distance reached: "
+                            << frontDist << " cm → STOP\n";
+                }
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }
 
+        if (wallFollowThread.joinable()) wallFollowThread.join();
+
         std::cout << "✅ Returned to starting position.\n";
+    }
 
 
-        
-    } else {
+    else {
+        std::thread wallFollowThread; // reusable thread variable
+
         // ------------------- MAIN LAP LOOP -------------------
         for (int lap = 0; lap < 10; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
 
-            arc90Back(-1, 40);
+            arcInProgress = true;
 
+            // Perform the arc first
+            arc90Back(1, 40);  // blocking, completes fully
+            std::this_thread::sleep_for(std::chrono::milliseconds(200)); // cooldown
+            arcInProgress = false;
+
+            // Start wall-follow after arc
             wallFollowStop = false;
-
-            // Start wall-following in a thread
-            std::thread wallFollowThread([]() {
-                followLeftWallRearStableYaw(20.0f, -200, 1.0f, 0.0f, 0.5f, 30.0f);
+            wallFollowThread = std::thread([&]() {
+                followLeftWallRearStableYaw(20.0f, -40, 1.0f, 0.0f, 0.5f, 10.0f);
             });
 
             // Wait for front distance <= threshold
@@ -683,111 +750,101 @@ int main() {
             while (!distanceReached && !ctrl_c_pressed) {
                 float dist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
-                // Only consider reasonable distances
-                if (dist > 10.0f && dist <= 60.0f) {
+                if (dist > 50.0f && dist <= 60.0f) {
                     consecutive++;
                     if (consecutive >= requiredConsecutive) {
                         distanceReached = true;
-                        wallFollowStop = true;
-                        sendCommand("M_STOP");
-                        std::cout << "[⚠️ WAIT LIDAR] Object detected at " << dist << " cm → STOP\n";
+                        if (!arcInProgress) {
+                            wallFollowStop = true;
+                            sendCommand("M_STOP");
+                            std::cout << "[⚠️ WAIT LIDAR] Object detected at "
+                                    << dist << " cm → STOP\n";
+                        }
                     }
                 } else {
-                    consecutive = 0; // reset if invalid or out of range
+                    consecutive = 0;
                 }
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(50));
             }
 
-            // Stop wall-following thread cleanly
-            wallFollowThread.join();
+            if (wallFollowThread.joinable()) wallFollowThread.join();
             sendCommand("SERVO_ANG:90");
 
-            // Perform lap turn
-            
-
-            // Optional short delay before next lap
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
         }
 
-        
-
-
-
         std::cout << "Returning to starting front distance...\n";
 
-        arc90Back(-1, 30);
+        // Final arc
+        arc90Back(1, 40);
 
-        // Reset control flag
+        // Wall-follow toward starting position
         wallFollowStop = false;
+        const float ARC_RADIUS_CM = 40.0f;
+        const float leftThreshold = Li + ARC_RADIUS_CM;
 
-        // Start wall-following thread along the previously chosen wall side
-        std::thread wallFollowThread([direction]() {
-            followLeftWallRearStableYaw(20.0f, -200, 1.0f, 0.0f, 0.5f, 30.0f);
+        wallFollowThread = std::thread([&]() {
+            followLeftWallRearStableYaw(20.0f, -40, 1.0f, 0.0f, 0.5f, 10.0f);
         });
 
-
-        const float ARC_RADIUS_CM = 25.0f;
-
-
-        const float leftThreshold = Li + ARC_RADIUS_CM;
         bool reachedLeft = false;
-
         while (!reachedLeft && !ctrl_c_pressed) {
             float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
             if (frontDist <= leftThreshold) {
                 reachedLeft = true;
-                wallFollowStop = true;
-                sendCommand("M_STOP");
-                std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+                if (!arcInProgress) {
+                    wallFollowStop = true;
+                    sendCommand("M_STOP");
+                    std::cout << "[⚠️ FINAL] Front distance reached: "
+                            << frontDist << " cm → STOP\n";
+                }
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }
 
-        // Stop wall-following thread cleanly
-        wallFollowThread.join();
+        if (wallFollowThread.joinable()) wallFollowThread.join();
 
-        // Perform the final arc
-        arc90Back(-1, 30);
+        // Final arc
+        arc90Back(1, 30);
 
         std::this_thread::sleep_for(std::chrono::milliseconds(1));
 
-        sendCommand("SERVO_ANG:104");
-        sendCommand("M_SPEED:-100");
+        // Wall-follow final stretch
+        wallFollowStop = false;
+        wallFollowThread = std::thread([&]() {
+            followLeftWallRearStableYaw(30.0f, -40, 1.0f, 0.0f, 0.5f, 10.0f);
+        });
 
-        const float frontThreshold = Fi;
+        const float frontThreshold = Fi + 20.0f;
         bool reachedFront = false;
-
-
         while (!reachedFront && !ctrl_c_pressed) {
             float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
 
             if (frontDist <= frontThreshold) {
                 reachedFront = true;
-                wallFollowStop = true;
-                sendCommand("M_STOP");
-                std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+                if (!arcInProgress) {
+                    wallFollowStop = true;
+                    sendCommand("M_STOP");
+                    std::cout << "[⚠️ FINAL] Front distance reached: "
+                            << frontDist << " cm → STOP\n";
+                }
             }
 
             std::this_thread::sleep_for(std::chrono::milliseconds(50));
         }
 
+        if (wallFollowThread.joinable()) wallFollowThread.join();
+
         std::cout << "✅ Returned to starting position.\n";
-
-
     }
-
-
-
-
 
 
 
     std::cout << "All 4 laps completed.\n";
 
-    // Ensure LIDAR thread exits
     ctrl_c_pressed = true;
     lidarThread.join();
 
@@ -797,6 +854,8 @@ int main() {
 
     return 0;
 }
+
+
 
 
 
@@ -831,42 +890,169 @@ int main() {
 //     // Start LIDAR receiver thread
 //     std::thread lidarThread(lidarReceiver, sock);
 
+//         // --- Wait for LIDAR ready ---
+//     while (latest_points.empty()) std::this_thread::sleep_for(std::chrono::milliseconds(100));
+
+//     float Fi = readLIDAR_median_cm(latest_points, 80, 100);
+//     float Ri = readLIDAR_median_cm(latest_points, 10, 50);
+//     float Li = readLIDAR_median_cm(latest_points, 130, 170);
+
+//     std::cout << "Initial distances: Fi="<<Fi<<", Ri="<<Ri<<", Li="<<Li<<std::endl;
 //     sendCommand("SERVO_ANG:90");  // center steering
-//     followLEFTWallRearStableYaw(30.0f, -200, 1.0f, 0.0f, 0.5f, 30.0f);
-
-//     // --- Wait for valid LIDAR readings ---
-//     // float currentRight = 0.0f;
-//     // float currentLeft  = 0.0f;
-
-//     // while (currentRight <= 0.0f || currentLeft <= 0.0f) {
-//     //     currentRight = readLIDAR_median_cm(latest_points, 170.0f, 190.0f);    // right sector
-//     //     currentLeft  = readLIDAR_median_cm(latest_points, 350.0f, 10.0f);  // left sector
-
-//     //     std::this_thread::sleep_for(std::chrono::milliseconds(50));
-//     // }
-
-//     // // --- Decide which wall to follow based on live readings ---
-//     // int direction = (currentRight > currentLeft) ? -1 : 1;
-//     // std::string wallSide = (direction == -1) ? "left" : "right";
-
-//     // std::cout << "Following " << wallSide << " wall (Right=" 
-//     //         << currentRight << ", Left=" << currentLeft << ")\n";
 
 
+    
+//     float currentRight = 0.0f;
+//     float currentLeft  = 0.0f;
 
-//     //sendCommand("M_STOP");
+//     while (currentRight <= 0.0f || currentLeft <= 0.0f) {
+//         currentRight = readLIDAR_median_cm(latest_points, 170.0f, 190.0f);    // right sector
+//         currentLeft  = readLIDAR_median_cm(latest_points, 350.0f, 10.0f);  // left sector
 
-//     // // Move until close to wall
-//     // sendCommand("M_SPEED:-100");
-//     // while (readLIDAR_median_cm(latest_points, 80, 100) > 60) std::this_thread::sleep_for(std::chrono::milliseconds(50));
-//     // sendCommand("M_STOP");
+//         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+//     }
 
-//     // // --- Direction decision ---
-//     // int direction = (Ri > Li) ? -1 : 1;
-//     // std::string wallSide = (direction == 1) ? "right" : "left";
-//     // std::cout << "Following " << wallSide << " wall\n";
+//     // --- Decide which wall to follow based on live readings ---
+//     int direction = (currentRight > currentLeft) ? -1 : 1;
+//     std::string wallSide = (direction == -1) ? "left" : "right";
+
+//     std::cout << "Following " << wallSide << " wall (Right=" 
+//             << currentRight << ", Left=" << currentLeft << ")\n";
+
+
+
+//     sendCommand("M_STOP");
+
+//     // Move until close to wall
+//     sendCommand("M_SPEED:-60");
+
+
+//     // --- Direction decision ---
+//     int direction = (Ri > Li) ? -1 : 1;
+//     std::string wallSide = (direction == 1) ? "right" : "left";
+//     std::cout << "Following " << wallSide << " wall\n";
+
+//     for (int lap = 0; lap < 3; ++lap) {
+//         std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
+
+//         sendCommand("SERVO_ANG:90");  // center steering
+
+
+
+//         wallFollowStop = false;
+
+//         // Start wall-following in a thread
+//         std::thread wallFollowThread([]() {
+//             followRightWallRearStableYaw(40.0f, -80, 1.0f, 0.0f, 0.5f, 10.0f);
+//         });
+
+//         // Wait for front distance <= threshold
+//         bool distanceReached = false;
+//         int consecutive = 0;
+//         const int requiredConsecutive = 3;
+
+//         while (!distanceReached && !ctrl_c_pressed) {
+//             float dist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
+
+//             // Only consider reasonable distances
+//             if (dist > 60.0f && dist <= 80.0f) {
+//                 consecutive++;
+//                 if (consecutive >= requiredConsecutive) {
+//                     distanceReached = true;
+//                     wallFollowStop = true;
+//                     sendCommand("M_SPEED:0");
+//                     sendCommand("M_STOP");
+//                     std::cout << "[⚠️ WAIT LIDAR] Object detected at " << dist << " cm → STOP\n";
+//                 }
+//             } else {
+//                 consecutive = 0; // reset if invalid or out of range
+//             }
+
+//             std::this_thread::sleep_for(std::chrono::milliseconds(50));
+//         }
+
+//         // Stop wall-following thread cleanly
+//         wallFollowThread.join();
+//         sendCommand("SERVO_ANG:90");
+
+
+
+//         // Optional short delay before next lap
+//         std::this_thread::sleep_for(std::chrono::milliseconds(100));
+//         //sendCommand("SERVO_ANG:120");  // center steering
+
+
+
+        
+//         arc90Back(-1, 60);
+
+//     }
+
+//     std::cout << "Returning to starting front distance...\n";
+
+//     arc90Back(-1, 60);
+
+//     // Reset control flag
+//     wallFollowStop = false;
+
+//     // Start wall-following thread along the previously chosen wall side
+//     std::thread wallFollowThread([direction]() {
+//         followRightWallRearStableYaw(30.0f, -80, 1.0f, 0.0f, 0.5f, 10.0f);
+//     });
+
+
+//     const float ARC_RADIUS_CM = 25.0f;
+
+
+//     const float rightThreshold = Ri + ARC_RADIUS_CM;
+//     bool reachedRight = false;
+
+//     while (!reachedRight && !ctrl_c_pressed) {
+//         float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
+
+//         if (frontDist <= rightThreshold) {
+//             reachedRight = true;
+//             wallFollowStop = true;
+//             sendCommand("M_STOP");
+//             std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+//         }
+
+//         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+//     }
+
+//     // Stop wall-following thread cleanly
+//     wallFollowThread.join();
+
+//     // Perform the final arc
+//     arc90Back(-1, 60);
+
+//     std::this_thread::sleep_for(std::chrono::milliseconds(1));
+
+//     sendCommand("SERVO_ANG:90");
+//     sendCommand("M_SPEED:-80");
+
+//     const float frontThreshold = Fi;
+//     bool reachedFront = false;
+
+
+//     while (!reachedFront && !ctrl_c_pressed) {
+//         float frontDist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
+
+//         if (frontDist <= frontThreshold) {
+//             reachedFront = true;
+//             wallFollowStop = true;
+//             sendCommand("M_STOP");
+//             std::cout << "[⚠️ FINAL] Front distance reached: " << frontDist << " cm → STOP\n";
+//         }
+
+//         std::this_thread::sleep_for(std::chrono::milliseconds(50));
+//     }
+
+//     std::cout << "✅ Returned to starting position.\n";
+
+    
+
+    
 
 
 // }
-
-
