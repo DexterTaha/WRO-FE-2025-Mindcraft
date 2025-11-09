@@ -200,26 +200,30 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Obstacle management discussion should include the strategy for the vehicle to negotiate the obstacle course for all the challenges. This could include flow diagrams, pseudo code and source code with detailed comments. |
 | [Strategy](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/strategy)                                                                                                                                                                                                              |
-| [Arduino Functions]()                                                                                                                                                                                                     |
-| [Open challenge]()                                                                                                                                                                                                        |
-| [Dashboard Visualisation]()                                                                                                                                                                                               |
-| [Map randomizer & score calculator]()                                                                                                                                                                                     |
+| [ESP 32 Functions](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/ESP32)                                                                                                                                                                                                     |
+| [Open challenge](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20#6.%20🚀%20Open%20Challenge%20Strategy))                                                                                                                                                                                                        |
+| [Dashboard Visualisation](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/PI4B/DASHBOARD_UDP_RECEIVER)                                                                                                                                                                                               |
+| [Map randomizer & score calculator](https://github.com/DexterTaha/WRO-Future-Engineers-Randomiser)                                                                                                                                                                                     |
 
 ---
 
 | **4.Pictures – Team and Vehicle**                                                                                                                                                                                                                                                                                                                                                                                    |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Pictures of the team and robot must be provided. The pictures of the robot must cover all sides of the robot, must be clear, in focus and show aspects of the mobility, power and sense, and obstacle management. Reference in the discussion sections 1, 2 and 3 can be made to these pictures. Team photo is necessary for judges to relate and identify the team during the local and international competitions. |
-| <a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/2bbf1b3f514550d7e91d4fa6e24702a49f4da584/v-photos" target="_blank" rel="noopener noreferrer">Vehicle Photos</a>                                                                                                                                                                                                                                                                           |
-| <a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/2bbf1b3f514550d7e91d4fa6e24702a49f4da584/t-photos" target="_blank" rel="noopener noreferrer">Team Members & Pictures</a>                                                                                                                                                                                                                                                                  |
+| [Vehicle Photos](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/v-photos)  |
 
+| [Team Members & Pictures](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/t-photos)  |     
+
+|
 ---
 
 | **5.Performance Videos**                                                                                                                                                                                                                            |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | The performance videos must demonstrate the performance of the vehicle from start to finish for each challenge. The videos could include an overlay of commentary, titles or animations. The video could also include aspects of section 1, 2 or 3. |
-| <a href="https://github.com/DexterTaha/WRO-FE-2024-Mindcraft-International/tree/2bbf1b3f514550d7e91d4fa6e24702a49f4da584/videos" target="_blank" rel="noopener noreferrer">Demonstration Videos</a>                                                                                                      |
-| <a href="https://www.youtube.com/@MindcraftWRO-kw8vp" target="_blank" rel="noopener noreferrer">Youtube Channel</a>                                                                                                                                                                                      |
+
+| [Demonstration Videos](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/videos)  |
+
+| [Youtube Channel](https://www.youtube.com/@MindcraftWRO-kw8vp)  | 
 
 ---
 
@@ -233,7 +237,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | **7.Engineering Factor**                                                                                                      |
 | :---------------------------------------------------------------------------------------------------------------------------- |
 | Own Design and manufacturing of vehicle and components, with off the shelf electrical components, such as motors and sensors. |
-| [Design Description]()                                                                                                        |
+| [Design Description](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models)                                                                                                        |
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
