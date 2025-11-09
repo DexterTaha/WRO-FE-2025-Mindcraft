@@ -1,7 +1,7 @@
 <a name="top"></a>
 
   
-# 🤖 MINDCRAFT WRO Future Engineers team
+# 🤖 MINDCRAFT WRO Future Engineers Team
 
 📌 This repository documents the ongoing research, design, and development of our self-driving robotic vehicle, engineered and programmed by Salmane Derdeb, Taha Taidi Laamiri, and Rayane Ghacha for the World Robot Olympiad (WRO) 2025 – Future Engineers Division. The project represents the fusion of embedded systems (ESP32 and Raspberry Pi), perception technologies (computer vision and LiDAR-based mapping), and intelligent control logic implemented in Python and C++. It showcases our continuous effort to build a robust, fully autonomous system capable of performing complex navigation and task-solving challenges with precision and adaptability.
 
@@ -45,19 +45,19 @@
      - [0x01 - Second Layer](./Models/Parts/0x01-%20Second%20Layer/)  
      - [0x02 - Wheel Support](./Models/Parts/0x02-%20Wheel%20Support/)  
      - [0x03 - Gear](./Models/Parts/0x03-%20Gear/)  
-     - [0x04 - Berring Support Right](./Models/Parts/0x04-%20%20Berring%20Support%20Right/)  
-     - [0x05 - stand off 2mm](./Models/Parts/0x05-%20stand%20off%202mm/)  
+     - [0x04 - Bearing Support Right](./Models/Parts/0x04-%20%20Berring%20Support%20Right/)  
+     - [0x05 - Stand-off 2mm](./Models/Parts/0x05-%20stand%20off%202mm/)  
      - [0x06 - Short Shaft](./Models/Parts/0x06-%20Short%20Shaft/)  
      - [0x07 - Long Shaft](./Models/Parts/0x07-%20Long%20Shaft/)  
      - [0x08 - Axle Clamp](./Models/Parts/0x08-%20Axle%20Clamp/)  
-     - [0x09 - stand off 1mm](./Models/Parts/0x09-%20stand%20off%201mm/)  
+     - [0x09 - Stand-off 1mm](./Models/Parts/0x09-%20stand%20off%201mm/)  
      - [0x10 - Big Gear](./Models/Parts/0x10-%20Big%20Gear/)  
      - [0x11 - Front Support Camera](./Models/Parts/0x11-%20Front%20Support%20Camera/)  
-     - [0x12 - Berring Support Left](./Models/Parts/0x12-%20Berring%20Support%20Left/)  
-     - [0x13 - stando ff3mm](./Models/Parts/0x13-%20stando%20ff3mm/)  
+     - [0x12 - Bearing Support Left](./Models/Parts/0x12-%20Berring%20Support%20Left/)  
+     - [0x13 - Stand-off 3mm](./Models/Parts/0x13-%20stando%20ff3mm/)  
      - [0x14 - Back Support Camera](./Models/Parts/0x14-%20Back%20Support%20Camera/)  
-     - [0x15 - Steering Conector](./Models/Parts/0x15-%20Steering%20Conector/)  
-     - [0x16 - scwer shaft](./Models/Parts/0x16-%20scwer%20shaft/)  
+     - [0x15 - Steering Connector](./Models/Parts/0x15-%20Steering%20Conector/)  
+     - [0x16 - Screw Shaft](./Models/Parts/0x16-%20scwer%20shaft/)  
      - [0x17 - Steering Rack](./Models/Parts/0x17-%20Steering%20Rack/)
 
 3. [other (BOM & components)](./other/)  
@@ -68,31 +68,31 @@
      - [component Details README](./other/component%20Details/README.md)  
      - Components (subfolders) — each folder is clickable:
        - [0x00 - Raspberry Pi 4B](./other/component%20Details/0x00-Raspberry%20Pi%204B/)  
-       - [0x01 - Raspberry pi pico](./other/component%20Details/0x01-Raspberry%20pi%20pico/)  
+       - [0x01 - Raspberry Pi Pico](./other/component%20Details/0x01-Raspberry%20pi%20pico/)  
        - [0x02 - LIDAR](./other/component%20Details/0x02-LIDAR/)  
-       - [0x03 - GYROSCOPE Sensor BMO055](./other/component%20Details/0x03-GYROSCOPE%20Sensor%20BMO055/)  
-       - [0x04 - PiCamera 3 wide](./other/component%20Details/0x04-PiCamera%203%20wide/)  
+       - [0x03 - GYROSCOPE Sensor BNO055](./other/component%20Details/0x03-GYROSCOPE%20Sensor%20BMO055/)  
+       - [0x04 - PiCamera 3 Wide](./other/component%20Details/0x04-PiCamera%203%20wide/)  
        - [0x05 - DC Brushed Motor with Encoder](./other/component%20Details/0x05-DC%20Brushed%20Motor%20with%20Encoder/)  
        - [0x06 - Wheels](./other/component%20Details/0x06-Wheels/)  
        - [0x07 - TB1266FNG Motor Driver](./other/component%20Details/0x07-TB1266FNG%20Motor%20Driver/)  
        - [0x08 - Servo motor Metal Gear Box 180°](./other/component%20Details/0x08-Servo%20motor%20Metal%20Gear%20Box%20180%C2%B0/)  
-       - [0x09 - Lipo 3S 2200mah 11.1V 50C](./other/component%20Details/0x09-Lipo%203S%202200mah%2011.1V%2050C/)  
+       - [0x09 - LiPo 3S 2200mAh 11.1V 50C](./other/component%20Details/0x09-Lipo%203S%202200mah%2011.1V%2050C/)  
        - [0x10 - IMAX B6AC V2](./other/component%20Details/0x10-IMAX%20B6AC%20V2/)  
        - [0x11 - 7806 Transistor](./other/component%20Details/0x11-7806%20Transistor/)  
        - [0x12 - 7805 Transistor](./other/component%20Details/0x12-7805%20Transistor/)  
        - [0x13 - 7809 Transistor](./other/component%20Details/0x13-7809%20Transistor/)  
-       - [0x14 - Push button](./other/component%20Details/0x14-Push%20button/)  
-       - [0x15 - Buzzer Alarm Batterie Lipo](./other/component%20Details/0x15-Buzzer%20Alarm%20Batterie%20Lipo/)  
+       - [0x14 - Push Button](./other/component%20Details/0x14-Push%20button/)  
+       - [0x15 - Buzzer Alarm Batterie LiPo](./other/component%20Details/0x15-Buzzer%20Alarm%20Batterie%20Lipo/)  
        - [0x16 - Servo Tester](./other/component%20Details/0x16-Servo%20Tester/)  
        - [0x17 - Servobras](./other/component%20Details/0x17-Servobras/)  
-       - [0x18 - SD card 64GB](./other/component%20Details/0x18-SD%20card%2064GB/)  
-       - [0x19 - RBG Led](./other/component%20Details/0x19-RBG%20Led/)  
+       - [0x18 - SD Card 64GB](./other/component%20Details/0x18-SD%20card%2064GB/)  
+       - [0x19 - RGB LED](./other/component%20Details/0x19-RBG%20Led/)  
        - [0x20 - Switch](./other/component%20Details/0x20-Switch/)
 
 4. [schemes (circuit files)](./schemes/)  
    - [schemes README](./schemes/README.md)
 
-5. [src ( source code )](./src%20(%20source%20code%20)/)  
+5. [src (source code)](./src%20(%20source%20code%20)/)  
    - [PI4B folder](./src%20(%20source%20code%20)/PI4B/)  
    - [PICO folder](./src%20(%20source%20code%20)/PICO/)
 
@@ -115,13 +115,13 @@
 
 > [!NOTE]
 >
-> The folders, images and supplementary docs in this repository are provided as documentation and for reference only. They are not required to recreate the robot hardware, nor are they mandatory for judging. The files and media help explain our design and process but do not imply required parts or exact build steps for competition entry.
+> The folders, images, and supplementary docs in this repository are provided as documentation and for reference only. They are not required to recreate the robot hardware, nor are they mandatory for judging. The files and media help explain our design and process but do not imply required parts or exact build steps for competition entry.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🌟 Highlights
 
-- **Innovative mobility system:** Built on a custom-designed chassis engineered for balance, rigidity, and modularity. The vehicle features a **rear-wheel differential drive system** for propulsion and a **front-wheel Ackermann steering mechanism** controlled by a high-torque servo motor. DC motors is driven by a **TB6612FNG motor driver**, with encoder feedback for precise closed-loop speed and position control. A **buzzer** provides real-time debugging feedback, and a **push button** is used for controlled start and system activation.  
+- **Innovative mobility system:** Built on a custom-designed chassis engineered for balance, rigidity, and modularity. The vehicle features a **rear-wheel differential drive system** for propulsion and a **front-wheel Ackermann steering mechanism** controlled by a high-torque servo motor. DC motors are driven by a **TB6612FNG motor driver**, with encoder feedback for precise closed-loop speed and position control. A **buzzer** provides real-time debugging feedback, and a **push button** is used for controlled start and system activation.  
 
 - **Optimized power and sensing setup:** Powered by a **12 V Li-ion 3C 2.2A battery system**, the design separates power lines for motors and logic circuits to ensure stability and reduce interference. The robot integrates an **RPLIDAR C1** for mapping and obstacle detection, a **Raspberry Pi Camera 3 Wide** for real-time vision color detection, and a **BNO055 IMU** for orientation sensing. All sensors are carefully placed for accurate perception and reliable navigation.  
 
@@ -170,14 +170,13 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 └── 📄 README.md
 ```
 
-
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 # 🏁 WRO Future Engineers Competition
 
-| **1.Mobility Management**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| **1. Mobility Management**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Mobility management discussion should cover how the vehicle movements are managed. What motors are selected, how they are selected and implemented. A brief discussion regarding the vehicle chassis design /selection can be provided as well as the mounting of all components to the vehicle chassis/structure. The discussion may include engineering principles such as speed, torque, power etc. usage. Building or assembly instructions can be provided together with 3D CAD files to 3D print parts. |
+| The mobility management discussion should cover how the vehicle's movements are managed. What motors are selected, how they are selected and implemented. A brief discussion regarding the vehicle chassis design/selection can be provided as well as the mounting of all components to the vehicle chassis/structure. The discussion may include engineering principles such as speed, torque, power, etc. usage. Building or assembly instructions can be provided together with 3D CAD files to 3D print parts. |
 | [Robot Parts & Design](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models)   |
 | [Power System](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#power-system)   |
 | [Steering System](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/Models/README.md#steering-system)  |
@@ -185,31 +184,31 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 
 ---
 
-| **2.Power and Sense Management**                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| **2. Power and Sense Management**                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Power and Sense management discussion should cover the power source for the vehicle as well as the sensors required to provide the vehicle with information to negotiate the different challenges. The discussion can include the reasons for selecting various sensors and how they are being used on the vehicle together with power consumption. The discussion could include a wiring diagram with BOM for the vehicle that includes all aspects of professional wiring diagrams. |
+| Power and sense management discussion should cover the power source for the vehicle as well as the sensors required to provide the vehicle with information to negotiate the different challenges. The discussion can include the reasons for selecting various sensors and how they are being used on the vehicle together with power consumption. The discussion could include a wiring diagram with BOM for the vehicle that includes all aspects of professional wiring diagrams. |
 | [Bill of Materials (BOM)](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/BOM(Bill%20Of%20Materials))  |
 | [Component Details](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/component%20Details)  |
 | [Wiring Diagram](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#wiring-diagram)  |
-| [Power Managementm and Consumption](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-management)  |
+| [Power Management and Consumption](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-management)  |
 | [Sensors](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#system-data-flow)  |
 
 ---
 
-| **3.Obstacle Management**                                                                                                                                                                                                 |
+| **3. Obstacle Management**                                                                                                                                                                                                 |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Obstacle management discussion should include the strategy for the vehicle to negotiate the obstacle course for all the challenges. This could include flow diagrams, pseudo code and source code with detailed comments. |
+| The obstacle management discussion should include the strategy for the vehicle to negotiate the obstacle course for all the challenges. This could include flow diagrams, pseudocode and source code with detailed comments. |
 | [Strategy](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/strategy)                                                                                                                                                                                                              |
-| [ESP 32 Functions](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/ESP32)                                                                                                                                                                                                     |
+| [ESP32 Functions](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/ESP32)                                                                                                                                                                                                     |
 | [Open challenge](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20#6.%20🚀%20Open%20Challenge%20Strategy))                                                                                                                                                                                                        |
 | [Dashboard Visualisation](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/PI4B/DASHBOARD_UDP_RECEIVER)                                                                                                                                                                                               |
 | [Map randomizer & score calculator](https://github.com/DexterTaha/WRO-Future-Engineers-Randomiser)                                                                                                                                                                                     |
 
 ---
 
-| **4.Pictures – Team and Vehicle**                                                                                                                                                                                                                                                                                                                                                                                    |
+| **4. Pictures – Team and Vehicle**                                                                                                                                                                                                                                                                                                                                                                                    |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pictures of the team and robot must be provided. The pictures of the robot must cover all sides of the robot, must be clear, in focus and show aspects of the mobility, power and sense, and obstacle management. Reference in the discussion sections 1, 2 and 3 can be made to these pictures. Team photo is necessary for judges to relate and identify the team during the local and international competitions. |
+| Pictures of the team and robot must be provided. The pictures of the robot must cover all sides of the robot, must be clear, in focus and show aspects of the mobility, power and sense, and obstacle management. Reference in the discussion sections 1, 2 and 3 can be made to these pictures. A team photo is necessary for judges to relate and identify the team during the local and international competitions. |
 | [Vehicle Photos](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/v-photos)  |
 
 | [Team Members & Pictures](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/t-photos)  |     
@@ -217,26 +216,26 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 |
 ---
 
-| **5.Performance Videos**                                                                                                                                                                                                                            |
+| **5. Performance Videos**                                                                                                                                                                                                                            |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The performance videos must demonstrate the performance of the vehicle from start to finish for each challenge. The videos could include an overlay of commentary, titles or animations. The video could also include aspects of section 1, 2 or 3. |
+| The performance videos must demonstrate the performance of the vehicle from start to finish for each challenge. The videos could include an overlay of commentary, titles or animations. The video could also include aspects of sections 1, 2 or 3. |
 
 | [Demonstration Videos](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/videos)  |
 
-| [Youtube Channel](https://www.youtube.com/@MindcraftWRO-kw8vp)  | 
+| [YouTube Channel](https://www.youtube.com/@MindcraftWRO-kw8vp)  | 
 
 ---
 
-| **6.GitHub Utilization**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| **6. GitHub Utilization**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Git and GitHub are available for opensource project management and file version control. As part of the design and development process, teams must use this platform to document their progress, coding development and share files. Judging the platform will include how complete the information provided is, how information is structured and how often commits were done. Teams can use this platform to provide additional information on their engineering design and coding of their vehicle as well. |
+| Git and GitHub are available for open-source project management and file version control. As part of the design and development process, teams must use this platform to document their progress, code development and share files. Judging the platform will include how complete the information provided is, how information is structured and how often commits were done. Teams can use this platform to provide additional information on their engineering design and coding of their vehicle as well. |
 | <a href="https://github.com/DexterTaha/WRO-FE-2025-Mindcraft" target="_blank" rel="noopener noreferrer">Repository Link</a>                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 
 ---
 
-| **7.Engineering Factor**                                                                                                      |
+| **7. Engineering Factor**                                                                                                      |
 | :---------------------------------------------------------------------------------------------------------------------------- |
-| Own Design and manufacturing of vehicle and components, with off the shelf electrical components, such as motors and sensors. |
+| Own design and manufacturing of the vehicle and components, with off-the-shelf electrical components, such as motors and sensors. |
 | [Design Description](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/Models)                                                                                                        |
 
 
@@ -258,7 +257,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 [![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/mindcraft.ma)
 [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/mindcraft.ma)
 
-Released 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
+Released in 2025 by [DERDEB Salmane](https://github.com/salmane-derdeb) @ [Taha TAIDI LAAMIRI](https://github.com/DexterTaha) @ [Rayane GHACHA](https://github.com/Rayane-Ghacha)
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
