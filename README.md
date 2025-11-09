@@ -200,7 +200,7 @@ Official rules: <a href="https://wro-association.org/wp-content/uploads/WRO-2025
 | The obstacle management discussion should include the strategy for the vehicle to negotiate the obstacle course for all the challenges. This could include flow diagrams, pseudocode and source code with detailed comments. |
 | [Strategy](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/other/strategy) |
 | [ESP32 Functions](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/ESP32)  |
-| [Open challenge](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20#6.%20🚀%20Open%20Challenge%20Strategy))          |
+| [Open challenge](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/blob/main/schemes/README.md#power-management))          |
 | [Dashboard Visualisation](https://github.com/DexterTaha/WRO-FE-2025-Mindcraft/tree/main/src%20(%20source%20code%20)/PI4B/DASHBOARD_UDP_RECEIVER)    |
 | [Map randomizer & score calculator](https://github.com/DexterTaha/WRO-Future-Engineers-Randomiser)    |
 
