@@ -77,7 +77,7 @@
                 <ul style="list-style-type: none; padding-left: 0;">
                     <li>French: Very Good</li>
                     <li>Arabic: Very Good</li>
-                    <li>English: Very Good</li>
+                    <li>English: Good</li>
                 </ul>
             </td>
         </tr>
