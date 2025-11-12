@@ -129,17 +129,6 @@ Align --> Stop[Stop Motors]
 
 ---
 
-## 🔑 Key Strategy Principles
-
-- **Adaptive Wall Selection:** Robot evaluates left/right median distance to choose wall dynamically.  
-- **Robust PID Wall-Following:** Smooth steering corrections based on median LIDAR distance and IMU yaw. Handles sensor noise and avoids oscillations.  
-- **Threaded Sensor Monitoring:** LIDAR, IMU, and front-distance checks run asynchronously to wall-following.  
-- **Arc Turns Using IMU:** 90° backward turns rely on yaw feedback for accuracy. Steering angle scaled to prevent overshoot.  
-- **Front Distance Filtering:** Requires multiple consecutive measurements to confirm obstacles, avoiding false stops.  
-- **Return Path Symmetry:** Final return uses same wall-following logic and thresholds to ensure precise alignment.
-
----
-
 ## 🖼️ Visualization Summary
 
 ```mermaid
@@ -159,25 +148,7 @@ AlignFinal --> Stop[Stop Motors]
 ```
 
 
----
 
-## 🧩 Optional Visual Enhancements
-
-- Include median distance graphs per lap for front/left/right LIDAR sectors.  
-- Yaw vs. time plot to visualize arc completion.  
-- Steering angle vs. error to illustrate PID correction.
-
----
-
-✅ **Summary**
-
-The Open Challenge strategy is built on:
-
-- Adaptive, real-time wall selection  
-- Robust PID wall-following  
-- IMU-assisted arc turns  
-- Threaded monitoring for obstacle detection  
-- Precision return to starting position
 
 
 
