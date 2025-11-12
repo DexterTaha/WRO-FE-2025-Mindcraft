@@ -303,7 +303,7 @@ else:
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🧭 Main Section Flow
+## 🧭 Main Section Flow
 
 The robot performs 4 sections (laps) in a loop.
 Each section begins with image detection, state classification, function execution, and ends with a 90° arc.
@@ -322,7 +322,7 @@ NextSection -->|Yes| End[Finish and Align]
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🔴 Passing a Red Obstacle (Right Side)
+## 🔴 Passing a Red Obstacle (Right Side)
 This function ensures the robot moves around a red pillar from the right side using LIDAR and gyro feedback.
 
 ```cpp
@@ -345,7 +345,7 @@ Forward --> End[Recenter Path]
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🟢 Passing a Green Obstacle (Left Side)
+## 🟢 Passing a Green Obstacle (Left Side)
 Same logic but mirrored to the left side.
 
 ```cpp
@@ -359,7 +359,7 @@ void passGreenLeft() {
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🅿️ Parking Zone Detection
+## 🅿️ Parking Zone Detection
 
 When the camera detects a parking color pattern (usually both red and green close to the front),
 the robot activates the `handleParking()` routine.
@@ -386,7 +386,7 @@ Stop --> End[Parked Perfectly]
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🔄 Full Lap Sequence
+## 🔄 Full Lap Sequence
 The robot completes four 90° turns to return to its starting orientation.
 Each section includes detection, decision, and movement.
 
@@ -413,7 +413,7 @@ Align --> Stop[Mission Complete]
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-##🧩 Example Control Loop (Simplified C++)
+## 🧩 Example Control Loop (Simplified C++)
 ```cpp
 while (running) {
     captureFrame();
