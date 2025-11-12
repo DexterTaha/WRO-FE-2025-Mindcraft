@@ -20,7 +20,7 @@ It focuses on **high-level decision-making, navigation logic, and visualizations
 - Sensors: **LIDAR** (distance & angle), **IMU** (yaw, pitch, roll), optional encoders.  
 - Actuators: **Rear Ackermann steering**, motors controlled via I²C.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧭 Step 1 – Startup and Initial Assessment
 
@@ -44,7 +44,7 @@ Decision -->|No| LeftWall[Follow Left Wall]
 ```
 
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🧭 Step 2 – Wall-Following PID Loop
 
@@ -76,8 +76,8 @@ PID --> AdjustSteering[Adjust Rear Steering]
 AdjustSteering --> LoopBack[Loop Back to Measure LIDAR Distance]
 ```
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
----
 
 ## 🧭 Step 3 – Obstacle Detection & Lap Completion
 
@@ -102,8 +102,8 @@ StopRobot --> ArcTurn[Execute 90° Backward Arc]
 ArcTurn --> WallFollow
 ```
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
----
 
 ## 🧭 Step 4 – Return to Starting Position
 
@@ -126,8 +126,8 @@ FinalArc --> Align[Align to Exact Starting Position]
 Align --> Stop[Stop Motors]
 ```
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
----
 
 ## 🖼️ Visualization Summary
 
@@ -148,7 +148,7 @@ AlignFinal --> Stop[Stop Motors]
 ```
 
 
-
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 
 
@@ -168,7 +168,8 @@ NextSection -->|Yes| End[Finish and Align]
 ```
 
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## 🧩 12 Possible States
 ```mermaid
@@ -200,6 +201,7 @@ A11 --> passGreenLeft
 A12[Parking Red] --> handleParking
 A12 --> passRedRight
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🔴 passRedRight / 🟢 passGreenLeft Flow
 ```mermaid
@@ -212,7 +214,8 @@ Realign --> Forward[Move Forward a Small Distance]
 Forward --> End[End Centered]
 ```
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## 🅿️ handleParking Flow
 ```mermaid
@@ -223,6 +226,8 @@ CheckDist -->|No| Forward
 CheckDist -->|Yes| Stop[Stop and Align Yaw to Zero]
 Stop --> End[Parked Perfectly]
 ```
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 
 ## 🧭 Full Lap Logic
 ```mermaid
