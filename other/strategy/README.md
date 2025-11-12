@@ -149,7 +149,7 @@ AlignFinal --> Stop[Stop Motors]
 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-
+---
 
 
 # 🚧 Obstacle Challenge – Strategy
