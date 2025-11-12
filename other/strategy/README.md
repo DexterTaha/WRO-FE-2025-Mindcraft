@@ -181,25 +181,25 @@ The Open Challenge strategy is built on:
 
 
 
-# 🚧 Obstacle Challenge – Strategy
+# 🚧 Obstacle Challenge – Flowcharts Overview
 
 ## 🧭 Main Section Loop
 ```mermaid
 flowchart TD
 Start[Start Lap] --> Loop[Loop 4 Sections]
-Loop --> TakePic[Capture & Analyze Section]
+Loop --> TakePic[Capture and Analyze Section]
 TakePic --> MatchState{Match to 12 States}
-MatchState --> Execute[Execute Corresponding Function(s)]
-Execute --> Arc[Perform 90° Arc]
+MatchState --> Execute[Execute Corresponding Functions]
+Execute --> Arc[Perform 90 Degree Arc]
 Arc --> NextSection{4 Sections Done?}
 NextSection -->|No| Loop
-NextSection -->|Yes| End[Finish & Align]
-
+NextSection -->|Yes| End[Finish and Align]
 ```
 
 
 ---
 
+## 🧩 12 Possible States
 ## 🧩 12 Possible States
 ```mermaid
 flowchart LR
@@ -234,11 +234,11 @@ A12 --> passRedRight
 ## 🔴 passRedRight / 🟢 passGreenLeft Flow
 ```mermaid
 flowchart TD
-Start[Start Function] --> Turn[Turn (±25°)]
+Start[Start Function] --> Turn[Turn plus or minus 25 Degrees]
 Turn --> Move[Move Around Pillar]
-Move --> LidarCheck[LIDAR Distance Cleared?]
+Move --> LidarCheck[LIDAR Distance Cleared]
 LidarCheck -->|Yes| Realign[Return to Original Yaw]
-Realign --> Forward[Move Forward Small Distance]
+Realign --> Forward[Move Forward a Small Distance]
 Forward --> End[End Centered]
 ```
 
@@ -248,23 +248,23 @@ Forward --> End[End Centered]
 ```mermaid
 flowchart TD
 StartP[Parking Detected] --> Forward[Move Forward Slowly]
-Forward --> CheckDist[Front LIDAR <= 25cm?]
+Forward --> CheckDist[Front LIDAR less than 25cm]
 CheckDist -->|No| Forward
-CheckDist -->|Yes| Stop[Stop & Align Yaw 0°]
+CheckDist -->|Yes| Stop[Stop and Align Yaw to Zero]
 Stop --> End[Parked Perfectly]
 ```
 
 ## 🧭 Full Lap Logic
 ```mermaid
 flowchart TD
-StartLap[Start Lap] --> S1[Section 1: handleCondition()]
-S1 --> Arc1[Arc 90°]
-Arc1 --> S2[Section 2: handleCondition()]
-S2 --> Arc2[Arc 90°]
-Arc2 --> S3[Section 3: handleCondition()]
-S3 --> Arc3[Arc 90°]
-Arc3 --> S4[Section 4: handleCondition()]
+StartLap[Start Lap] --> S1[Section 1 handleCondition]
+S1 --> Arc1[Arc 90 Degree]
+Arc1 --> S2[Section 2 handleCondition]
+S2 --> Arc2[Arc 90 Degree]
+Arc2 --> S3[Section 3 handleCondition]
+S3 --> Arc3[Arc 90 Degree]
+Arc3 --> S4[Section 4 handleCondition]
 S4 --> ReturnArc[Final Arc to Start]
-ReturnArc --> Align[Align to Yaw 0°]
+ReturnArc --> Align[Align to Yaw Zero]
 Align --> Stop[Mission Complete]
 ```
