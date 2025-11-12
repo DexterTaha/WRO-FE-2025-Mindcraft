@@ -181,7 +181,7 @@ The Open Challenge strategy is built on:
 
 
 
-# 🚧 Obstacle Challenge – Flowcharts Overview
+# 🚧 Obstacle Challenge – Strategy
 
 ## 🧭 Main Section Loop
 ```mermaid
@@ -199,7 +199,6 @@ NextSection -->|Yes| End[Finish and Align]
 
 ---
 
-## 🧩 12 Possible States
 ## 🧩 12 Possible States
 ```mermaid
 flowchart LR
