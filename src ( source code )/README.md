@@ -277,6 +277,8 @@ rightDist = lidar.getRightDistance()
 
 Both sensors feed into a state decision system, which determines how the robot must react.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ## 🧠 State Machine and Function Calls
 
 Each camera frame is classified into a color state:
@@ -299,6 +301,8 @@ else:
     wallFollow()
 ```
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ##🧭 Main Section Flow
 
 The robot performs 4 sections (laps) in a loop.
@@ -315,6 +319,8 @@ Arc --> NextSection{4 Sections Done?}
 NextSection -->|No| Loop
 NextSection -->|Yes| End[Finish and Align]
 ```
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ##🔴 Passing a Red Obstacle (Right Side)
 This function ensures the robot moves around a red pillar from the right side using LIDAR and gyro feedback.
@@ -337,6 +343,8 @@ Realign --> Forward[Move Forward Small Distance]
 Forward --> End[Recenter Path]
 ```
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
 ##🟢 Passing a Green Obstacle (Left Side)
 Same logic but mirrored to the left side.
 
@@ -348,6 +356,8 @@ void passGreenLeft() {
     moveForwardSmall();
 }
 ```
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ##🅿️ Parking Zone Detection
 
@@ -374,7 +384,9 @@ CheckDist -->|Yes| Stop[Stop and Align Yaw 0°]
 Stop --> End[Parked Perfectly]
 ```
 
-###🔄 Full Lap Sequence
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+##🔄 Full Lap Sequence
 The robot completes four 90° turns to return to its starting orientation.
 Each section includes detection, decision, and movement.
 
@@ -398,6 +410,8 @@ Align --> Stop[Mission Complete]
 | LIDAR            | Measures distance to objects/walls | `getFrontDistance()`      |
 | IMU (Gyroscope)  | Maintains heading                  | `alignYaw()`              |
 | Motor Controller | Moves robot according to decision  | `moveForward()`, `turn()` |
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ##🧩 Example Control Loop (Simplified C++)
 ```cpp
