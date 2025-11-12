@@ -3,7 +3,7 @@
 This document outlines the **strategy** for the Raspberry Pi-controlled wall-following robot in the WRO Future Engineers 2025 Open Challenge.  
 It focuses on **high-level decision-making, navigation logic, and visualizations**, without reference to code.
 
----
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## 🎯 Mission Goals
 
