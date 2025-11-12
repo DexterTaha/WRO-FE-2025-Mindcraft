@@ -178,3 +178,93 @@ The Open Challenge strategy is built on:
 - IMU-assisted arc turns  
 - Threaded monitoring for obstacle detection  
 - Precision return to starting position
+
+
+
+# 🚧 Obstacle Challenge – Strategy
+
+## 🧭 Main Section Loop
+```mermaid
+flowchart TD
+Start[Start Lap] --> Loop[Loop 4 Sections]
+Loop --> TakePic[Capture & Analyze Section]
+TakePic --> MatchState{Match to 12 States}
+MatchState --> Execute[Execute Corresponding Function(s)]
+Execute --> Arc[Perform 90° Arc]
+Arc --> NextSection{4 Sections Done?}
+NextSection -->|No| Loop
+NextSection -->|Yes| End[Finish & Align]
+
+```
+
+
+---
+
+## 🧩 12 Possible States
+```mermaid
+flowchart LR
+A1[Red Green] --> passRedRight
+A1 --> passGreenLeft
+A2[Green Red] --> passGreenLeft
+A2 --> passRedRight
+A3[Red Red] --> passRedRight
+A3 --> passRedRight
+A4[Green Green] --> passGreenLeft
+A4 --> passGreenLeft
+A5[Only Red] --> passRedRight
+A6[Only Green] --> passGreenLeft
+A7[Parking Red Green] --> handleParking
+A7 --> passRedRight
+A7 --> passGreenLeft
+A8[Parking Green Red] --> handleParking
+A8 --> passGreenLeft
+A8 --> passRedRight
+A9[Parking Green Green] --> handleParking
+A9 --> passGreenLeft
+A9 --> passGreenLeft
+A10[Parking Red Red] --> handleParking
+A10 --> passRedRight
+A10 --> passRedRight
+A11[Parking Green] --> handleParking
+A11 --> passGreenLeft
+A12[Parking Red] --> handleParking
+A12 --> passRedRight
+```
+
+## 🔴 passRedRight / 🟢 passGreenLeft Flow
+```mermaid
+flowchart TD
+Start[Start Function] --> Turn[Turn (±25°)]
+Turn --> Move[Move Around Pillar]
+Move --> LidarCheck[LIDAR Distance Cleared?]
+LidarCheck -->|Yes| Realign[Return to Original Yaw]
+Realign --> Forward[Move Forward Small Distance]
+Forward --> End[End Centered]
+```
+
+---
+
+## 🅿️ handleParking Flow
+```mermaid
+flowchart TD
+StartP[Parking Detected] --> Forward[Move Forward Slowly]
+Forward --> CheckDist[Front LIDAR <= 25cm?]
+CheckDist -->|No| Forward
+CheckDist -->|Yes| Stop[Stop & Align Yaw 0°]
+Stop --> End[Parked Perfectly]
+```
+
+## 🧭 Full Lap Logic
+```mermaid
+flowchart TD
+StartLap[Start Lap] --> S1[Section 1: handleCondition()]
+S1 --> Arc1[Arc 90°]
+Arc1 --> S2[Section 2: handleCondition()]
+S2 --> Arc2[Arc 90°]
+Arc2 --> S3[Section 3: handleCondition()]
+S3 --> Arc3[Arc 90°]
+Arc3 --> S4[Section 4: handleCondition()]
+S4 --> ReturnArc[Final Arc to Start]
+ReturnArc --> Align[Align to Yaw 0°]
+Align --> Stop[Mission Complete]
+```
