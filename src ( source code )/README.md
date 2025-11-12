@@ -242,8 +242,177 @@ Lap 1 complete.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## 10. 🚦 Obstacle Challenge
+# 10. 🚦 Obstacle Challenge
 
-(Section reserved for obstacle course notes / challenge results.)
+This section explains **how the robot integrates its camera, LIDAR, and control logic** to handle obstacles and parking in a fully autonomous lap.
+
+---
+
+
+## 🎥 Camera and LIDAR Integration
+
+The onboard **camera** continuously captures frames that are analyzed using **OpenCV**.  
+Each frame is processed to detect **colored obstacles (Red / Green)** based on HSV filtering:
+
+```cpp
+// Pseudocode Example
+frame = camera.read()
+mask_red = hsvInRange(frame, lower_red, upper_red)
+mask_green = hsvInRange(frame, lower_green, upper_green)
+
+if detectObstacle(mask_red, mask_green):
+    colorState = getColorState(mask_red, mask_green)
+
+```
+
+Meanwhile, the LIDAR measures distances to surrounding objects and walls.
+It provides depth data that ensures obstacle avoidance and alignment:
+
+```cpp
+// Simplified LIDAR check
+frontDist = lidar.getFrontDistance()
+leftDist = lidar.getLeftDistance()
+rightDist = lidar.getRightDistance()
+```
+
+Both sensors feed into a state decision system, which determines how the robot must react.
+
+## 🧠 State Machine and Function Calls
+
+Each camera frame is classified into a color state:
+
+🔴 Red on Left
+🟢 Green on Right
+🅿️ Parking zone detected
+Or empty segment (no obstacle)
+
+The control loop calls the corresponding function for each detected case:
+
+```cpp
+if state == "Red":
+    passRedRight()
+elif state == "Green":
+    passGreenLeft()
+elif state == "Parking":
+    handleParking()
+else:
+    wallFollow()
+```
+
+##🧭 Main Section Flow
+
+The robot performs 4 sections (laps) in a loop.
+Each section begins with image detection, state classification, function execution, and ends with a 90° arc.
+
+```mermaid
+flowchart TD
+Start[Start Lap] --> Loop[Loop 4 Sections]
+Loop --> TakePic[Capture and Analyze Section]
+TakePic --> MatchState{Match to 12 States}
+MatchState --> Execute[Execute Corresponding Functions]
+Execute --> Arc[Perform 90 Degree Arc]
+Arc --> NextSection{4 Sections Done?}
+NextSection -->|No| Loop
+NextSection -->|Yes| End[Finish and Align]
+```
+
+##🔴 Passing a Red Obstacle (Right Side)
+This function ensures the robot moves around a red pillar from the right side using LIDAR and gyro feedback.
+
+```cpp
+void passRedRight() {
+    turn(+25);
+    moveForwardUntilClear();
+    realignYaw();
+    moveForwardSmall();
+}
+```
+```mermaid
+flowchart TD
+Start[Start passRedRight] --> Turn[Turn +25 Degrees]
+Turn --> Move[Move Around Pillar]
+Move --> LidarCheck[LIDAR Distance Cleared?]
+LidarCheck -->|Yes| Realign[Return to Original Yaw]
+Realign --> Forward[Move Forward Small Distance]
+Forward --> End[Recenter Path]
+```
+
+##🟢 Passing a Green Obstacle (Left Side)
+Same logic but mirrored to the left side.
+
+```cpp
+void passGreenLeft() {
+    turn(-25);
+    moveForwardUntilClear();
+    realignYaw();
+    moveForwardSmall();
+}
+```
+
+##🅿️ Parking Zone Detection
+
+When the camera detects a parking color pattern (usually both red and green close to the front),
+the robot activates the `handleParking()` routine.
+LIDAR ensures the robot stops exactly at the correct distance (e.g., 25 cm from the wall).
+
+```cpp
+void handleParking() {
+    while (lidar.front() > 25) {
+        moveForwardSlow();
+    }
+    stopMotors();
+    alignYaw(0);
+}
+```
+
+```mermaid
+flowchart TD
+StartP[Parking Detected] --> Forward[Move Forward Slowly]
+Forward --> CheckDist[Front LIDAR < 25cm?]
+CheckDist -->|No| Forward
+CheckDist -->|Yes| Stop[Stop and Align Yaw 0°]
+Stop --> End[Parked Perfectly]
+```
+
+###🔄 Full Lap Sequence
+The robot completes four 90° turns to return to its starting orientation.
+Each section includes detection, decision, and movement.
+
+```mermaid
+flowchart TD
+StartLap[Start Lap] --> S1[Section 1: handleCondition]
+S1 --> Arc1[Arc 90 Degree]
+Arc1 --> S2[Section 2: handleCondition]
+S2 --> Arc2[Arc 90 Degree]
+Arc2 --> S3[Section 3: handleCondition]
+S3 --> Arc3[Arc 90 Degree]
+Arc3 --> S4[Section 4: handleCondition]
+S4 --> ReturnArc[Final Arc to Start]
+ReturnArc --> Align[Align to Yaw 0°]
+Align --> Stop[Mission Complete]
+```
+
+| Component        | Role                               | Key Function              |
+| ---------------- | ---------------------------------- | ------------------------- |
+| Camera           | Detects color of obstacles         | `getColorState()`         |
+| LIDAR            | Measures distance to objects/walls | `getFrontDistance()`      |
+| IMU (Gyroscope)  | Maintains heading                  | `alignYaw()`              |
+| Motor Controller | Moves robot according to decision  | `moveForward()`, `turn()` |
+
+##🧩 Example Control Loop (Simplified C++)
+```cpp
+while (running) {
+    captureFrame();
+    detectColors();
+    updateLidar();
+
+    if (inParkingZone()) handleParking();
+    else if (redDetected()) passRedRight();
+    else if (greenDetected()) passGreenLeft();
+    else wallFollow();
+
+    delay(50); // Control loop delay
+}
+```
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
