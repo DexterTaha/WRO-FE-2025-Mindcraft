@@ -215,7 +215,7 @@ if (ctrl_c_pressed) break;
     sendCommand("SERVO_ANG:90");
     cout << "Arc completed\n";
 }
-void arc90Back(int direction, int steerPercent = 120, float stopThresholdDeg = 30.0f) {
+void arc90Back(int direction, int steerPercent = 120, float stopThresholdDeg = 20.0f) {
     arcInProgress = true;  // prevent other threads from stopping motors
 
     std::cout << "\nStarting 90° backward arc "
@@ -232,7 +232,7 @@ void arc90Back(int direction, int steerPercent = 120, float stopThresholdDeg = 3
     sendCommand("SERVO_ANG:" + std::to_string(steerAngle));
     std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
-    sendCommand("M_SPEED:-80");
+    sendCommand("M_SPEED:-60");
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
     while (!ctrl_c_pressed) {
@@ -437,7 +437,7 @@ void followLeftWallRearStableYaw(float targetDistanceCm = 30.0f,
 
         if (fabs(relativeYaw) < 0.2f) relativeYaw = 0;
 
-        float leftDist = readLIDAR_median_cm(latest_points, 100.0f, 170.0f);
+        float leftDist = readLIDAR_median_cm(latest_points, 130.0f, 170.0f);
         if (leftDist <= 0) {
             std::this_thread::sleep_for(std::chrono::milliseconds(20));
             continue;
@@ -527,6 +527,22 @@ void bootMenuCheck() {
 //     return 0;
 // }
 
+
+
+void arcRight() {
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    sendCommand("SERVO_ANG:145");
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    sendCommand("M_SPEED:-70");
+    std::this_thread::sleep_for(std::chrono::milliseconds(950));
+    sendCommand("M_STOP");
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    sendCommand("SERVO_ANG:90");
+    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+}
+
+
+
 int main() {
     signal(SIGINT, ctrlc_handler);
 
@@ -575,16 +591,18 @@ int main() {
     sendCommand("M_SPEED:-60");  // start moving backward
     while (readLIDAR_median_cm(latest_points, 80, 100) > 65) std::this_thread::sleep_for(std::chrono::milliseconds(50));
     sendCommand("M_STOP");
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
 
     // --- Wait for valid LIDAR readings ---
         float currentRight = 0.0f;
         float currentLeft  = 0.0f;
 
-        while (currentRight <= 0.0f || currentLeft <= 0.0f) {
-            currentRight = readLIDAR_median_cm(latest_points, 170.0f, 190.0f);    // right sector
-            currentLeft  = readLIDAR_median_cm(latest_points, 350.0f, 10.0f);  // left sector
+        while ( currentLeft <= 0.0f || currentRight <= 0.0f ) {
+            currentLeft  = readLIDAR_median_cm(latest_points, 140.0f, 160.0f);
+            currentRight = readLIDAR_median_cm(latest_points, 10.0f, 50.0f); 
 
-            std::this_thread::sleep_for(std::chrono::milliseconds(50));
+
+            std::this_thread::sleep_for(std::chrono::milliseconds(200));
         }
 
         // --- Decide which wall to follow based on live readings ---
@@ -594,70 +612,92 @@ int main() {
         std::cout << "Following " << wallSide << " wall (Right=" 
                 << currentRight << ", Left=" << currentLeft << ")\n";
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+                
+
 
 
     // ---- CONDITION -----
 
 
 
-    if (direction == -1) {
+    if (direction == 1) {
         std::thread wallFollowThread;  // reusable thread variable
 
+        // ------------------- MAIN LAP LOOP -------------------
         // ------------------- MAIN LAP LOOP -------------------
         for (int lap = 0; lap < 10; ++lap) {
             std::cout << "\n=== Lap " << (lap + 1) << " ===\n";
 
-            arcInProgress = true;
-
-            // --- Perform the arc first (blocking, protected) ---
-            arc90Back(-1, 60);
-            std::this_thread::sleep_for(std::chrono::milliseconds(200)); // cooldown
+            // Reset flags
+            wallFollowStop = false;
             arcInProgress = false;
 
-            // --- Start wall-follow after arc ---
-            wallFollowStop = false;
-
-            wallFollowThread = std::thread([&]() {
-                followRightWallRearStableYaw(30.0f, -50, 1.0f, 0.0f, 0.5f, 15.0f);
-            });
-
-            // Wait for front distance <= threshold
+            // Reset consecutive counter and front distance tracking
             bool distanceReached = false;
             int consecutive = 0;
             const int requiredConsecutive = 3;
 
+
+            // --- Perform the arc ---
+            arcInProgress = true;
+            arc90Back(-1, 60);
+            arcInProgress = false;
+
+            // Make sure robot is fully stopped before wall-follow
+            sendCommand("M_STOP");
+            std::this_thread::sleep_for(std::chrono::milliseconds(20));
+            sendCommand("SERVO_ANG:90");
+            std::this_thread::sleep_for(std::chrono::milliseconds(200));
+
+            // --- Start wall-follow after arc ---
+            wallFollowStop = false;
+            if (wallFollowThread.joinable()) wallFollowThread.join(); // join any previous thread
+            wallFollowThread = std::thread([&]() {
+                while (!wallFollowStop && !ctrl_c_pressed) {
+                    followRightWallRearStableYaw(35.0f, -60, 1.031f, 0.0f, 0.5f, 16.0f);
+                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                }
+            });
+
+
+
             while (!distanceReached && !ctrl_c_pressed) {
                 float dist = readLIDAR_median_cm(latest_points, 80.0f, 100.0f);
-
-                if (dist > 50.0f && dist <= 70.0f) {
+                if (dist > 60.0f && dist <= 80.0f) {
                     consecutive++;
                     if (consecutive >= requiredConsecutive) {
                         distanceReached = true;
-                        if (!arcInProgress) {  // do not stop during arc
-                            wallFollowStop = true;
-                            sendCommand("M_STOP");
-                            std::cout << "[⚠️ WAIT LIDAR] Object detected at "
-                                    << dist << " cm → STOP\n";
-                        }
+                        wallFollowStop = true;
+                        if (wallFollowThread.joinable()) wallFollowThread.join();
+                        sendCommand("M_STOP");
+                        std::this_thread::sleep_for(std::chrono::milliseconds(300));
+                        sendCommand("SERVO_ANG:90");
+                        std::cout << "[⚠️ WAIT LIDAR] Object detected at "
+                                << dist << " cm → STOP after arc\n";
                     }
-                } else {
-                    consecutive = 0;
-                }
+                } else consecutive = 0;
 
                 std::this_thread::sleep_for(std::chrono::milliseconds(50));
             }
 
-            // Stop wall-follow thread cleanly
-            if (wallFollowThread.joinable()) wallFollowThread.join();
             sendCommand("SERVO_ANG:90");
-
             std::this_thread::sleep_for(std::chrono::milliseconds(2));
+            sendCommand("M_STOP");
+
+
         }
+
+
+        std::cout << "✅ Lap loop completed.\n";
+
 
         std::cout << "Returning to starting front distance...\n";
 
         // Final arc
+        arcInProgress = true;
         arc90Back(-1, 60);
+        arcInProgress = false;
 
         // Wall-follow toward starting position
         wallFollowStop = false;
@@ -665,7 +705,8 @@ int main() {
         const float rightThreshold = Ri + ARC_RADIUS_CM;
 
         wallFollowThread = std::thread([&]() {
-            followRightWallRearStableYaw(30.0f, -60, 1.0f, 0.0f, 0.5f, 10.0f);
+            followRightWallRearStableYaw(30.0f, -60, 1.0f, 0.0f, 0.5f, 15.0f);
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         });
 
         bool reachedRight = false;
@@ -677,6 +718,8 @@ int main() {
                 if (!arcInProgress) {
                     wallFollowStop = true;
                     sendCommand("M_STOP");
+                    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+                    sendCommand("SERVO_ANG:90");
                     std::cout << "[⚠️ FINAL] Front distance reached: "
                             << frontDist << " cm → STOP\n";
                 }
@@ -687,15 +730,19 @@ int main() {
 
         if (wallFollowThread.joinable()) wallFollowThread.join();
 
-        // Final arc
-        arc90Back(-1, 60);
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
+        arcInProgress = true;
+        arc90Back(-1, 60);
+        arcInProgress = false;
+
+        std::this_thread::sleep_for(std::chrono::milliseconds(20));
 
         // Wall-follow final stretch
         wallFollowStop = false;
         wallFollowThread = std::thread([&]() {
-            followRightWallRearStableYaw(rightThreshold, -60, 1.0f, 0.0f, 0.5f, 10.0f);
+            followRightWallRearStableYaw(rightThreshold, -60, 1.0f, 0.0f, 0.5f, 15.0f);
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
         });
 
         const float frontThreshold = Fi + 10.0f;
@@ -708,6 +755,8 @@ int main() {
                 if (!arcInProgress) {
                     wallFollowStop = true;
                     sendCommand("M_STOP");
+                    std::this_thread::sleep_for(std::chrono::milliseconds(200));
+                    sendCommand("SERVO_ANG:90");
                     std::cout << "[⚠️ FINAL] Front distance reached: "
                             << frontDist << " cm → STOP\n";
                 }
@@ -719,9 +768,9 @@ int main() {
         if (wallFollowThread.joinable()) wallFollowThread.join();
 
         std::cout << "✅ Returned to starting position.\n";
+
+
     }
-
-
     else {
         std::thread wallFollowThread; // reusable thread variable
 
@@ -1054,5 +1103,42 @@ int main() {
 
     
 
+
+// }
+
+
+
+
+
+// int main() {
+//     signal(SIGINT, ctrlc_handler);
+
+//     // Reset globals for safe multiple runs
+//     ctrl_c_pressed = false;
+//     wallFollowStop = false;
+
+//     const char* ip = "127.0.0.1";
+//     const int port = 5005;
+
+//     int sock = socket(AF_INET, SOCK_DGRAM, 0);
+//     if (sock < 0) { perror("socket"); return -1; }
+
+//     sockaddr_in addr{};
+//     addr.sin_family = AF_INET;
+//     addr.sin_port = htons(port);
+//     addr.sin_addr.s_addr = inet_addr(ip);
+
+//     if (bind(sock, (struct sockaddr*)&addr, sizeof(addr)) < 0) {
+//         perror("bind");
+//         close(sock);
+//         return -1;
+//     }
+
+//     std::cout << "Listening on " << ip << ":" << port << std::endl;
+
+//     // Start LIDAR receiver thread
+//     std::thread lidarThread(lidarReceiver, sock);
+
+//     followRightWallRearStableYaw(30.0f, -60, 1.0f, 0.0f, 0.5f, 15.0f);
 
 // }
